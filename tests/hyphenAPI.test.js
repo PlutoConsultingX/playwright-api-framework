@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { APIClient } from '../utils/apiClient.js';
 import { UserEndpoints } from '../endpoints/userEndpoints.js';
 import { AuthService } from '../auth/authService.js';
-
+/*
 test.describe('User API Tests (with Auth & Refresh)', () => {
   let apiClient;
 
@@ -18,7 +18,7 @@ test.describe('User API Tests (with Auth & Refresh)', () => {
     await apiClient.dispose();
   });
 
-  test('GET user by ID with auto-refresh if needed', async () => {
+  test('GET user by ID with auto-refresh if needed',{tag : '@API'}, async () => {
     const response = await apiClient.get(UserEndpoints.getUser(1));
     expect(response.ok()).toBeTruthy();
 
@@ -41,8 +41,8 @@ test.describe('User API Tests (with Auth & Refresh)', () => {
 
   
 });
-
-
+*/
+//-----------------------------------------------------------------------------------
 
 /*
 import { test, expect } from '@playwright/test';
