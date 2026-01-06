@@ -1,0 +1,37 @@
+{
+    "Response": {
+        "ISInfo": {
+            "serviceId": "FACS-EFT-TRANSACTION-01",
+            "responseId": "{{$guid}}",
+            "isCorrelationId": "6683a233-3eed-45b4-8968-0446b4670e4b",
+            "senderMessageId": "02c9b2e5-c11f-4271-afa3-a3818ae13d92"
+        },
+        "responseDetail": {
+            "transactions": [
+                {
+                    "transactionId": "e6527b69-6aab-435b-bc02-b75e4de9487a",
+                    "actionDate": "{{currentDate}}",
+                    "effectiveDate": "{{currentDate}}",
+                    "serviceType": "EFTCOLLECTION",
+                    "transactionError": {
+                        "errorCode": "ACHD",
+                        "errorDescription": "Account Holder Deceased"
+                    },
+                    "transactionAmount": "100",
+                    "transactionResponse": {
+                        "responseType": "UNPAID",
+                        "responseDescription": "The transaction was unsuccessful"
+                    }
+                }
+            ]
+        },
+        "responseHeader": {
+            "totalCount": 1,
+            "responseCode": "PROCESSED",
+            "responseType": "RESPONSE",
+            "clientProfile": "FACHYTQ1",
+            "responseTimestamp": "{{currentDateTime}}",
+            "clientIntegrationId": "HYT0003"
+        }
+    }
+}

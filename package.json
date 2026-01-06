@@ -3,11 +3,16 @@
   "version": "1.0.0",
   "type": "module",
   "devDependencies": {
-    "@playwright/test": "^1.42.0"
+    "@playwright/test": "^1.42.0",
+    "allure-playwright": "^3.4.3"
   },
   "scripts": {
     "test": "npx playwright test",
     "test:dev": "ENV=dev npx playwright test",
     "test:qa": "ENV=qa npx playwright test"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "mysql2": "^3.16.0"
   }
 }

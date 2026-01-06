@@ -1,0 +1,58 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Request Payload: {
+  workflowID: '99590d04-add1-4f6f-b025-61ecb93b82a6',
+  clientCorrelationID: 'bf9fea54-e9a6-4b9f-9782-fdfe195cf657',
+  requestDate: '2025-12-0912:02:37',
+  totalCount: 1,
+  transactions: [
+    {
+      transactionID: '05dada6c-3a1d-4623-b8e0-1f697fc6003d',
+      transactionAmount: 300,
+      actionDate: '2025-12-09',
+      subjectReference: 'SREF000-06052025',
+      clientReference: 'CREF000-06052025',
+      mandateReference: '00032024091612QRZ2ZDWW',
+      contractReference: 'Molly222',
+      trackingDays: 10,
+      collectionReoccurance: 'OOFF',
+      subjectDetails: [Object]
+    }
+  ]
+}
+Request Payload: {
+  "workflowID": "99590d04-add1-4f6f-b025-61ecb93b82a6",
+  "clientCorrelationID": "bf9fea54-e9a6-4b9f-9782-fdfe195cf657",
+  "requestDate": "2025-12-0912:02:37",
+  "totalCount": 1,
+  "transactions": [
+    {
+      "transactionID": "05dada6c-3a1d-4623-b8e0-1f697fc6003d",
+      "transactionAmount": 300,
+      "actionDate": "2025-12-09",
+      "subjectReference": "SREF000-06052025",
+      "clientReference": "CREF000-06052025",
+      "mandateReference": "00032024091612QRZ2ZDWW",
+      "contractReference": "Molly222",
+      "trackingDays": 10,
+      "collectionReoccurance": "OOFF",
+      "subjectDetails": {
+        "accountNumber": "62006677069",
+        "accountType": "02",
+        "branchCode": "250655",
+        "country": "ZAF",
+        "idType": "SouthAfricanID",
+        "idValue": "5010207660089",
+        "initials": "SK",
+        "firstName": "john",
+        "lastName": "doe",
+        "phoneNumber": "+27721234567",
+        "emailAddress": "Hyphen@RMB.com",
+        "profileReference": "Ram"
+      }
+    }
+  ]
+}
+[INFO] Sending POST request to create transaction...
+The request [AsyncFunction: post]

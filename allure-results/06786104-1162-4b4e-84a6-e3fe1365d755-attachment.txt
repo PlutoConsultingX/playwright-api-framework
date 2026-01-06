@@ -1,0 +1,25 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+2025-12-11T09:58
+Request Payload: {
+  workflowID: '99590d04-add1-4f6f-b025-61ecb93b82a6',
+  clientCorrelationID: '8e03e4ae-8028-4be3-bb18-bf7a752e135b',
+  requestDate: '2025-12-11T09:58',
+  totalCount: 1,
+  transactions: [
+    {
+      transactionID: '175ba191-0ea9-4d59-a1c2-bef849e7a250',
+      transactionAmount: 300,
+      actionDate: '2025-12-11',
+      subjectReference: 'SREF000-06052025',
+      clientReference: 'CREF000-06052025',
+      mandateReference: '00032024091612QRZ2ZDWW',
+      contractReference: 'Thato Auto',
+      trackingDays: 10,
+      collectionReoccurance: 'OOFF',
+      subjectDetails: [Object]
+    }
+  ]
+}
+API Response Status: 400

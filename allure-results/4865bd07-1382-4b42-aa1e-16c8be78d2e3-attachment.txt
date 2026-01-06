@@ -1,0 +1,43 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+{
+  "workflowID": "c5d1f3b5-508e-4f47-9997-a4912d486466",
+  "clientCorrelationID": "7959a680-8f65-4854-ad79-ca683576ae49",
+  "requestDate": "2025-12-11T08:13",
+  "totalCount": 1,
+  "transactions": [
+    {
+      "transactionID": "d051053a-8584-4668-a330-2aeea9bd65d8",
+      "transactionAmount": 300,
+      "actionDate": "2025-12-11",
+      "subjectReference": "SREF000-23042025",
+      "clientReference": "CREF000-23042025",
+      "mandateReference": "00032024091612QRZ2ZDWW",
+      "contractReference": "Thato Auto",
+      "trackingDays": 10,
+      "collectionReoccurance": "OOFF",
+      "subjectDetails": {
+        "accountNumber": "62006677069",
+        "accountType": "02",
+        "branchCode": "250655",
+        "country": "ZAF",
+        "idType": "EntityRegistrationNumber",
+        "idValue": "1951/000009/07",
+        "initials": "SK",
+        "firstName": "john",
+        "lastName": "doe",
+        "phoneNumber": "+27721234567",
+        "emailAddress": "Hyphen@RMB.com",
+        "profileReference": "Thatos"
+      }
+    }
+  ]
+}
+API Response: {
+  success: false,
+  message: [
+    "Invalid date format for requestDate. Expected format: yyyy-MM-dd'T'HH:mm:ss"
+  ],
+  clientCorrelationID: '8048f458-b90a-4837-81e3-cebd7b488f9b'
+}

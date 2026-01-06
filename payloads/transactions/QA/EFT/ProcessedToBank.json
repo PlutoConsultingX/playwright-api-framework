@@ -1,0 +1,39 @@
+{
+  "Response": {
+      "ISInfo": {
+          "serviceId": "FACS-EFT-TRANSACTION-01",
+          "responseId": "{{$guid}}",
+          "isCorrelationId": "c5919c23-a691-4cc8-a3fe-b918b9c04f94",
+          "senderMessageId": "ba4f6f3a-6486-40da-9f95-ad85a011d7c4"
+      },
+      "responseDetail": {
+          "transactions": [
+              {
+                  "transactionId": "e1f77f6f-e987-4e0f-ac6f-3db59c4eb7ee",
+                  "actionDate": "{{currentDate}}",
+                  "effectiveDate": "{{currentDate}}",
+                  "nativeTransactionId": "E238 -DO-000000007-00000100",
+                  "serviceType": "EFTCOLLECTION",
+                  "transactionError": {
+                      "errorCode": "",
+                      "errorDescription": ""
+                  },
+                  "transactionAmount": "100",
+                  "transactionResponse": {
+                      "responseType": "PROCESSED",
+                      "responseDescription": "Processed to bank"
+                  }
+              }
+          ]
+      },
+      "responseHeader": {
+          "totalCount": 1,
+          "responseCode": "PROCESSED",
+          "responseType": "RESPONSE",
+          "clientProfile": "FACHYTQ1",
+          "responseTimestamp": "{{currentDateTime}}",
+          "nativeMsgId": "11049bd1-5fea-4bb2-b97e-0afa064ac82a",
+          "clientIntegrationId": "HYT0003"
+      }
+  }
+}

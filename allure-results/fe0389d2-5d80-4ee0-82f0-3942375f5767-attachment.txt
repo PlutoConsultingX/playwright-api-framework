@@ -1,0 +1,30 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Request Payload: {
+  workflowID: '99590d04-add1-4f6f-b025-61ecb93b82a6',
+  clientCorrelationID: 'ce76f327-747d-4b6b-ba73-c228da351877',
+  requestDate: '2025-12-1011:06:43',
+  totalCount: 1,
+  transactions: [
+    {
+      transactionID: '77234df9-a009-4a83-b49c-d79ba36ecd56',
+      transactionAmount: 300,
+      actionDate: '2025-12-10',
+      subjectReference: 'SREF000-06052025',
+      clientReference: 'CREF000-06052025',
+      mandateReference: '00032024091612QRZ2ZDWW',
+      contractReference: 'Molly222',
+      trackingDays: 10,
+      collectionReoccurance: 'OOFF',
+      subjectDetails: [Object]
+    }
+  ]
+}
+API Response Status: 200
+API Response: {
+  success: true,
+  message: [ 'ACCEPTED' ],
+  clientCorrelationID: 'f21dc40c-8ecd-4bd8-a87f-07d93b63cde9',
+  hyphenCorrelationID: '8daa1e4d-1185-4646-8057-e8105bcb8ebe'
+}

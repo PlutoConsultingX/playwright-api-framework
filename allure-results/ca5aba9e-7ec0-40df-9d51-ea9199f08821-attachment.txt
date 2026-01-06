@@ -1,0 +1,63 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Request Payload: {
+  workflowID: '99590d04-add1-4f6f-b025-61ecb93b82a6',
+  clientCorrelationID: '2630c16e-a3b4-46cf-8b7c-6f3b3eee6142',
+  requestDate: '2025-12-0911:13:42',
+  totalCount: 1,
+  transactions: [
+    {
+      transactionID: '7e9c22b6-c95c-48d4-91be-e5a97c0f023b',
+      transactionAmount: 300,
+      actionDate: '2025-12-09',
+      subjectReference: 'SREF000-06052025',
+      clientReference: 'CREF000-06052025',
+      mandateReference: '00032024091612QRZ2ZDWW',
+      contractReference: 'Molly222',
+      trackingDays: 10,
+      collectionReoccurance: 'OOFF',
+      subjectDetails: [Object]
+    }
+  ]
+}
+Request Payload: {
+  "workflowID": "99590d04-add1-4f6f-b025-61ecb93b82a6",
+  "clientCorrelationID": "2630c16e-a3b4-46cf-8b7c-6f3b3eee6142",
+  "requestDate": "2025-12-0911:13:42",
+  "totalCount": 1,
+  "transactions": [
+    {
+      "transactionID": "7e9c22b6-c95c-48d4-91be-e5a97c0f023b",
+      "transactionAmount": 300,
+      "actionDate": "2025-12-09",
+      "subjectReference": "SREF000-06052025",
+      "clientReference": "CREF000-06052025",
+      "mandateReference": "00032024091612QRZ2ZDWW",
+      "contractReference": "Molly222",
+      "trackingDays": 10,
+      "collectionReoccurance": "OOFF",
+      "subjectDetails": {
+        "accountNumber": "62006677069",
+        "accountType": "02",
+        "branchCode": "250655",
+        "country": "ZAF",
+        "idType": "SouthAfricanID",
+        "idValue": "5010207660089",
+        "initials": "SK",
+        "firstName": "john",
+        "lastName": "doe",
+        "phoneNumber": "+27721234567",
+        "emailAddress": "Hyphen@RMB.com",
+        "profileReference": "Venka"
+      }
+    }
+  ]
+}
+[INFO] Sending POST request to create transaction...
+The request Promise {
+  <pending>,
+  [Symbol(async_id_symbol)]: 494,
+  [Symbol(trigger_async_id_symbol)]: 479,
+  [Symbol(kResourceStore)]: undefined
+}

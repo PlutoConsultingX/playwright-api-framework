@@ -1,0 +1,8 @@
+[INFO] Generating token using password grant...
+URLSearchParams {
+  'grant_type' => 'password',
+  'client_id' => 'hyptransform',
+  'client_secret' => 'NRMxErHZgAATuY1I5OMjQM80i3YITcpt',
+  'username' => 'sysuser_transf_qa',
+  'password' => 'DvD%P!22[20hgg(492f',
+  'scope' => 'openid' }

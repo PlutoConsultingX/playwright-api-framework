@@ -1,0 +1,58 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Request Payload: {
+  workflowID: '99590d04-add1-4f6f-b025-61ecb93b82a6',
+  clientCorrelationID: '62866453-f432-436c-badd-ad48296eca40',
+  requestDate: '2025-12-1005:12:21',
+  totalCount: 1,
+  transactions: [
+    {
+      transactionID: '90becc65-b746-44b1-b3d2-6fa253a1a8f0',
+      transactionAmount: 300,
+      actionDate: '2025-12-10',
+      subjectReference: 'SREF000-06052025',
+      clientReference: 'CREF000-06052025',
+      mandateReference: '00032024091612QRZ2ZDWW',
+      contractReference: 'Molly222',
+      trackingDays: 10,
+      collectionReoccurance: 'OOFF',
+      subjectDetails: [Object]
+    }
+  ]
+}
+[INFO] Sending POST request to create transaction...
+Request Payload: {
+  "workflowID": "99590d04-add1-4f6f-b025-61ecb93b82a6",
+  "clientCorrelationID": "62866453-f432-436c-badd-ad48296eca40",
+  "requestDate": "2025-12-1005:12:21",
+  "totalCount": 1,
+  "transactions": [
+    {
+      "transactionID": "90becc65-b746-44b1-b3d2-6fa253a1a8f0",
+      "transactionAmount": 300,
+      "actionDate": "2025-12-10",
+      "subjectReference": "SREF000-06052025",
+      "clientReference": "CREF000-06052025",
+      "mandateReference": "00032024091612QRZ2ZDWW",
+      "contractReference": "Molly222",
+      "trackingDays": 10,
+      "collectionReoccurance": "OOFF",
+      "subjectDetails": {
+        "accountNumber": "62006677069",
+        "accountType": "02",
+        "branchCode": "250655",
+        "country": "ZAF",
+        "idType": "SouthAfricanID",
+        "idValue": "5010207660089",
+        "initials": "SK",
+        "firstName": "john",
+        "lastName": "doe",
+        "phoneNumber": "+27721234567",
+        "emailAddress": "Hyphen@RMB.com",
+        "profileReference": "Thato"
+      }
+    }
+  ]
+}
+-------------------You are now here---------------

@@ -1,0 +1,31 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Request Payload: {
+  workflowID: '99590d04-add1-4f6f-b025-61ecb93b82a6',
+  clientCorrelationID: '40b83561-4c27-442f-93bc-5b4679a247c1',
+  requestDate: '2025-12-1010:50:03',
+  totalCount: 1,
+  transactions: [
+    {
+      transactionID: '92d5da6d-b325-40f0-8f46-20e39e856c8e',
+      transactionAmount: 300,
+      actionDate: '2025-12-10',
+      subjectReference: 'SREF000-06052025',
+      clientReference: 'CREF000-06052025',
+      mandateReference: '00032024091612QRZ2ZDWW',
+      contractReference: 'Molly222',
+      trackingDays: 10,
+      collectionReoccurance: 'OOFF',
+      subjectDetails: [Object]
+    }
+  ]
+}
+API Response Status: 500
+API Response: {
+  success: false,
+  message: [
+    "Required request header 'sag-correlation-id' for method parameter type UUID is not present"
+  ],
+  clientCorrelationID: 'a7f86882-889b-45b3-8d4a-d88adf12d905'
+}

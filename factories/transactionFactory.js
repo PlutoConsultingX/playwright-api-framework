@@ -3,9 +3,9 @@ import { Helpers } from '../utils/helpers.js';
 export class TransactionFactory {
   static createTransactionPayload() {
     return {
-      workflowID: "WF123456",
+      workflowID: "99590d04-add1-4f6f-b025-61ecb93b82a6",
       clientCorrelationID: Helpers.generateGUID(),
-      requestDate: `${Helpers.getCurrentDate()}${Helpers.getCurrentTime()}`,
+      requestDate: "2026-01-05T08:13",
       totalCount: 1,
       transactions: [
         {
@@ -15,7 +15,7 @@ export class TransactionFactory {
           subjectReference: "SREF000-06052025",
           clientReference: "CREF000-06052025",
           mandateReference: "00032024091612QRZ2ZDWW",
-          contractReference: "Molly222",
+          contractReference: "",
           trackingDays: 10,
           collectionReoccurance: "OOFF",
           subjectDetails: {
