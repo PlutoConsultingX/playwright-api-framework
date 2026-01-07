@@ -9,3 +9,5 @@
         process.env.DB_PORT || 3306
       }/${process.env.DB_NAME || "qa_db"}?ssl=false`,
   };
+
+  

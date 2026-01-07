@@ -1,0 +1,36 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+{
+  "workflowID": "c5d1f3b5-508e-4f47-9997-a4912d486466",
+  "clientCorrelationID": "6072f9f8-42e4-41fc-ad9f-0d0ac014cd73",
+  "requestDate": "2025-12-11T08:13:00",
+  "totalCount": 1,
+  "transactions": [
+    {
+      "transactionID": "de0dd50e-cc43-4498-abf5-552ea98fa546",
+      "transactionAmount": 300,
+      "actionDate": "2026-01-06",
+      "subjectReference": "SREF000-23042025",
+      "clientReference": "CREF000-23042025",
+      "mandateReference": "00032024091612QRZ2ZDWW",
+      "contractReference": "Thato Auto",
+      "trackingDays": 10,
+      "collectionReoccurance": "OOFF",
+      "subjectDetails": {
+        "accountNumber": "62006677069",
+        "accountType": "02",
+        "branchCode": "250655",
+        "country": "ZAF",
+        "idType": "EntityRegistrationNumber",
+        "idValue": "1951/000009/07",
+        "initials": "SK",
+        "firstName": "john",
+        "lastName": "doe",
+        "phoneNumber": "+27721234567",
+        "emailAddress": "Hyphen@RMB.com",
+        "profileReference": "Thatos"
+      }
+    }
+  ]
+}

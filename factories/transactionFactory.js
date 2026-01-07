@@ -26,8 +26,8 @@ export class TransactionFactory {
             idType: "SouthAfricanID",
             idValue: "5010207660089",
             initials: "SK",
-            firstName: "john",
-            lastName: "doe",
+            firstName: "Thato",
+            lastName: "Automation",
             phoneNumber: "+27721234567",
             emailAddress: "Hyphen@RMB.com",
             profileReference: Helpers.randomFirstName()

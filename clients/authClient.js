@@ -1,5 +1,5 @@
 import { logger } from '../utils/logger.js';
-import { loadEnvironment } from '../utils/env.js';
+import { loadEnvironment } from '../utils/process.env';
 
 const ENV = loadEnvironment(process.env.ENV || "qa");
 

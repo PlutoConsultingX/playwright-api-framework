@@ -1,12 +1,12 @@
 import { defineConfig } from "@playwright/test";
-import { loadEnvironment } from "./utils/env.js";
+import { loadEnvironment } from "./utils/process.env";
 
 const ENV = loadEnvironment(process.env.ENV || "qa");
 
 export default defineConfig({
   testDir: './tests', 
   timeout: 30000,
-  retries: 1,
+  retries: 0,
 
   use: {
     baseURL: ENV.BASE_URL,

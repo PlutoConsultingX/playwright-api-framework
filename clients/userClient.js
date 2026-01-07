@@ -1,6 +1,6 @@
 import { Helpers } from '../utils/helpers.js';
-import { loadEnvironment } from '../utils/env.js';
-const ENV = loadEnvironment(process.env.ENV || "qa");
+import { loadEnvironment } from '../utils/process.env';
+const ENV = loadEnvironment(process.env.ENV || "qa_token");
 
 export class UserClient {
   constructor(request, token) {
@@ -14,7 +14,7 @@ export class UserClient {
     const payload = {
       workflowID: "c5d1f3b5-508e-4f47-9997-a4912d486466",
       clientCorrelationID: Helpers.generateGUID(), 
-      requestDate: "2025-12-11T08:13:00",
+      requestDate: "2026-01-07T08:13:00",
       totalCount:1,
       transactions: [
         {
