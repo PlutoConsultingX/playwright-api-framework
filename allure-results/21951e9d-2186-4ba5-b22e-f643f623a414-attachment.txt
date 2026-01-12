@@ -1,41 +1,61 @@
-/*export const transactionQueries = {
-    getSalaryTransactionByCorrelationId:  `
-    SELECT t.workflow_execution_id,t.transaction_id 
-    ,ti.client_transaction_id ,ti.transaction_item_id 
-    ,tidr.child_workflow_execution_id 
-    ,ts.transaction_status_name as trxBatchStatus,tis.transaction_item_status_name as trxStatus,tids.transaction_item_detail_status_name as trxItemDetailStatus
- 
-    -- t.client_message_id,t.workflow_id,t.transaction_id,ti.transaction_item_id,tid.transaction_item_detail_id 
-    ,s.service_name ,tid.transaction_item_detail_id 
-    ,tidrs.transaction_item_detail_run_status_name 
-    ,tidr.response_manager_code ,tidr.response_manager_exception_type ,tidr.response_manager_message,tidr.response_data 
-    ,et.response_reference ,et.request_payload_data as sagrequestpayload,et.transaction_id as senderID,et.transaction_run_detail_id as transactionIDSAGReqPayload,et.response_payload_data ,et.response_type,et.transaction_status as workertransactionstatus
- 
-    -- ,ewr.response_code as sagTransresponsecode,ewr.response_description as sagTransresponse_description,ewr.error_code as sagTranserrorcode,ewr.error_description as sagTranserror_description,ewr.callback_data
- 
-    from transaction t 
-    INNer Join transaction_status ts on t.transaction_status_id = ts.transaction_status_id 
-    INNER Join transaction_item ti on t.transaction_id = ti.transaction_id 
-    INNER Join transaction_item_status tis on ti.transaction_item_status_id = tis.transaction_item_status_id 
-    INNER JOIN transaction_item_detail tid on ti.transaction_item_id = tid.transaction_item_id 
-    INNER JOIN service s on tid.service_id = s.service_id 
-    INNER JOIN transaction_item_detail_status tids on tid.transaction_item_detail_status_id = tids.transaction_item_detail_status_id 
-    INNER JOIN transaction_item_detail_run tidr on tidr.transaction_item_detail_id = tid.transaction_item_detail_id 
-    INNER JOIN transaction_item_detail_run_status tidrs on tidr.transaction_item_detail_run_status_id = tidrs.transaction_item_detail_run_status_id 
-    INNER JOIN WORKFLOW_WORKER_EFT_PAYMENTS_SALARYDAY.salaryday_eft_payment_transaction et on et.transaction_run_detail_id = tidr.transaction_item_detail_run_id 
-    -- INNER JOIN WORKFLOW_WORKER_EFT_PAYMENTS_SALARYDAY.salaryday_eft_payment_worker_responses ewr on ewr.transaction_id = et.transaction_id 
-    where t.client_message_id = "6c5b81e3-f248-4412-91a1-08b20927f3ea"
-  `,
-  
-    getWorkflowById: `
-      SELECT *
-      FROM workflows
-      WHERE workflow_id = $1
-    `
-  };*/
-  
-  export const transactionQueries = {
-    getSalaryTransactionFailedSAGResponse: `
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+{
+  "workflowID": "c5d1f3b5-508e-4f47-9997-a4912d486466",
+  "clientCorrelationID": "940fc424-19b0-4103-8382-f4569609d9d7",
+  "requestDate": "2026-01-12T08:13:00",
+  "totalCount": 1,
+  "transactions": [
+    {
+      "transactionID": "d8bfa434-2595-4594-8b0f-0d7e8280fde1",
+      "transactionAmount": 300,
+      "actionDate": "2026-01-12",
+      "subjectReference": "SREF000-23042025",
+      "clientReference": "CREF000-23042025",
+      "mandateReference": "00032024091612QRZ2ZDWW",
+      "contractReference": "Thato Auto",
+      "trackingDays": 10,
+      "collectionReoccurance": "OOFF",
+      "subjectDetails": {
+        "accountNumber": "62006677069",
+        "accountType": "02",
+        "branchCode": "250655",
+        "country": "ZAF",
+        "idType": "EntityRegistrationNumber",
+        "idValue": "1951/000009/07",
+        "initials": "SK",
+        "firstName": "john",
+        "lastName": "doe",
+        "phoneNumber": "+27721234567",
+        "emailAddress": "Hyphen@RMB.com",
+        "profileReference": "Thatos"
+      }
+    }
+  ]
+}
+API Response Status: 200
+API Response Body: {
+  "success": true,
+  "message": [
+    "Total transactions posted: 1",
+    "Total valid transactions saved: 1",
+    "Total invalid transactions: 0"
+  ],
+  "clientCorrelationID": "940fc424-19b0-4103-8382-f4569609d9d7",
+  "hyphenCorrelationID": "dfa82929-7035-424f-80ab-19b97f01c703"
+}
+API Response Body: {
+  success: true,
+  message: [
+    'Total transactions posted: 1',
+    'Total valid transactions saved: 1',
+    'Total invalid transactions: 0'
+  ],
+  clientCorrelationID: '940fc424-19b0-4103-8382-f4569609d9d7',
+  hyphenCorrelationID: 'dfa82929-7035-424f-80ab-19b97f01c703'
+}
+SQL Query: 
     SELECT t.workflow_execution_id,t.transaction_id 
     ,ti.client_transaction_id ,ti.transaction_item_id 
     ,tidr.child_workflow_execution_id 
@@ -62,5 +82,85 @@
     -- INNER JOIN WORKFLOW_WORKER_EFT_PAYMENTS_SALARYDAY.salaryday_eft_payment_worker_responses ewr on ewr.transaction_id = et.transaction_id 
     -- where t.client_message_id = "6c5b81e3-f248-4412-91a1-08b20927f3ea"
     WHERE t.client_message_id = ?
-  `
-  };
+  
+Params: [ '940fc424-19b0-4103-8382-f4569609d9d7' ]
+Executing SQL:
+ 
+    SELECT t.workflow_execution_id,t.transaction_id 
+    ,ti.client_transaction_id ,ti.transaction_item_id 
+    ,tidr.child_workflow_execution_id 
+    ,ts.transaction_status_name as trxBatchStatus,tis.transaction_item_status_name as trxStatus,tids.transaction_item_detail_status_name as trxItemDetailStatus
+ 
+    -- t.client_message_id,t.workflow_id,t.transaction_id,ti.transaction_item_id,tid.transaction_item_detail_id 
+    ,s.service_name ,tid.transaction_item_detail_id 
+    ,tidrs.transaction_item_detail_run_status_name 
+    ,tidr.response_manager_code ,tidr.response_manager_exception_type ,tidr.response_manager_message,tidr.response_data 
+    ,et.response_reference ,et.request_payload_data as sagrequestpayload,et.transaction_id as senderID,et.transaction_run_detail_id as transactionIDSAGReqPayload,et.response_payload_data ,et.response_type,et.transaction_status as workertransactionstatus
+ 
+    -- ,ewr.response_code as sagTransresponsecode,ewr.response_description as sagTransresponse_description,ewr.error_code as sagTranserrorcode,ewr.error_description as sagTranserror_description,ewr.callback_data
+ 
+    from transaction t 
+    INNer Join transaction_status ts on t.transaction_status_id = ts.transaction_status_id 
+    INNER Join transaction_item ti on t.transaction_id = ti.transaction_id 
+    INNER Join transaction_item_status tis on ti.transaction_item_status_id = tis.transaction_item_status_id 
+    INNER JOIN transaction_item_detail tid on ti.transaction_item_id = tid.transaction_item_id 
+    INNER JOIN service s on tid.service_id = s.service_id 
+    INNER JOIN transaction_item_detail_status tids on tid.transaction_item_detail_status_id = tids.transaction_item_detail_status_id 
+    INNER JOIN transaction_item_detail_run tidr on tidr.transaction_item_detail_id = tid.transaction_item_detail_id 
+    INNER JOIN transaction_item_detail_run_status tidrs on tidr.transaction_item_detail_run_status_id = tidrs.transaction_item_detail_run_status_id 
+    INNER JOIN WORKFLOW_WORKER_EFT_PAYMENTS_SALARYDAY.salaryday_eft_payment_transaction et on et.transaction_run_detail_id = tidr.transaction_item_detail_run_id 
+    -- INNER JOIN WORKFLOW_WORKER_EFT_PAYMENTS_SALARYDAY.salaryday_eft_payment_worker_responses ewr on ewr.transaction_id = et.transaction_id 
+    -- where t.client_message_id = "6c5b81e3-f248-4412-91a1-08b20927f3ea"
+    WHERE t.client_message_id = ?
+  
+Waiting for DB record... (1/10)
+DB Result: [
+  {
+    workflow_execution_id: '75a8937c-75fa-4b45-9c4a-3ae6a9feee13',
+    transaction_id: '583b1238-81fe-475d-90ab-81b91b708754',
+    client_transaction_id: 'd8bfa434-2595-4594-8b0f-0d7e8280fde1',
+    transaction_item_id: 'd4998d7b-b1d1-41c6-8d87-921873bd76ae',
+    child_workflow_execution_id: 'c1ded77e-4fda-3da0-8696-71c44831b252',
+    trxBatchStatus: 'In Progress',
+    trxStatus: 'In progress',
+    trxItemDetailStatus: 'In progress',
+    service_name: 'SALARY_EFT_PAYMENTS',
+    transaction_item_detail_id: 'f269682a-60c0-40c6-86b8-c4f4d013ed94',
+    transaction_item_detail_run_status_name: 'In progress',
+    response_manager_code: null,
+    response_manager_exception_type: null,
+    response_manager_message: null,
+    response_data: null,
+    response_reference: null,
+    sagrequestpayload: '{\n' +
+      '  "transactionId": "5c3bae6c-542f-4cc3-9230-771b82b055be",\n' +
+      '  "beneficiaryAccountNumber": "62006677069",\n' +
+      '  "branchCode": "250655",\n' +
+      '  "accountType": "2",\n' +
+      '  "serviceType": "EFTPAYMNET",\n' +
+      '  "transactionType": "P926",\n' +
+      '  "documentType": "EF",\n' +
+      '  "customerName": "john doe",\n' +
+      '  "napsBeneficiaryCode": "",\n' +
+      '  "globalRecipient": "",\n' +
+      '  "transactionAmount": "300",\n' +
+      '  "actionDate": "2026-01-12",\n' +
+      '  "reference1": "SREF000-23042025",\n' +
+      '  "reference2": "CREF000-23042025",\n' +
+      '  "reference3": "",\n' +
+      '  "bicCode": "",\n' +
+      '  "processingOption1": "I",\n' +
+      '  "processingOption2": "S",\n' +
+      '  "mandateReference": "",\n' +
+      '  "collectionReoccurence": "OOFF",\n' +
+      '  "contractReference": "Thato Auto",\n' +
+      '  "emailAddress": "Hyphen@RMB.com",\n' +
+      '  "cellphoneNumber": "+27721234567"\n' +
+      '}',
+    senderID: 'd572972d-ae15-481d-bdb8-584abbd3f551',
+    transactionIDSAGReqPayload: '5c3bae6c-542f-4cc3-9230-771b82b055be',
+    response_payload_data: null,
+    response_type: null,
+    workertransactionstatus: 1
+  }
+]

@@ -1,0 +1,135 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+{
+  "workflowID": "c5d1f3b5-508e-4f47-9997-a4912d486466",
+  "clientCorrelationID": "c38632d5-5ae2-4afc-8a53-1e81b36eaed7",
+  "requestDate": "2026-01-09T08:13:00",
+  "totalCount": 1,
+  "transactions": [
+    {
+      "transactionID": "031724bb-a4f3-44db-bb29-802e383aaf4f",
+      "transactionAmount": 300,
+      "actionDate": "2026-01-09",
+      "subjectReference": "SREF000-23042025",
+      "clientReference": "CREF000-23042025",
+      "mandateReference": "00032024091612QRZ2ZDWW",
+      "contractReference": "Thato Auto",
+      "trackingDays": 10,
+      "collectionReoccurance": "OOFF",
+      "subjectDetails": {
+        "accountNumber": "62006677069",
+        "accountType": "02",
+        "branchCode": "250655",
+        "country": "ZAF",
+        "idType": "EntityRegistrationNumber",
+        "idValue": "1951/000009/07",
+        "initials": "SK",
+        "firstName": "john",
+        "lastName": "doe",
+        "phoneNumber": "+27721234567",
+        "emailAddress": "Hyphen@RMB.com",
+        "profileReference": "Thatos"
+      }
+    }
+  ]
+}
+API Response Status: 200
+API Response Body: {
+  "success": true,
+  "message": [
+    "Total transactions posted: 1",
+    "Total valid transactions saved: 1",
+    "Total invalid transactions: 0"
+  ],
+  "clientCorrelationID": "c38632d5-5ae2-4afc-8a53-1e81b36eaed7",
+  "hyphenCorrelationID": "88dee058-6af6-4daa-a709-1c2853689c2e"
+}
+API Response Body: {
+  success: true,
+  message: [
+    'Total transactions posted: 1',
+    'Total valid transactions saved: 1',
+    'Total invalid transactions: 0'
+  ],
+  clientCorrelationID: 'c38632d5-5ae2-4afc-8a53-1e81b36eaed7',
+  hyphenCorrelationID: '88dee058-6af6-4daa-a709-1c2853689c2e'
+}
+SQL Query: 
+    SELECT t.workflow_execution_id,t.transaction_id 
+    ,ti.client_transaction_id ,ti.transaction_item_id 
+    ,tidr.child_workflow_execution_id 
+    ,ts.transaction_status_name as trxBatchStatus,tis.transaction_item_status_name as trxStatus,tids.transaction_item_detail_status_name as trxItemDetailStatus
+ 
+    -- t.client_message_id,t.workflow_id,t.transaction_id,ti.transaction_item_id,tid.transaction_item_detail_id 
+    ,s.service_name ,tid.transaction_item_detail_id 
+    ,tidrs.transaction_item_detail_run_status_name 
+    ,tidr.response_manager_code ,tidr.response_manager_exception_type ,tidr.response_manager_message,tidr.response_data 
+    ,et.response_reference ,et.request_payload_data as sagrequestpayload,et.transaction_id as senderID,et.transaction_run_detail_id as transactionIDSAGReqPayload,et.response_payload_data ,et.response_type,et.transaction_status as workertransactionstatus
+ 
+    -- ,ewr.response_code as sagTransresponsecode,ewr.response_description as sagTransresponse_description,ewr.error_code as sagTranserrorcode,ewr.error_description as sagTranserror_description,ewr.callback_data
+ 
+    from transaction t 
+    INNer Join transaction_status ts on t.transaction_status_id = ts.transaction_status_id 
+    INNER Join transaction_item ti on t.transaction_id = ti.transaction_id 
+    INNER Join transaction_item_status tis on ti.transaction_item_status_id = tis.transaction_item_status_id 
+    INNER JOIN transaction_item_detail tid on ti.transaction_item_id = tid.transaction_item_id 
+    INNER JOIN service s on tid.service_id = s.service_id 
+    INNER JOIN transaction_item_detail_status tids on tid.transaction_item_detail_status_id = tids.transaction_item_detail_status_id 
+    INNER JOIN transaction_item_detail_run tidr on tidr.transaction_item_detail_id = tid.transaction_item_detail_id 
+    INNER JOIN transaction_item_detail_run_status tidrs on tidr.transaction_item_detail_run_status_id = tidrs.transaction_item_detail_run_status_id 
+    INNER JOIN WORKFLOW_WORKER_EFT_PAYMENTS_SALARYDAY.salaryday_eft_payment_transaction et on et.transaction_run_detail_id = tidr.transaction_item_detail_run_id 
+    -- INNER JOIN WORKFLOW_WORKER_EFT_PAYMENTS_SALARYDAY.salaryday_eft_payment_worker_responses ewr on ewr.transaction_id = et.transaction_id 
+    where t.client_message_id = "6c5b81e3-f248-4412-91a1-08b20927f3ea"
+  
+Params: [ 'c38632d5-5ae2-4afc-8a53-1e81b36eaed7' ]
+DB Result: [
+  {
+    workflow_execution_id: '4b20a1a2-4422-4d6d-ad12-0490d08d3757',
+    transaction_id: '4995f1d9-5aa5-498e-9e03-3f9742e4dc28',
+    client_transaction_id: 'd59ad2bc-46c2-4839-b005-4bc0f9882a36',
+    transaction_item_id: '64823566-f8d8-4f8a-9087-68ae3f626700',
+    child_workflow_execution_id: '06701995-cb42-3f0f-a464-4e05713f4d76',
+    trxBatchStatus: 'In Progress',
+    trxStatus: 'In progress',
+    trxItemDetailStatus: 'In progress',
+    service_name: 'SALARY_EFT_PAYMENTS',
+    transaction_item_detail_id: 'c2f425c5-3a42-4922-bf07-fcb7bee9de26',
+    transaction_item_detail_run_status_name: 'In progress',
+    response_manager_code: null,
+    response_manager_exception_type: null,
+    response_manager_message: null,
+    response_data: null,
+    response_reference: null,
+    sagrequestpayload: '{\n' +
+      '  "transactionId": "bd7bc75c-86e4-4c1e-9e74-7c00752dcfa3",\n' +
+      '  "beneficiaryAccountNumber": "62006677069",\n' +
+      '  "branchCode": "250655",\n' +
+      '  "accountType": "2",\n' +
+      '  "serviceType": "EFTPAYMNET",\n' +
+      '  "transactionType": "P926",\n' +
+      '  "documentType": "EF",\n' +
+      '  "customerName": "john doe",\n' +
+      '  "napsBeneficiaryCode": "",\n' +
+      '  "globalRecipient": "",\n' +
+      '  "transactionAmount": "300",\n' +
+      '  "actionDate": "2026-01-06",\n' +
+      '  "reference1": "SREF000-23042025",\n' +
+      '  "reference2": "CREF000-23042025",\n' +
+      '  "reference3": "",\n' +
+      '  "bicCode": "",\n' +
+      '  "processingOption1": "I",\n' +
+      '  "processingOption2": "S",\n' +
+      '  "mandateReference": "",\n' +
+      '  "collectionReoccurence": "OOFF",\n' +
+      '  "contractReference": "Thato Auto",\n' +
+      '  "emailAddress": "Hyphen@RMB.com",\n' +
+      '  "cellphoneNumber": "+27721234567"\n' +
+      '}',
+    senderID: '8cbe2c0b-7ac9-415d-b719-3500ff844a9a',
+    transactionIDSAGReqPayload: 'bd7bc75c-86e4-4c1e-9e74-7c00752dcfa3',
+    response_payload_data: null,
+    response_type: null,
+    workertransactionstatus: 1
+  }
+]

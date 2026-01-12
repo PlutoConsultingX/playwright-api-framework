@@ -1,0 +1,51 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+{
+  "workflowID": "c5d1f3b5-508e-4f47-9997-a4912d486466",
+  "clientCorrelationID": "d9498b7d-effc-40cc-a46c-173d09d40d73",
+  "requestDate": "2026-01-07T08:13:00",
+  "totalCount": 1,
+  "transactions": [
+    {
+      "transactionID": "f18dc043-5fff-495e-a4cd-0440c1542aa4",
+      "transactionAmount": 300,
+      "actionDate": "2026-01-08",
+      "subjectReference": "SREF000-23042025",
+      "clientReference": "CREF000-23042025",
+      "mandateReference": "00032024091612QRZ2ZDWW",
+      "contractReference": "Thato Auto",
+      "trackingDays": 10,
+      "collectionReoccurance": "OOFF",
+      "subjectDetails": {
+        "accountNumber": "62006677069",
+        "accountType": "02",
+        "branchCode": "250655",
+        "country": "ZAF",
+        "idType": "EntityRegistrationNumber",
+        "idValue": "1951/000009/07",
+        "initials": "SK",
+        "firstName": "john",
+        "lastName": "doe",
+        "phoneNumber": "+27721234567",
+        "emailAddress": "Hyphen@RMB.com",
+        "profileReference": "Thatos"
+      }
+    }
+  ]
+}
+API Response Status: 400
+API Response Body: {
+  "success": false,
+  "message": [
+    "requestDate must be today's date."
+  ],
+  "clientCorrelationID": "d9498b7d-effc-40cc-a46c-173d09d40d73",
+  "hyphenCorrelationID": "e3dc3f0b-3f2a-4a6c-b175-5494c52bdc2e"
+}
+API Response Body: {
+  success: false,
+  message: [ "requestDate must be today's date." ],
+  clientCorrelationID: 'd9498b7d-effc-40cc-a46c-173d09d40d73',
+  hyphenCorrelationID: 'e3dc3f0b-3f2a-4a6c-b175-5494c52bdc2e'
+}
