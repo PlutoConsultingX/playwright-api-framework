@@ -5,6 +5,7 @@ const ENV = loadEnvironment(process.env.ENV || "qa");
 
 export default defineConfig({
   testDir: './tests', 
+  testMatch: '**/*.spec.js',
   timeout: 30000,
   retries: 0,
 
