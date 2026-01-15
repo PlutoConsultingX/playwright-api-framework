@@ -53,6 +53,15 @@ export class Helpers {
 
     return `${year}-${month}-${day}T${hours}:${minutes}:${seconds}`;
   }
+  static getExactFormatCurrentDateTime() {
+    const datePart = Helpers.getCurrentDate(); // "2026-01-15"
+    const timePart = new Date().toTimeString().slice(0, 8);
+
+    const output = `${datePart}T${timePart}`;
+    console.log(output);
+
+    return output;
+  }
 
 }
 

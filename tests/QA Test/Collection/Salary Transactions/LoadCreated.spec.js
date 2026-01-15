@@ -6,14 +6,15 @@ import { transactionQueries } from "../../../../db/queries/transactionQueries.js
 
 const dbClient = new DbClient(); // 🔑 shared per worker
 
-test("Validation Test - POST Transaction Workflow", async ({ request, token }) => {
+test("Load Created Test", async ({ request, token }) => {
+  
   const userClient = new UserClient(request, token);
 
   // ---------- Build Payload ----------
-  const payload = TransactionFactory.createTransactionPayload();
+  const payload = TransactionFactory.loadCreatedEFTPayload();
 
   // ---------- Execute API Request ----------
-  const response = await userClient.validation(payload);
+  const response = await userClient.loadCreatedEFT(payload);
   const body = await response.json();
 
   console.log("API Response Body:", body);
@@ -52,4 +53,3 @@ test("Validation Test - POST Transaction Workflow", async ({ request, token }) =
   console.log("Sender Message ID from DB:", senderMessageId);
 
 });
-

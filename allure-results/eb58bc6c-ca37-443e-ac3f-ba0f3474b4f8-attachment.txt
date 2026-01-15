@@ -1,0 +1,66 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+{
+  "workflowID": "c5d1f3b5-508e-4f47-9997-a4912d486466",
+  "clientCorrelationID": "7fdc38a8-2561-44c5-bf23-f4813790b333",
+  "requestDate": "2026-01-14T08:13:00",
+  "totalCount": 1,
+  "transactions": [
+    {
+      "transactionID": "8930e747-e506-45d4-ad5b-f07ad992aeb3",
+      "transactionAmount": 300,
+      "actionDate": "2026-01-14",
+      "subjectReference": "SREF000-23042025",
+      "clientReference": "CREF000-23042025",
+      "mandateReference": "00032024091612QRZ2ZDWW",
+      "contractReference": "Thato Auto",
+      "trackingDays": 10,
+      "collectionReoccurance": "OOFF",
+      "subjectDetails": {
+        "accountNumber": "62006677069",
+        "accountType": "02",
+        "branchCode": "250655",
+        "country": "ZAF",
+        "idType": "EntityRegistrationNumber",
+        "idValue": "1951/000009/07",
+        "initials": "SK",
+        "firstName": "john",
+        "lastName": "doe",
+        "phoneNumber": "+27721234567",
+        "emailAddress": "Hyphen@RMB.com",
+        "profileReference": "Thatos"
+      }
+    }
+  ]
+}
+API Response Status: 200
+API Response Body: {
+  "success": true,
+  "message": [
+    "Total transactions posted: 1",
+    "Total valid transactions saved: 1",
+    "Total invalid transactions: 0"
+  ],
+  "clientCorrelationID": "7fdc38a8-2561-44c5-bf23-f4813790b333",
+  "hyphenCorrelationID": "53870150-7da1-4ee1-b6c3-b23b8982029b"
+}
+API Response Body: {
+  success: true,
+  message: [
+    'Total transactions posted: 1',
+    'Total valid transactions saved: 1',
+    'Total invalid transactions: 0'
+  ],
+  clientCorrelationID: '7fdc38a8-2561-44c5-bf23-f4813790b333',
+  hyphenCorrelationID: '53870150-7da1-4ee1-b6c3-b23b8982029b'
+}
+Params: [ '7fdc38a8-2561-44c5-bf23-f4813790b333' ]
+Waiting for DB record... (1/10)
+Waiting for DB record... (2/10)
+Waiting for DB record... (3/10)
+Waiting for DB record... (4/10)
+Waiting for DB record... (5/10)
+Waiting for DB record... (6/10)
+Transaction ID from DB: 9f935f35-f988-46d2-9805-9e359fc6f075
+Sender Message ID from DB: 593772e9-2393-4773-9915-5f2c00e0e592

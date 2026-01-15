@@ -1,0 +1,65 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+2026-01-15T09:37:17
+{
+  "workflowID": "c5d1f3b5-508e-4f47-9997-a4912d486466",
+  "clientCorrelationID": "d9563829-9807-4440-b73b-8ca593f8e0eb",
+  "request": "2026-01-15T09:37:17",
+  "totalCount": 1,
+  "transactions": [
+    {
+      "transactionID": "058febf6-5e8d-4dbb-981f-095645bb0e4b",
+      "transactionAmount": 300,
+      "actionDate": "2026-01-15",
+      "subjectReference": "SREF000-23042025",
+      "clientReference": "CREF000-23042025",
+      "mandateReference": "00032024091612QRZ2ZDWW",
+      "contractReference": "Thato Auto",
+      "trackingDays": 10,
+      "collectionReoccurance": "OOFF",
+      "subjectDetails": {
+        "accountNumber": "62006677069",
+        "accountType": "02",
+        "branchCode": "250655",
+        "country": "ZAF",
+        "idType": "EntityRegistrationNumber",
+        "idValue": "1951/000009/07",
+        "initials": "SK",
+        "firstName": "john",
+        "lastName": "doe",
+        "phoneNumber": "+27721234567",
+        "emailAddress": "Hyphen@RMB.com",
+        "profileReference": "Thatos"
+      }
+    }
+  ]
+}
+API Response Status: 500
+API Response Body: {
+  "success": false,
+  "message": [
+    "Cannot invoke \"java.time.LocalDateTime.toLocalDate()\" because the return value of \"co.za.hyphen.workflowapps.v2.model.request.UniversalApiV2Request.getRequestDate()\" is null"
+  ],
+  "clientCorrelationID": "d9563829-9807-4440-b73b-8ca593f8e0eb",
+  "hyphenCorrelationID": "fbf8bf0e-28cb-4aa2-9f89-00bfd18edcb1"
+}
+API Response Body: {
+  success: false,
+  message: [
+    'Cannot invoke "java.time.LocalDateTime.toLocalDate()" because the return value of "co.za.hyphen.workflowapps.v2.model.request.UniversalApiV2Request.getRequestDate()" is null'
+  ],
+  clientCorrelationID: 'd9563829-9807-4440-b73b-8ca593f8e0eb',
+  hyphenCorrelationID: 'fbf8bf0e-28cb-4aa2-9f89-00bfd18edcb1'
+}
+Params: [ 'd9563829-9807-4440-b73b-8ca593f8e0eb' ]
+Waiting for DB record... (1/10)
+Waiting for DB record... (2/10)
+Waiting for DB record... (3/10)
+Waiting for DB record... (4/10)
+Waiting for DB record... (5/10)
+Waiting for DB record... (6/10)
+Waiting for DB record... (7/10)
+Waiting for DB record... (8/10)
+Waiting for DB record... (9/10)
+Waiting for DB record... (10/10)

@@ -1,0 +1,61 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+{
+  "workflowID": "c5d1f3b5-508e-4f47-9997-a4912d486466",
+  "clientCorrelationID": "0c244911-bbf4-4655-9f66-fc22d8b5fdb9",
+  "requestDate": "2026-01-14T08:13:00",
+  "totalCount": 1,
+  "transactions": [
+    {
+      "transactionID": "2792eda1-f548-4f71-900e-cf68c01ba0a0",
+      "transactionAmount": 300,
+      "actionDate": "2026-01-14",
+      "subjectReference": "SREF000-23042025",
+      "clientReference": "CREF000-23042025",
+      "mandateReference": "00032024091612QRZ2ZDWW",
+      "contractReference": "Thato Auto",
+      "trackingDays": 10,
+      "collectionReoccurance": "OOFF",
+      "subjectDetails": {
+        "accountNumber": "62006677069",
+        "accountType": "02",
+        "branchCode": "250655",
+        "country": "ZAF",
+        "idType": "EntityRegistrationNumber",
+        "idValue": "1951/000009/07",
+        "initials": "SK",
+        "firstName": "john",
+        "lastName": "doe",
+        "phoneNumber": "+27721234567",
+        "emailAddress": "Hyphen@RMB.com",
+        "profileReference": "Thatos"
+      }
+    }
+  ]
+}
+API Response Status: 200
+API Response Body: {
+  "success": true,
+  "message": [
+    "Total transactions posted: 1",
+    "Total valid transactions saved: 1",
+    "Total invalid transactions: 0"
+  ],
+  "clientCorrelationID": "0c244911-bbf4-4655-9f66-fc22d8b5fdb9",
+  "hyphenCorrelationID": "f673fe63-c99b-45d2-bc24-6d39b8a8efb8"
+}
+API Response Body: {
+  success: true,
+  message: [
+    'Total transactions posted: 1',
+    'Total valid transactions saved: 1',
+    'Total invalid transactions: 0'
+  ],
+  clientCorrelationID: '0c244911-bbf4-4655-9f66-fc22d8b5fdb9',
+  hyphenCorrelationID: 'f673fe63-c99b-45d2-bc24-6d39b8a8efb8'
+}
+Params: [ '0c244911-bbf4-4655-9f66-fc22d8b5fdb9' ]
+Waiting for DB record... (1/10)
+Transaction ID from DB: 08524e98-d9ff-4752-ac21-5986eec81fb7
+Sender Message ID from DB: 62970f02-5aa0-44e2-9d55-e633b76dff74

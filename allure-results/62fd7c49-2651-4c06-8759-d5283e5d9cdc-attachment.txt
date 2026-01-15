@@ -1,0 +1,62 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+{
+  "workflowID": "c5d1f3b5-508e-4f47-9997-a4912d486466",
+  "clientCorrelationID": "914e4944-9ded-40a8-9f2f-48978356246e",
+  "requestDate": "2026-01-14T08:13:00",
+  "totalCount": 1,
+  "transactions": [
+    {
+      "transactionID": "c677255b-3a9f-4212-8397-ca9f0e74fb6d",
+      "transactionAmount": 300,
+      "actionDate": "2026-01-15",
+      "subjectReference": "SREF000-23042025",
+      "clientReference": "CREF000-23042025",
+      "mandateReference": "00032024091612QRZ2ZDWW",
+      "contractReference": "Thato Auto",
+      "trackingDays": 10,
+      "collectionReoccurance": "OOFF",
+      "subjectDetails": {
+        "accountNumber": "62006677069",
+        "accountType": "02",
+        "branchCode": "250655",
+        "country": "ZAF",
+        "idType": "EntityRegistrationNumber",
+        "idValue": "1951/000009/07",
+        "initials": "SK",
+        "firstName": "john",
+        "lastName": "doe",
+        "phoneNumber": "+27721234567",
+        "emailAddress": "Hyphen@RMB.com",
+        "profileReference": "Thatos"
+      }
+    }
+  ]
+}
+API Response Status: 400
+API Response Body: {
+  "success": false,
+  "message": [
+    "requestDate must be today's date."
+  ],
+  "clientCorrelationID": "914e4944-9ded-40a8-9f2f-48978356246e",
+  "hyphenCorrelationID": "9523dfad-2ba5-40b6-af0e-61e178ca1f16"
+}
+API Response Body: {
+  success: false,
+  message: [ "requestDate must be today's date." ],
+  clientCorrelationID: '914e4944-9ded-40a8-9f2f-48978356246e',
+  hyphenCorrelationID: '9523dfad-2ba5-40b6-af0e-61e178ca1f16'
+}
+Params: [ '914e4944-9ded-40a8-9f2f-48978356246e' ]
+Waiting for DB record... (1/10)
+Waiting for DB record... (2/10)
+Waiting for DB record... (3/10)
+Waiting for DB record... (4/10)
+Waiting for DB record... (5/10)
+Waiting for DB record... (6/10)
+Waiting for DB record... (7/10)
+Waiting for DB record... (8/10)
+Waiting for DB record... (9/10)
+Waiting for DB record... (10/10)

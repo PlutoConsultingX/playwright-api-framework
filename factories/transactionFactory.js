@@ -5,7 +5,7 @@ export class TransactionFactory {
     return {
       workflowID: "99590d04-add1-4f6f-b025-61ecb93b82a6",
       clientCorrelationID: Helpers.generateGUID(),
-      requestDate: "2026-01-05T08:13",
+      requestDate:Helpers.getExactFormatCurrentDateTime(),
       totalCount: 1,
       transactions: [
         {
@@ -35,5 +35,44 @@ export class TransactionFactory {
         }
       ]
     };
+  }
+  static loadCreatedEFTPayload() {
+    return {
+      Response: {
+        ISInfo: {
+          serviceId: "FACS-SALARYDAY-TRANSACTION-01",
+          responseId: "{{$guid}}",
+          isCorrelationId: "4332489f-7273-4f93-b989-53436a1277ab",
+          senderMessageId: "8381a889-c20a-4d6b-8c33-ca77d605ed52"
+        },
+        responseDetail: {
+          transactions: [
+            {
+              transactionId: "fedc6743-8971-4e89-b868-e5f3328e0562",
+              actionDate: Helpers.getCurrentDate(),
+              effectiveDate: Helpers.getCurrentDate(),
+              serviceType: "EFTPAYMENT",
+              transactionError: {
+                errorCode: "",
+                errorDescription: ""
+              },
+              transactionAmount: "100",
+              transactionResponse: {
+                responseType: "CREATED",
+                responseDescription: "Transaction created"
+              }
+            }
+          ]
+        },
+        responseHeader: {
+          totalCount: 1,
+          responseCode: "PROCESSED",
+          responseType: "LOAD",
+          clientProfile: "FACHYTQ1",
+          responseTimestamp: Helpers.getCurrentDate(),
+          clientIntegrationId: "HYT0002"
+        }
+      }
+    }
   }
 }

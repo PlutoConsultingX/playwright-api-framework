@@ -47,7 +47,7 @@
     ,tidr.response_manager_code ,tidr.response_manager_exception_type ,tidr.response_manager_message,tidr.response_data 
     ,et.response_reference ,et.request_payload_data as sagrequestpayload,et.transaction_id as senderID,et.transaction_run_detail_id as transactionIDSAGReqPayload,et.response_payload_data ,et.response_type,et.transaction_status as workertransactionstatus
  
-    -- ,ewr.response_code as sagTransresponsecode,ewr.response_description as sagTransresponse_description,ewr.error_code as sagTranserrorcode,ewr.error_description as sagTranserror_description,ewr.callback_data
+    ,ewr.response_code as sagTransresponsecode,ewr.response_description as sagTransresponse_description,ewr.error_code as sagTranserrorcode,ewr.error_description as sagTranserror_description,ewr.callback_data
  
     from transaction t 
     INNer Join transaction_status ts on t.transaction_status_id = ts.transaction_status_id 
@@ -59,7 +59,7 @@
     INNER JOIN transaction_item_detail_run tidr on tidr.transaction_item_detail_id = tid.transaction_item_detail_id 
     INNER JOIN transaction_item_detail_run_status tidrs on tidr.transaction_item_detail_run_status_id = tidrs.transaction_item_detail_run_status_id 
     INNER JOIN WORKFLOW_WORKER_EFT_PAYMENTS_SALARYDAY.salaryday_eft_payment_transaction et on et.transaction_run_detail_id = tidr.transaction_item_detail_run_id 
-    -- INNER JOIN WORKFLOW_WORKER_EFT_PAYMENTS_SALARYDAY.salaryday_eft_payment_worker_responses ewr on ewr.transaction_id = et.transaction_id 
+    INNER JOIN WORKFLOW_WORKER_EFT_PAYMENTS_SALARYDAY.salaryday_eft_payment_worker_responses ewr on ewr.transaction_id = et.transaction_id 
     -- where t.client_message_id = "6c5b81e3-f248-4412-91a1-08b20927f3ea"
     WHERE t.client_message_id = ?
   `
