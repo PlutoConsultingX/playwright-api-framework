@@ -1,0 +1,62 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Load Created Payload: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "c06820d2-f206-41a2-aa13-45620c51e68e"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "actionDate": "2026-01-22",
+          "effectiveDate": "2026-01-22",
+          "serviceType": "EFTPAYMENT",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-22",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Load Created Status: 200
+Load Created Response: {"versionNumber":1,"traceId":"ac881b58-3775-4508-ba06-d345acd80aa2","correlationId":"12fe41fe-21e9-49c2-8db9-633c5bd66621","result":{"success":true,"origin":"WORKER_SERVICE"},"profile":{"zone":"SAT","lang":"ENG","country":"USA","offset":"+02:00","requestDate":"2026-01-22 10:51:07.785","responseDate":"2026-01-22 10:51:07.797","hostDateUtc":"2026-01-22 08:51:07.785","hostDate":"2026-01-22 10:51:07.785","durationInMillis":12}}
+Load Created Response: {
+  versionNumber: 1,
+  traceId: 'ac881b58-3775-4508-ba06-d345acd80aa2',
+  correlationId: '12fe41fe-21e9-49c2-8db9-633c5bd66621',
+  result: { success: true, origin: 'WORKER_SERVICE' },
+  profile: {
+    zone: 'SAT',
+    lang: 'ENG',
+    country: 'USA',
+    offset: '+02:00',
+    requestDate: '2026-01-22 10:51:07.785',
+    responseDate: '2026-01-22 10:51:07.797',
+    hostDateUtc: '2026-01-22 08:51:07.785',
+    hostDate: '2026-01-22 10:51:07.785',
+    durationInMillis: 12
+  }
+}
+Determining the type of dbResult: object
+Keys: []
+DB Result after load created (attempt 1):
+[]
+We are moving now, I am reaching my maximum horse power
+Waiting for DB record... (1/10)

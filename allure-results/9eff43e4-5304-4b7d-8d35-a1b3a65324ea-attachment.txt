@@ -1,0 +1,106 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Load Created Payload: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "baa2014b-1adf-422b-b868-451b7129afa0"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "actionDate": "2026-01-22",
+          "effectiveDate": "2026-01-22",
+          "serviceType": "EFTPAYMENT",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-22",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Load Created Status: 200
+Load Created Response: {"versionNumber":1,"traceId":"3b7507f3-2df1-4251-b967-0b3c91bad5d2","correlationId":"cb957129-e4b3-4446-b747-161d5e3e53c1","result":{"success":true,"origin":"WORKER_SERVICE"},"profile":{"zone":"SAT","lang":"ENG","country":"USA","offset":"+02:00","requestDate":"2026-01-22 10:05:26.716","responseDate":"2026-01-22 10:05:26.728","hostDateUtc":"2026-01-22 08:05:26.716","hostDate":"2026-01-22 10:05:26.716","durationInMillis":11}}
+Load Created Response: {
+  versionNumber: 1,
+  traceId: '3b7507f3-2df1-4251-b967-0b3c91bad5d2',
+  correlationId: 'cb957129-e4b3-4446-b747-161d5e3e53c1',
+  result: { success: true, origin: 'WORKER_SERVICE' },
+  profile: {
+    zone: 'SAT',
+    lang: 'ENG',
+    country: 'USA',
+    offset: '+02:00',
+    requestDate: '2026-01-22 10:05:26.716',
+    responseDate: '2026-01-22 10:05:26.728',
+    hostDateUtc: '2026-01-22 08:05:26.716',
+    hostDate: '2026-01-22 10:05:26.716',
+    durationInMillis: 11
+  }
+}
+Determining the type of dbResult: object
+Keys: []
+DB Result after load created (attempt 1):
+[]
+Waiting for DB record... (1/10)
+Determining the type of dbResult: object
+Keys: []
+DB Result after load created (attempt 2):
+[]
+Waiting for DB record... (2/10)
+Determining the type of dbResult: object
+Keys: []
+DB Result after load created (attempt 3):
+[]
+Waiting for DB record... (3/10)
+Determining the type of dbResult: object
+Keys: []
+DB Result after load created (attempt 4):
+[]
+Waiting for DB record... (4/10)
+Determining the type of dbResult: object
+Keys: []
+DB Result after load created (attempt 5):
+[]
+Waiting for DB record... (5/10)
+Determining the type of dbResult: object
+Keys: []
+DB Result after load created (attempt 6):
+[]
+Waiting for DB record... (6/10)
+Determining the type of dbResult: object
+Keys: []
+DB Result after load created (attempt 7):
+[]
+Waiting for DB record... (7/10)
+Determining the type of dbResult: object
+Keys: []
+DB Result after load created (attempt 8):
+[]
+Waiting for DB record... (8/10)
+Determining the type of dbResult: object
+Keys: []
+DB Result after load created (attempt 9):
+[]
+Waiting for DB record... (9/10)
+Determining the type of dbResult: object
+Keys: []
+DB Result after load created (attempt 10):
+[]
+Waiting for DB record... (10/10)

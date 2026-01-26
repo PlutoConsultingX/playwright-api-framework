@@ -1,0 +1,118 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Load Created Payload: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "40911c7f-e37d-461d-8513-bcf33dec6250"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "actionDate": "2026-01-22",
+          "effectiveDate": "2026-01-22",
+          "serviceType": "EFTPAYMENT",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-22",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Load Created Status: 200
+Load Created Response: {"versionNumber":1,"traceId":"b4a60793-7ae2-4bc4-9958-a9d7d6d33aeb","correlationId":"ec033196-8593-43c5-a252-c4e12ee81060","result":{"success":true,"origin":"WORKER_SERVICE"},"profile":{"zone":"SAT","lang":"ENG","country":"USA","offset":"+02:00","requestDate":"2026-01-22 14:12:41.174","responseDate":"2026-01-22 14:12:41.186","hostDateUtc":"2026-01-22 12:12:41.174","hostDate":"2026-01-22 14:12:41.174","durationInMillis":11}}
+Load Created API Response: {
+  "versionNumber": 1,
+  "traceId": "b4a60793-7ae2-4bc4-9958-a9d7d6d33aeb",
+  "correlationId": "ec033196-8593-43c5-a252-c4e12ee81060",
+  "result": {
+    "success": true,
+    "origin": "WORKER_SERVICE"
+  },
+  "profile": {
+    "zone": "SAT",
+    "lang": "ENG",
+    "country": "USA",
+    "offset": "+02:00",
+    "requestDate": "2026-01-22 14:12:41.174",
+    "responseDate": "2026-01-22 14:12:41.186",
+    "hostDateUtc": "2026-01-22 12:12:41.174",
+    "hostDate": "2026-01-22 14:12:41.174",
+    "durationInMillis": 11
+  }
+}
+Polling DB (attempt 1) for clientCorrelationID: 849e3778-3c3a-4484-b179-88826e7c3bf2
+DB rows returned: 0
+Waiting for DB record... (1/10)
+Polling DB (attempt 2) for clientCorrelationID: 849e3778-3c3a-4484-b179-88826e7c3bf2
+DB rows returned: 0
+Waiting for DB record... (2/10)
+Polling DB (attempt 3) for clientCorrelationID: 849e3778-3c3a-4484-b179-88826e7c3bf2
+DB rows returned: 0
+Waiting for DB record... (3/10)
+Polling DB (attempt 4) for clientCorrelationID: 849e3778-3c3a-4484-b179-88826e7c3bf2
+DB rows returned: 0
+Waiting for DB record... (4/10)
+Polling DB (attempt 5) for clientCorrelationID: 849e3778-3c3a-4484-b179-88826e7c3bf2
+DB rows returned: 0
+Waiting for DB record... (5/10)
+Polling DB (attempt 6) for clientCorrelationID: 849e3778-3c3a-4484-b179-88826e7c3bf2
+DB rows returned: 1
+✅ Parsed callback_data JSON: {
+  "isInfo": {
+    "senderMessageId": "319cf2cb-2c56-4f2c-ae26-7d596385ffbe",
+    "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+    "responseId": "f466a230-107b-4eb1-a094-5c4f67386cdd",
+    "isCorrelationId": "a53575c7-2b17-48ba-adf3-de550e5e9fcb"
+  },
+  "responseHeader": {
+    "totalCount": 1,
+    "responseTimestamp": "2026-01-22 14:12:49.278",
+    "clientIntegrationId": "HYT0002",
+    "clientProfile": "FACHYTQ1",
+    "responseType": "LOAD",
+    "responseCode": "PROCESSED",
+    "nativeMsgId": "bb4354f3-2660-49a5-bef8-b57b65d65b7b"
+  },
+  "responseDetail": {
+    "transactions": [
+      {
+        "transactionId": "9431d165-7096-4ff1-a92e-23aae75371aa",
+        "serviceType": "EFTPAYMENT",
+        "transactionAmount": "300",
+        "effectiveDate": "2026-01-22",
+        "actionDate": "2026-01-22",
+        "nativeTransactionId": "P926 -EF-000000156-00000100",
+        "transactionResponse": {
+          "responseType": "CREATED",
+          "responseDescription": "Transaction created"
+        },
+        "transactionError": {
+          "errorCode": "",
+          "errorDescription": ""
+        }
+      }
+    ]
+  }
+}
+Extracted Fields from callback_data: Load Created
+senderMessageId: 319cf2cb-2c56-4f2c-ae26-7d596385ffbe
+isCorrelationId: a53575c7-2b17-48ba-adf3-de550e5e9fcb
+transactionId: 9431d165-7096-4ff1-a92e-23aae75371aa
+nativeTransactionId: P926 -EF-000000156-00000100

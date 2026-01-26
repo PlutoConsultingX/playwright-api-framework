@@ -1,0 +1,124 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Load Created Payload: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "085e2edc-4f48-4860-9688-3738d1007fef"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "actionDate": "2026-01-22",
+          "effectiveDate": "2026-01-22",
+          "serviceType": "EFTPAYMENT",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-22",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Load Created Status: 200
+Load Created Response: {"versionNumber":1,"traceId":"5592f72a-68b2-41a7-bdfd-d40579610f83","correlationId":"7e41e604-6798-4cbf-b3f5-f3da5b2e751e","result":{"success":true,"origin":"WORKER_SERVICE"},"profile":{"zone":"SAT","lang":"ENG","country":"USA","offset":"+02:00","requestDate":"2026-01-22 13:21:39.654","responseDate":"2026-01-22 13:21:39.668","hostDateUtc":"2026-01-22 11:21:39.654","hostDate":"2026-01-22 13:21:39.654","durationInMillis":13}}
+Load Created API Response: {
+  "versionNumber": 1,
+  "traceId": "5592f72a-68b2-41a7-bdfd-d40579610f83",
+  "correlationId": "7e41e604-6798-4cbf-b3f5-f3da5b2e751e",
+  "result": {
+    "success": true,
+    "origin": "WORKER_SERVICE"
+  },
+  "profile": {
+    "zone": "SAT",
+    "lang": "ENG",
+    "country": "USA",
+    "offset": "+02:00",
+    "requestDate": "2026-01-22 13:21:39.654",
+    "responseDate": "2026-01-22 13:21:39.668",
+    "hostDateUtc": "2026-01-22 11:21:39.654",
+    "hostDate": "2026-01-22 13:21:39.654",
+    "durationInMillis": 13
+  }
+}
+Polling DB (attempt 1) for clientCorrelationID: 771b5af9-371a-469c-a49e-feb1e67aa87c
+DB rows returned: 0
+Waiting for DB record... (1/10)
+Polling DB (attempt 2) for clientCorrelationID: 771b5af9-371a-469c-a49e-feb1e67aa87c
+DB rows returned: 0
+Waiting for DB record... (2/10)
+Polling DB (attempt 3) for clientCorrelationID: 771b5af9-371a-469c-a49e-feb1e67aa87c
+DB rows returned: 0
+Waiting for DB record... (3/10)
+Polling DB (attempt 4) for clientCorrelationID: 771b5af9-371a-469c-a49e-feb1e67aa87c
+DB rows returned: 0
+Waiting for DB record... (4/10)
+Polling DB (attempt 5) for clientCorrelationID: 771b5af9-371a-469c-a49e-feb1e67aa87c
+DB rows returned: 0
+Waiting for DB record... (5/10)
+Polling DB (attempt 6) for clientCorrelationID: 771b5af9-371a-469c-a49e-feb1e67aa87c
+DB rows returned: 0
+Waiting for DB record... (6/10)
+Polling DB (attempt 7) for clientCorrelationID: 771b5af9-371a-469c-a49e-feb1e67aa87c
+DB rows returned: 0
+Waiting for DB record... (7/10)
+Polling DB (attempt 8) for clientCorrelationID: 771b5af9-371a-469c-a49e-feb1e67aa87c
+DB rows returned: 1
+✅ Parsed callback_data JSON: {
+  "isInfo": {
+    "senderMessageId": "d9f2059d-6d15-49bc-bed6-2a7343b49866",
+    "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+    "responseId": "ef3af714-4d3a-4ee0-af9f-6bbb0c0d4e28",
+    "isCorrelationId": "cd5d3541-b796-4461-87a5-e562b071f371"
+  },
+  "responseHeader": {
+    "totalCount": 1,
+    "responseTimestamp": "2026-01-22 13:21:49.827",
+    "clientIntegrationId": "HYT0002",
+    "clientProfile": "FACHYTQ1",
+    "responseType": "LOAD",
+    "responseCode": "PROCESSED",
+    "nativeMsgId": "0011e486-710c-456e-9643-9d3c472915ee"
+  },
+  "responseDetail": {
+    "transactions": [
+      {
+        "transactionId": "bdf4b2ab-51ff-4f86-b0ee-c71d425a9bc5",
+        "serviceType": "EFTPAYMENT",
+        "transactionAmount": "300",
+        "effectiveDate": "2026-01-22",
+        "actionDate": "2026-01-22",
+        "nativeTransactionId": "P926 -EF-000000145-00000100",
+        "transactionResponse": {
+          "responseType": "CREATED",
+          "responseDescription": "Transaction created"
+        },
+        "transactionError": {
+          "errorCode": "",
+          "errorDescription": ""
+        }
+      }
+    ]
+  }
+}
+Extracted Fields from callback_data:
+senderMessageId: d9f2059d-6d15-49bc-bed6-2a7343b49866
+isCorrelationId: cd5d3541-b796-4461-87a5-e562b071f371
+transactionId: bdf4b2ab-51ff-4f86-b0ee-c71d425a9bc5
+nativeTransactionId: P926 -EF-000000145-00000100

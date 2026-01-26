@@ -47,24 +47,6 @@ export class UserClient {
     };
 
 
-
-    /* Load from file example
-     async validation() {
-     const payloadPath = path.resolve('payloads/QA/EFT/validation.json');
-       // Read the JSON payload file
-     const fileData = await fs.readFile(payloadPath, 'utf-8');
-     const payload = JSON.parse(fileData);
- 
-     // Dynamically set IDs and dates
-     payload.clientCorrelationID = Helpers.generateGUID();
-     payload.transactions.forEach(tx => {
-       tx.transactionID = Helpers.generateGUID();
-       tx.actionDate = Helpers.getCurrentDate();
-     });
- 
-     console.log("Validation Payload:", JSON.stringify(payload, null, 2));
-   */
-
     console.log(JSON.stringify(payload, null, 2));
     // Send POST request
     const response = await this.request.post(ENV.BASE_URL, {
@@ -86,8 +68,11 @@ export class UserClient {
 
 
   //----------Processed EFT Payment Request ----------
-  async processedToBank() {
-    // Build payload dynamically
+  async processedToBankSalary({senderMessageIdFromCallback, transactionIdFromCallback, nativeTransactionIdFromCallback }) {
+    if (!ENV.LOAD_CREATED_URL) {
+      throw new Error("ENV.LOAD_CREATED_URL is not defined");
+    }
+    
 
     const payloadProcessedToBank = {
       Response: {
@@ -95,15 +80,15 @@ export class UserClient {
           serviceId: "FACS-EFT-TRANSACTION-01",
           responseId: "{{$guid}}",
           isCorrelationId: "c5919c23-a691-4cc8-a3fe-b918b9c04f94",
-          senderMessageId: "ba4f6f3a-6486-40da-9f95-ad85a011d7c4"
+          senderMessageId: senderMessageIdFromCallback
         },
         responseDetail: {
           transactions: [
             {
-              transactionId: "e1f77f6f-e987-4e0f-ac6f-3db59c4eb7ee",
+              transactionId: transactionIdFromCallback,
               actionDate: Helpers.getCurrentDate(),
               actionDate: Helpers.getCurrentDate(),
-              nativeTransactionId: "E238 -DO-000000007-00000100",
+              nativeTransactionId: nativeTransactionIdFromCallback ,
               serviceType: "EFTCOLLECTION",
               transactionError: {
                 errorCode: "",
@@ -127,24 +112,47 @@ export class UserClient {
           clientIntegrationId: "HYT0003"
         }
       }
-    }
+    };
+    console.log("Processed To Bank Payload:", JSON.stringify(payloadProcessedToBank, null, 2));
+  
+    const response = await this.request.post(ENV.LOAD_CREATED_URL, {
+      headers: {
+        Authorization: `Bearer ${this.token}`,
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        "sag-correlation-id": Helpers.generateGUID()
+      },
+      data: payloadProcessedToBank
+    });
+  
+    console.log("Processed to bank Status:", response.status());
+    console.log("Processed to bank Response:", await response.text());
+  
+    return response;
 
   }
-  async loadCreatedEFT() {
-    // Build payload dynamically
+
+  async loadCreatedSalary({ transactionId, senderMessageId }) {
+    
+    if (!ENV.LOAD_CREATED_URL) {
+      throw new Error("ENV.LOAD_CREATED_URL is not defined");
+      //console.log("LOAD_CREATED_URL:", ENV.LOAD_CREATED_URL);
+    }
+    
+
     const payloadLoadCreated = {
       Response: {
         ISInfo: {
           serviceId: "FACS-SALARYDAY-TRANSACTION-01",
-          responseId: "{{$guid}}",
-          //replace isCorrelation and senderMessageID and TransactioID with parameters---
-          isCorrelationId: "4332489f-7273-4f93-b989-53436a1277ab",
-          senderMessageId: "8381a889-c20a-4d6b-8c33-ca77d605ed52"
+          responseId: Helpers.generateGUID(),
+          //isCorrelationId: correlationId,
+          senderMessageId: senderMessageId,
+          transactionId : transactionId
         },
         responseDetail: {
           transactions: [
             {
-              transactionId: "fedc6743-8971-4e89-b868-e5f3328e0562",
+              transactionId: transactionId,
               actionDate: Helpers.getCurrentDate(),
               effectiveDate: Helpers.getCurrentDate(),
               serviceType: "EFTPAYMENT",
@@ -169,7 +177,85 @@ export class UserClient {
           clientIntegrationId: "HYT0002"
         }
       }
-    }
+    };
+  
+    console.log("Load Created Payload:", JSON.stringify(payloadLoadCreated, null, 2));
+  
+    const response = await this.request.post(ENV.LOAD_CREATED_URL, {
+      headers: {
+        Authorization: `Bearer ${this.token}`,
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        "sag-correlation-id": Helpers.generateGUID()
+      },
+      data: payloadLoadCreated
+    });
+  
+    console.log("Load Created Status:", response.status());
+    console.log("Load Created Response:", await response.text());
+  
+    return response;
   }
+
+  async cashedSalary({ senderMessageIdFromCallback, transactionIdFromCallback, nativeTransactionIdFromCallback }) {  
+    if (!ENV.CASHED_URL) {
+      throw new Error("ENV.CASHED_URL is not defined");
+    }    
+
+    const payloadCashed = {
+      Response: {
+        ISInfo: {
+          serviceId: "FACS-EFT-TRANSACTION-01",
+          responseId: Helpers.generateGUID(),
+          //isCorrelationId: correlationId,
+          senderMessageId: senderMessageIdFromCallback
+        },
+        responseDetail: {
+          transactions: [
+            {
+              transactionId: transactionIdFromCallback,
+              actionDate: Helpers.getCurrentDate(),
+              nativeTransactionId: nativeTransactionIdFromCallback,
+              serviceType: "EFTCOLLECTION",
+              transactionError: {
+                errorCode: "",
+                errorDescription: ""
+              },
+              transactionAmount: "100",
+              transactionResponse: {
+                responseType: "CASHED",
+                responseDescription: "Cashed by beneficiary"
+              }
+            }
+          ]
+        },
+        responseHeader: {
+          totalCount: 1,
+          responseCode: "CASHED",
+          responseType: "RESPONSE",
+          clientProfile: "FACHYTQ1",
+          responseTimestamp: Helpers.getCurrentDate(),
+          clientIntegrationId: "HYT0004"
+        }
+      }
+    };
+    console.log("Cashed Payload:", JSON.stringify(payloadCashed, null, 2));
+  
+    const response = await this.request.post(ENV.CASHED_URL, {
+      headers: {
+        Authorization: `Bearer ${this.token}`,
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        "sag-correlation-id": Helpers.generateGUID()
+      },
+      data: payloadCashed
+    });
+  
+    console.log("Cashed Status:", response.status());
+    console.log("Cashed Response:", await response.text());
+  
+    return response;
+
+  }  
 }
 

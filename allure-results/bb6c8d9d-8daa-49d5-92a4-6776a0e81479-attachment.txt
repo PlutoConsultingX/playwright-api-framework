@@ -1,0 +1,22 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Load Created Request: {
+  Response: {
+    ISInfo: {
+      serviceId: 'FACS-SALARYDAY-TRANSACTION-01',
+      responseId: '{{$guid}}',
+      isCorrelationId: '4332489f-7273-4f93-b989-53436a1277ab',
+      senderMessageId: '8381a889-c20a-4d6b-8c33-ca77d605ed52'
+    },
+    responseDetail: { transactions: [Array] },
+    responseHeader: {
+      totalCount: 1,
+      responseCode: 'PROCESSED',
+      responseType: 'LOAD',
+      clientProfile: 'FACHYTQ1',
+      responseTimestamp: '2026-01-21',
+      clientIntegrationId: 'HYT0002'
+    }
+  }
+}

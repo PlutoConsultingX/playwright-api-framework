@@ -1,0 +1,30 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Polling DB for processed to bank (attempt 1) for clientCorrelationID: bed7f4c4-ca99-4cab-a46c-2030ab54287e
+DB rows returned: 0
+Waiting for DB record... (1/10)
+Polling DB for processed to bank (attempt 2) for clientCorrelationID: bed7f4c4-ca99-4cab-a46c-2030ab54287e
+DB rows returned: 0
+Waiting for DB record... (2/10)
+Polling DB for processed to bank (attempt 3) for clientCorrelationID: bed7f4c4-ca99-4cab-a46c-2030ab54287e
+DB rows returned: 0
+Waiting for DB record... (3/10)
+Polling DB for processed to bank (attempt 4) for clientCorrelationID: bed7f4c4-ca99-4cab-a46c-2030ab54287e
+DB rows returned: 0
+Waiting for DB record... (4/10)
+Polling DB for processed to bank (attempt 5) for clientCorrelationID: bed7f4c4-ca99-4cab-a46c-2030ab54287e
+DB rows returned: 0
+Waiting for DB record... (5/10)
+Polling DB for processed to bank (attempt 6) for clientCorrelationID: bed7f4c4-ca99-4cab-a46c-2030ab54287e
+DB rows returned: 0
+Waiting for DB record... (6/10)
+Polling DB for processed to bank (attempt 7) for clientCorrelationID: bed7f4c4-ca99-4cab-a46c-2030ab54287e
+DB rows returned: 0
+Waiting for DB record... (7/10)
+Polling DB for processed to bank (attempt 8) for clientCorrelationID: bed7f4c4-ca99-4cab-a46c-2030ab54287e
+DB rows returned: 0
+Waiting for DB record... (8/10)
+Polling DB for processed to bank (attempt 9) for clientCorrelationID: bed7f4c4-ca99-4cab-a46c-2030ab54287e
+DB rows returned: 0
+Waiting for DB record... (9/10)

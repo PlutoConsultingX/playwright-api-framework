@@ -1,0 +1,65 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+2026-01-20T19:56:08
+2026-01-20T19:56:08
+{
+  "workflowID": "c5d1f3b5-508e-4f47-9997-a4912d486466",
+  "clientCorrelationID": "195093f4-4bdd-4bd4-af65-baccfb2a2464",
+  "requestDate": "2026-01-20T19:56:08",
+  "totalCount": 1,
+  "transactions": [
+    {
+      "transactionID": "e20ae8c1-8afb-4347-bee0-ae395a3facd5",
+      "transactionAmount": 300,
+      "actionDate": "2026-01-20",
+      "subjectReference": "SREF000-23042025",
+      "clientReference": "CREF000-23042025",
+      "mandateReference": "00032024091612QRZ2ZDWW",
+      "contractReference": "Thato Auto",
+      "trackingDays": 10,
+      "collectionReoccurance": "OOFF",
+      "subjectDetails": {
+        "accountNumber": "62006677069",
+        "accountType": "02",
+        "branchCode": "250655",
+        "country": "ZAF",
+        "idType": "EntityRegistrationNumber",
+        "idValue": "1951/000009/07",
+        "initials": "SK",
+        "firstName": "john",
+        "lastName": "doe",
+        "phoneNumber": "+27721234567",
+        "emailAddress": "Hyphen@RMB.com",
+        "profileReference": "Thatos"
+      }
+    }
+  ]
+}
+API Response Status: 200
+API Response Body: {
+  "success": true,
+  "message": [
+    "Total transactions posted: 1",
+    "Total valid transactions saved: 1",
+    "Total invalid transactions: 0"
+  ],
+  "clientCorrelationID": "195093f4-4bdd-4bd4-af65-baccfb2a2464",
+  "hyphenCorrelationID": "c09e5989-4118-4ee4-94cf-a407c9e11ed6"
+}
+Validation Response: {
+  success: true,
+  message: [
+    'Total transactions posted: 1',
+    'Total valid transactions saved: 1',
+    'Total invalid transactions: 0'
+  ],
+  clientCorrelationID: '195093f4-4bdd-4bd4-af65-baccfb2a2464',
+  hyphenCorrelationID: 'c09e5989-4118-4ee4-94cf-a407c9e11ed6'
+}
+Waiting for DB record... (1/10)
+Waiting for DB record... (2/10)
+Waiting for DB record... (3/10)
+Waiting for DB record... (4/10)
+Transaction ID: a6443f48-90ea-4131-9c6a-b058122cc62d
+Sender Message ID: 8c55dcf3-8429-4d0e-9bb6-e88e77a9c94c

@@ -1,0 +1,66 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Load Created Payload: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "dc3d6bd7-e0e7-4d57-8370-e61a9cabe1a5"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "actionDate": "2026-01-22",
+          "effectiveDate": "2026-01-22",
+          "serviceType": "EFTPAYMENT",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-22",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Load Created Status: 200
+Load Created Response: {"versionNumber":1,"traceId":"5346f54e-7666-44f4-aafd-32d88e8b0403","correlationId":"8155bc07-d61d-4022-a64c-4a76f9b1f422","result":{"success":true,"origin":"WORKER_SERVICE"},"profile":{"zone":"SAT","lang":"ENG","country":"USA","offset":"+02:00","requestDate":"2026-01-22 09:48:55.245","responseDate":"2026-01-22 09:48:55.257","hostDateUtc":"2026-01-22 07:48:55.245","hostDate":"2026-01-22 09:48:55.245","durationInMillis":11}}
+Load Created Response: {
+  versionNumber: 1,
+  traceId: '5346f54e-7666-44f4-aafd-32d88e8b0403',
+  correlationId: '8155bc07-d61d-4022-a64c-4a76f9b1f422',
+  result: { success: true, origin: 'WORKER_SERVICE' },
+  profile: {
+    zone: 'SAT',
+    lang: 'ENG',
+    country: 'USA',
+    offset: '+02:00',
+    requestDate: '2026-01-22 09:48:55.245',
+    responseDate: '2026-01-22 09:48:55.257',
+    hostDateUtc: '2026-01-22 07:48:55.245',
+    hostDate: '2026-01-22 09:48:55.245',
+    durationInMillis: 11
+  }
+}
+Waiting for DB record... (1/10)
+Waiting for DB record... (2/10)
+Waiting for DB record... (3/10)
+Waiting for DB record... (4/10)
+Waiting for DB record... (5/10)
+Waiting for DB record... (6/10)
+Waiting for DB record... (7/10)
+Waiting for DB record... (8/10)
+Waiting for DB record... (9/10)
+Waiting for DB record... (10/10)

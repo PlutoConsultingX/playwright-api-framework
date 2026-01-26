@@ -1,0 +1,103 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Processed To Bank Payload: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-EFT-TRANSACTION-01",
+      "responseId": "{{$guid}}",
+      "isCorrelationId": "c5919c23-a691-4cc8-a3fe-b918b9c04f94"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "actionDate": "2026-01-22",
+          "serviceType": "EFTCOLLECTION",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "PROCESSED",
+            "responseDescription": "Processed to bank"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "RESPONSE",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-22",
+      "nativeMsgId": "11049bd1-5fea-4bb2-b97e-0afa064ac82a",
+      "clientIntegrationId": "HYT0003"
+    }
+  }
+}
+Processed to bank Status: 200
+Processed to bank Response: {"versionNumber":1,"traceId":"f887e3c7-b93f-47b8-8019-e1b888d96d78","correlationId":"45a1ac59-1e53-4680-bf7d-db67a3f1d21c","result":{"success":true,"origin":"WORKER_SERVICE"},"profile":{"zone":"SAT","lang":"ENG","country":"USA","offset":"+02:00","requestDate":"2026-01-22 14:12:13.051","responseDate":"2026-01-22 14:12:13.060","hostDateUtc":"2026-01-22 12:12:13.051","hostDate":"2026-01-22 14:12:13.051","durationInMillis":9}}
+Processed To Bank API Response: {
+  "versionNumber": 1,
+  "traceId": "f887e3c7-b93f-47b8-8019-e1b888d96d78",
+  "correlationId": "45a1ac59-1e53-4680-bf7d-db67a3f1d21c",
+  "result": {
+    "success": true,
+    "origin": "WORKER_SERVICE"
+  },
+  "profile": {
+    "zone": "SAT",
+    "lang": "ENG",
+    "country": "USA",
+    "offset": "+02:00",
+    "requestDate": "2026-01-22 14:12:13.051",
+    "responseDate": "2026-01-22 14:12:13.060",
+    "hostDateUtc": "2026-01-22 12:12:13.051",
+    "hostDate": "2026-01-22 14:12:13.051",
+    "durationInMillis": 9
+  }
+}
+Polling DB (attempt 1) for clientCorrelationID: f8ea7dde-513a-423b-8bd5-9a4cc1bbd874
+DB rows returned: 1
+✅ Parsed callback_data JSON: {
+  "isInfo": {
+    "senderMessageId": "52430639-89a1-4e86-8026-15a021f66f82",
+    "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+    "responseId": "65b44f5a-c299-4a52-b9cb-3dfda8980fe8",
+    "isCorrelationId": "6c56a794-1a63-4554-a1cd-1dbbe969b402"
+  },
+  "responseHeader": {
+    "totalCount": 1,
+    "responseTimestamp": "2026-01-22 14:04:49.085",
+    "clientIntegrationId": "HYT0002",
+    "clientProfile": "FACHYTQ1",
+    "responseType": "LOAD",
+    "responseCode": "PROCESSED",
+    "nativeMsgId": "76f5bb61-5c06-4815-b01c-c8243dc8f612"
+  },
+  "responseDetail": {
+    "transactions": [
+      {
+        "transactionId": "4d1d3fe3-aecc-4cf2-a8eb-89272444f1d4",
+        "serviceType": "EFTPAYMENT",
+        "transactionAmount": "300",
+        "effectiveDate": "2026-01-22",
+        "actionDate": "2026-01-22",
+        "nativeTransactionId": "P926 -EF-000000155-00000100",
+        "transactionResponse": {
+          "responseType": "CREATED",
+          "responseDescription": "Transaction created"
+        },
+        "transactionError": {
+          "errorCode": "",
+          "errorDescription": ""
+        }
+      }
+    ]
+  }
+}
+------Extracted Fields from callback_data:------
+senderMessageId: 52430639-89a1-4e86-8026-15a021f66f82
+transactionId: 4d1d3fe3-aecc-4cf2-a8eb-89272444f1d4
+nativeTransactionId: P926 -EF-000000155-00000100

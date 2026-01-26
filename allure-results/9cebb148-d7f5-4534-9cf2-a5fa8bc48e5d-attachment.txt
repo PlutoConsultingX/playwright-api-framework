@@ -1,0 +1,62 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+2026-01-20T13:19:22
+2026-01-20T13:19:22
+{
+  "workflowID": "c5d1f3b5-508e-4f47-9997-a4912d486466",
+  "clientCorrelationID": "ab8fdf49-925e-44cf-b5f4-4039f3e3c364",
+  "requestDate": "2026-01-20T13:19:22",
+  "totalCount": 1,
+  "transactions": [
+    {
+      "transactionID": "2eb796d4-ab4b-4b05-87ba-fac63f9b6571",
+      "transactionAmount": 300,
+      "actionDate": "2026-01-20",
+      "subjectReference": "SREF000-23042025",
+      "clientReference": "CREF000-23042025",
+      "mandateReference": "00032024091612QRZ2ZDWW",
+      "contractReference": "Thato Auto",
+      "trackingDays": 10,
+      "collectionReoccurance": "OOFF",
+      "subjectDetails": {
+        "accountNumber": "62006677069",
+        "accountType": "02",
+        "branchCode": "250655",
+        "country": "ZAF",
+        "idType": "EntityRegistrationNumber",
+        "idValue": "1951/000009/07",
+        "initials": "SK",
+        "firstName": "john",
+        "lastName": "doe",
+        "phoneNumber": "+27721234567",
+        "emailAddress": "Hyphen@RMB.com",
+        "profileReference": "Thatos"
+      }
+    }
+  ]
+}
+API Response Status: 200
+API Response Body: {
+  "success": true,
+  "message": [
+    "Total transactions posted: 1",
+    "Total valid transactions saved: 1",
+    "Total invalid transactions: 0"
+  ],
+  "clientCorrelationID": "ab8fdf49-925e-44cf-b5f4-4039f3e3c364",
+  "hyphenCorrelationID": "d1c84555-8862-470c-b6ea-9ec96ac60f7d"
+}
+Validation Response: {
+  success: true,
+  message: [
+    'Total transactions posted: 1',
+    'Total valid transactions saved: 1',
+    'Total invalid transactions: 0'
+  ],
+  clientCorrelationID: 'ab8fdf49-925e-44cf-b5f4-4039f3e3c364',
+  hyphenCorrelationID: 'd1c84555-8862-470c-b6ea-9ec96ac60f7d'
+}
+Waiting for DB record... (1/10)
+Transaction ID: 80c3f096-d199-4766-9b67-18bbfa7e4e45
+Sender Message ID: 795eb278-49dc-4329-8b79-6cbed1dc1411

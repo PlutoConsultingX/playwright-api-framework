@@ -1,0 +1,356 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Load Created Payload: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "c7da3e71-b7f3-4241-a2de-88f39e93aabd"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "actionDate": "2026-01-22",
+          "effectiveDate": "2026-01-22",
+          "serviceType": "EFTPAYMENT",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-22",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Load Created Status: 200
+Load Created Response: {"versionNumber":1,"traceId":"d79da56d-3d6f-42d7-b7f2-122a093a6f00","correlationId":"27d284be-7311-4efe-89c0-6e94861d2bcc","result":{"success":true,"origin":"WORKER_SERVICE"},"profile":{"zone":"SAT","lang":"ENG","country":"USA","offset":"+02:00","requestDate":"2026-01-22 09:37:51.029","responseDate":"2026-01-22 09:37:51.045","hostDateUtc":"2026-01-22 07:37:51.029","hostDate":"2026-01-22 09:37:51.029","durationInMillis":16}}
+Load Created Response: {
+  versionNumber: 1,
+  traceId: 'd79da56d-3d6f-42d7-b7f2-122a093a6f00',
+  correlationId: '27d284be-7311-4efe-89c0-6e94861d2bcc',
+  result: { success: true, origin: 'WORKER_SERVICE' },
+  profile: {
+    zone: 'SAT',
+    lang: 'ENG',
+    country: 'USA',
+    offset: '+02:00',
+    requestDate: '2026-01-22 09:37:51.029',
+    responseDate: '2026-01-22 09:37:51.045',
+    hostDateUtc: '2026-01-22 07:37:51.029',
+    hostDate: '2026-01-22 09:37:51.029',
+    durationInMillis: 16
+  }
+}
+DB results query: 
+    SELECT t.workflow_execution_id,t.transaction_id 
+    ,ti.client_transaction_id ,ti.transaction_item_id 
+    ,tidr.child_workflow_execution_id 
+    ,ts.transaction_status_name as trxBatchStatus,tis.transaction_item_status_name as trxStatus,tids.transaction_item_detail_status_name as trxItemDetailStatus
+ 
+    -- t.client_message_id,t.workflow_id,t.transaction_id,ti.transaction_item_id,tid.transaction_item_detail_id 
+    ,s.service_name ,tid.transaction_item_detail_id 
+    ,tidrs.transaction_item_detail_run_status_name 
+    ,tidr.response_manager_code ,tidr.response_manager_exception_type ,tidr.response_manager_message,tidr.response_data 
+    ,et.response_reference ,et.request_payload_data as sagrequestpayload,et.transaction_id as senderID,et.transaction_run_detail_id as transactionIDSAGReqPayload,et.response_payload_data ,et.response_type,et.transaction_status as workertransactionstatus
+ 
+    ,ewr.response_code as sagTransresponsecode,ewr.response_description as sagTransresponse_description,ewr.error_code as sagTranserrorcode,ewr.error_description as sagTranserror_description,ewr.callback_data
+ 
+    from transaction t 
+    INNer Join transaction_status ts on t.transaction_status_id = ts.transaction_status_id 
+    INNER Join transaction_item ti on t.transaction_id = ti.transaction_id 
+    INNER Join transaction_item_status tis on ti.transaction_item_status_id = tis.transaction_item_status_id 
+    INNER JOIN transaction_item_detail tid on ti.transaction_item_id = tid.transaction_item_id 
+    INNER JOIN service s on tid.service_id = s.service_id 
+    INNER JOIN transaction_item_detail_status tids on tid.transaction_item_detail_status_id = tids.transaction_item_detail_status_id 
+    INNER JOIN transaction_item_detail_run tidr on tidr.transaction_item_detail_id = tid.transaction_item_detail_id 
+    INNER JOIN transaction_item_detail_run_status tidrs on tidr.transaction_item_detail_run_status_id = tidrs.transaction_item_detail_run_status_id 
+    INNER JOIN WORKFLOW_WORKER_EFT_PAYMENTS_SALARYDAY.salaryday_eft_payment_transaction et on et.transaction_run_detail_id = tidr.transaction_item_detail_run_id 
+    INNER JOIN WORKFLOW_WORKER_EFT_PAYMENTS_SALARYDAY.salaryday_eft_payment_worker_responses ewr on ewr.transaction_id = et.transaction_id 
+    
+    WHERE t.client_message_id = ?
+  
+DB Result after load created (attempt 1): []
+Waiting for DB record... (1/10)
+DB results query: 
+    SELECT t.workflow_execution_id,t.transaction_id 
+    ,ti.client_transaction_id ,ti.transaction_item_id 
+    ,tidr.child_workflow_execution_id 
+    ,ts.transaction_status_name as trxBatchStatus,tis.transaction_item_status_name as trxStatus,tids.transaction_item_detail_status_name as trxItemDetailStatus
+ 
+    -- t.client_message_id,t.workflow_id,t.transaction_id,ti.transaction_item_id,tid.transaction_item_detail_id 
+    ,s.service_name ,tid.transaction_item_detail_id 
+    ,tidrs.transaction_item_detail_run_status_name 
+    ,tidr.response_manager_code ,tidr.response_manager_exception_type ,tidr.response_manager_message,tidr.response_data 
+    ,et.response_reference ,et.request_payload_data as sagrequestpayload,et.transaction_id as senderID,et.transaction_run_detail_id as transactionIDSAGReqPayload,et.response_payload_data ,et.response_type,et.transaction_status as workertransactionstatus
+ 
+    ,ewr.response_code as sagTransresponsecode,ewr.response_description as sagTransresponse_description,ewr.error_code as sagTranserrorcode,ewr.error_description as sagTranserror_description,ewr.callback_data
+ 
+    from transaction t 
+    INNer Join transaction_status ts on t.transaction_status_id = ts.transaction_status_id 
+    INNER Join transaction_item ti on t.transaction_id = ti.transaction_id 
+    INNER Join transaction_item_status tis on ti.transaction_item_status_id = tis.transaction_item_status_id 
+    INNER JOIN transaction_item_detail tid on ti.transaction_item_id = tid.transaction_item_id 
+    INNER JOIN service s on tid.service_id = s.service_id 
+    INNER JOIN transaction_item_detail_status tids on tid.transaction_item_detail_status_id = tids.transaction_item_detail_status_id 
+    INNER JOIN transaction_item_detail_run tidr on tidr.transaction_item_detail_id = tid.transaction_item_detail_id 
+    INNER JOIN transaction_item_detail_run_status tidrs on tidr.transaction_item_detail_run_status_id = tidrs.transaction_item_detail_run_status_id 
+    INNER JOIN WORKFLOW_WORKER_EFT_PAYMENTS_SALARYDAY.salaryday_eft_payment_transaction et on et.transaction_run_detail_id = tidr.transaction_item_detail_run_id 
+    INNER JOIN WORKFLOW_WORKER_EFT_PAYMENTS_SALARYDAY.salaryday_eft_payment_worker_responses ewr on ewr.transaction_id = et.transaction_id 
+    
+    WHERE t.client_message_id = ?
+  
+DB Result after load created (attempt 2): []
+Waiting for DB record... (2/10)
+DB results query: 
+    SELECT t.workflow_execution_id,t.transaction_id 
+    ,ti.client_transaction_id ,ti.transaction_item_id 
+    ,tidr.child_workflow_execution_id 
+    ,ts.transaction_status_name as trxBatchStatus,tis.transaction_item_status_name as trxStatus,tids.transaction_item_detail_status_name as trxItemDetailStatus
+ 
+    -- t.client_message_id,t.workflow_id,t.transaction_id,ti.transaction_item_id,tid.transaction_item_detail_id 
+    ,s.service_name ,tid.transaction_item_detail_id 
+    ,tidrs.transaction_item_detail_run_status_name 
+    ,tidr.response_manager_code ,tidr.response_manager_exception_type ,tidr.response_manager_message,tidr.response_data 
+    ,et.response_reference ,et.request_payload_data as sagrequestpayload,et.transaction_id as senderID,et.transaction_run_detail_id as transactionIDSAGReqPayload,et.response_payload_data ,et.response_type,et.transaction_status as workertransactionstatus
+ 
+    ,ewr.response_code as sagTransresponsecode,ewr.response_description as sagTransresponse_description,ewr.error_code as sagTranserrorcode,ewr.error_description as sagTranserror_description,ewr.callback_data
+ 
+    from transaction t 
+    INNer Join transaction_status ts on t.transaction_status_id = ts.transaction_status_id 
+    INNER Join transaction_item ti on t.transaction_id = ti.transaction_id 
+    INNER Join transaction_item_status tis on ti.transaction_item_status_id = tis.transaction_item_status_id 
+    INNER JOIN transaction_item_detail tid on ti.transaction_item_id = tid.transaction_item_id 
+    INNER JOIN service s on tid.service_id = s.service_id 
+    INNER JOIN transaction_item_detail_status tids on tid.transaction_item_detail_status_id = tids.transaction_item_detail_status_id 
+    INNER JOIN transaction_item_detail_run tidr on tidr.transaction_item_detail_id = tid.transaction_item_detail_id 
+    INNER JOIN transaction_item_detail_run_status tidrs on tidr.transaction_item_detail_run_status_id = tidrs.transaction_item_detail_run_status_id 
+    INNER JOIN WORKFLOW_WORKER_EFT_PAYMENTS_SALARYDAY.salaryday_eft_payment_transaction et on et.transaction_run_detail_id = tidr.transaction_item_detail_run_id 
+    INNER JOIN WORKFLOW_WORKER_EFT_PAYMENTS_SALARYDAY.salaryday_eft_payment_worker_responses ewr on ewr.transaction_id = et.transaction_id 
+    
+    WHERE t.client_message_id = ?
+  
+DB Result after load created (attempt 3): []
+Waiting for DB record... (3/10)
+DB results query: 
+    SELECT t.workflow_execution_id,t.transaction_id 
+    ,ti.client_transaction_id ,ti.transaction_item_id 
+    ,tidr.child_workflow_execution_id 
+    ,ts.transaction_status_name as trxBatchStatus,tis.transaction_item_status_name as trxStatus,tids.transaction_item_detail_status_name as trxItemDetailStatus
+ 
+    -- t.client_message_id,t.workflow_id,t.transaction_id,ti.transaction_item_id,tid.transaction_item_detail_id 
+    ,s.service_name ,tid.transaction_item_detail_id 
+    ,tidrs.transaction_item_detail_run_status_name 
+    ,tidr.response_manager_code ,tidr.response_manager_exception_type ,tidr.response_manager_message,tidr.response_data 
+    ,et.response_reference ,et.request_payload_data as sagrequestpayload,et.transaction_id as senderID,et.transaction_run_detail_id as transactionIDSAGReqPayload,et.response_payload_data ,et.response_type,et.transaction_status as workertransactionstatus
+ 
+    ,ewr.response_code as sagTransresponsecode,ewr.response_description as sagTransresponse_description,ewr.error_code as sagTranserrorcode,ewr.error_description as sagTranserror_description,ewr.callback_data
+ 
+    from transaction t 
+    INNer Join transaction_status ts on t.transaction_status_id = ts.transaction_status_id 
+    INNER Join transaction_item ti on t.transaction_id = ti.transaction_id 
+    INNER Join transaction_item_status tis on ti.transaction_item_status_id = tis.transaction_item_status_id 
+    INNER JOIN transaction_item_detail tid on ti.transaction_item_id = tid.transaction_item_id 
+    INNER JOIN service s on tid.service_id = s.service_id 
+    INNER JOIN transaction_item_detail_status tids on tid.transaction_item_detail_status_id = tids.transaction_item_detail_status_id 
+    INNER JOIN transaction_item_detail_run tidr on tidr.transaction_item_detail_id = tid.transaction_item_detail_id 
+    INNER JOIN transaction_item_detail_run_status tidrs on tidr.transaction_item_detail_run_status_id = tidrs.transaction_item_detail_run_status_id 
+    INNER JOIN WORKFLOW_WORKER_EFT_PAYMENTS_SALARYDAY.salaryday_eft_payment_transaction et on et.transaction_run_detail_id = tidr.transaction_item_detail_run_id 
+    INNER JOIN WORKFLOW_WORKER_EFT_PAYMENTS_SALARYDAY.salaryday_eft_payment_worker_responses ewr on ewr.transaction_id = et.transaction_id 
+    
+    WHERE t.client_message_id = ?
+  
+DB Result after load created (attempt 4): []
+Waiting for DB record... (4/10)
+DB results query: 
+    SELECT t.workflow_execution_id,t.transaction_id 
+    ,ti.client_transaction_id ,ti.transaction_item_id 
+    ,tidr.child_workflow_execution_id 
+    ,ts.transaction_status_name as trxBatchStatus,tis.transaction_item_status_name as trxStatus,tids.transaction_item_detail_status_name as trxItemDetailStatus
+ 
+    -- t.client_message_id,t.workflow_id,t.transaction_id,ti.transaction_item_id,tid.transaction_item_detail_id 
+    ,s.service_name ,tid.transaction_item_detail_id 
+    ,tidrs.transaction_item_detail_run_status_name 
+    ,tidr.response_manager_code ,tidr.response_manager_exception_type ,tidr.response_manager_message,tidr.response_data 
+    ,et.response_reference ,et.request_payload_data as sagrequestpayload,et.transaction_id as senderID,et.transaction_run_detail_id as transactionIDSAGReqPayload,et.response_payload_data ,et.response_type,et.transaction_status as workertransactionstatus
+ 
+    ,ewr.response_code as sagTransresponsecode,ewr.response_description as sagTransresponse_description,ewr.error_code as sagTranserrorcode,ewr.error_description as sagTranserror_description,ewr.callback_data
+ 
+    from transaction t 
+    INNer Join transaction_status ts on t.transaction_status_id = ts.transaction_status_id 
+    INNER Join transaction_item ti on t.transaction_id = ti.transaction_id 
+    INNER Join transaction_item_status tis on ti.transaction_item_status_id = tis.transaction_item_status_id 
+    INNER JOIN transaction_item_detail tid on ti.transaction_item_id = tid.transaction_item_id 
+    INNER JOIN service s on tid.service_id = s.service_id 
+    INNER JOIN transaction_item_detail_status tids on tid.transaction_item_detail_status_id = tids.transaction_item_detail_status_id 
+    INNER JOIN transaction_item_detail_run tidr on tidr.transaction_item_detail_id = tid.transaction_item_detail_id 
+    INNER JOIN transaction_item_detail_run_status tidrs on tidr.transaction_item_detail_run_status_id = tidrs.transaction_item_detail_run_status_id 
+    INNER JOIN WORKFLOW_WORKER_EFT_PAYMENTS_SALARYDAY.salaryday_eft_payment_transaction et on et.transaction_run_detail_id = tidr.transaction_item_detail_run_id 
+    INNER JOIN WORKFLOW_WORKER_EFT_PAYMENTS_SALARYDAY.salaryday_eft_payment_worker_responses ewr on ewr.transaction_id = et.transaction_id 
+    
+    WHERE t.client_message_id = ?
+  
+DB Result after load created (attempt 5): []
+Waiting for DB record... (5/10)
+DB results query: 
+    SELECT t.workflow_execution_id,t.transaction_id 
+    ,ti.client_transaction_id ,ti.transaction_item_id 
+    ,tidr.child_workflow_execution_id 
+    ,ts.transaction_status_name as trxBatchStatus,tis.transaction_item_status_name as trxStatus,tids.transaction_item_detail_status_name as trxItemDetailStatus
+ 
+    -- t.client_message_id,t.workflow_id,t.transaction_id,ti.transaction_item_id,tid.transaction_item_detail_id 
+    ,s.service_name ,tid.transaction_item_detail_id 
+    ,tidrs.transaction_item_detail_run_status_name 
+    ,tidr.response_manager_code ,tidr.response_manager_exception_type ,tidr.response_manager_message,tidr.response_data 
+    ,et.response_reference ,et.request_payload_data as sagrequestpayload,et.transaction_id as senderID,et.transaction_run_detail_id as transactionIDSAGReqPayload,et.response_payload_data ,et.response_type,et.transaction_status as workertransactionstatus
+ 
+    ,ewr.response_code as sagTransresponsecode,ewr.response_description as sagTransresponse_description,ewr.error_code as sagTranserrorcode,ewr.error_description as sagTranserror_description,ewr.callback_data
+ 
+    from transaction t 
+    INNer Join transaction_status ts on t.transaction_status_id = ts.transaction_status_id 
+    INNER Join transaction_item ti on t.transaction_id = ti.transaction_id 
+    INNER Join transaction_item_status tis on ti.transaction_item_status_id = tis.transaction_item_status_id 
+    INNER JOIN transaction_item_detail tid on ti.transaction_item_id = tid.transaction_item_id 
+    INNER JOIN service s on tid.service_id = s.service_id 
+    INNER JOIN transaction_item_detail_status tids on tid.transaction_item_detail_status_id = tids.transaction_item_detail_status_id 
+    INNER JOIN transaction_item_detail_run tidr on tidr.transaction_item_detail_id = tid.transaction_item_detail_id 
+    INNER JOIN transaction_item_detail_run_status tidrs on tidr.transaction_item_detail_run_status_id = tidrs.transaction_item_detail_run_status_id 
+    INNER JOIN WORKFLOW_WORKER_EFT_PAYMENTS_SALARYDAY.salaryday_eft_payment_transaction et on et.transaction_run_detail_id = tidr.transaction_item_detail_run_id 
+    INNER JOIN WORKFLOW_WORKER_EFT_PAYMENTS_SALARYDAY.salaryday_eft_payment_worker_responses ewr on ewr.transaction_id = et.transaction_id 
+    
+    WHERE t.client_message_id = ?
+  
+DB Result after load created (attempt 6): []
+Waiting for DB record... (6/10)
+DB results query: 
+    SELECT t.workflow_execution_id,t.transaction_id 
+    ,ti.client_transaction_id ,ti.transaction_item_id 
+    ,tidr.child_workflow_execution_id 
+    ,ts.transaction_status_name as trxBatchStatus,tis.transaction_item_status_name as trxStatus,tids.transaction_item_detail_status_name as trxItemDetailStatus
+ 
+    -- t.client_message_id,t.workflow_id,t.transaction_id,ti.transaction_item_id,tid.transaction_item_detail_id 
+    ,s.service_name ,tid.transaction_item_detail_id 
+    ,tidrs.transaction_item_detail_run_status_name 
+    ,tidr.response_manager_code ,tidr.response_manager_exception_type ,tidr.response_manager_message,tidr.response_data 
+    ,et.response_reference ,et.request_payload_data as sagrequestpayload,et.transaction_id as senderID,et.transaction_run_detail_id as transactionIDSAGReqPayload,et.response_payload_data ,et.response_type,et.transaction_status as workertransactionstatus
+ 
+    ,ewr.response_code as sagTransresponsecode,ewr.response_description as sagTransresponse_description,ewr.error_code as sagTranserrorcode,ewr.error_description as sagTranserror_description,ewr.callback_data
+ 
+    from transaction t 
+    INNer Join transaction_status ts on t.transaction_status_id = ts.transaction_status_id 
+    INNER Join transaction_item ti on t.transaction_id = ti.transaction_id 
+    INNER Join transaction_item_status tis on ti.transaction_item_status_id = tis.transaction_item_status_id 
+    INNER JOIN transaction_item_detail tid on ti.transaction_item_id = tid.transaction_item_id 
+    INNER JOIN service s on tid.service_id = s.service_id 
+    INNER JOIN transaction_item_detail_status tids on tid.transaction_item_detail_status_id = tids.transaction_item_detail_status_id 
+    INNER JOIN transaction_item_detail_run tidr on tidr.transaction_item_detail_id = tid.transaction_item_detail_id 
+    INNER JOIN transaction_item_detail_run_status tidrs on tidr.transaction_item_detail_run_status_id = tidrs.transaction_item_detail_run_status_id 
+    INNER JOIN WORKFLOW_WORKER_EFT_PAYMENTS_SALARYDAY.salaryday_eft_payment_transaction et on et.transaction_run_detail_id = tidr.transaction_item_detail_run_id 
+    INNER JOIN WORKFLOW_WORKER_EFT_PAYMENTS_SALARYDAY.salaryday_eft_payment_worker_responses ewr on ewr.transaction_id = et.transaction_id 
+    
+    WHERE t.client_message_id = ?
+  
+DB Result after load created (attempt 7): []
+Waiting for DB record... (7/10)
+DB results query: 
+    SELECT t.workflow_execution_id,t.transaction_id 
+    ,ti.client_transaction_id ,ti.transaction_item_id 
+    ,tidr.child_workflow_execution_id 
+    ,ts.transaction_status_name as trxBatchStatus,tis.transaction_item_status_name as trxStatus,tids.transaction_item_detail_status_name as trxItemDetailStatus
+ 
+    -- t.client_message_id,t.workflow_id,t.transaction_id,ti.transaction_item_id,tid.transaction_item_detail_id 
+    ,s.service_name ,tid.transaction_item_detail_id 
+    ,tidrs.transaction_item_detail_run_status_name 
+    ,tidr.response_manager_code ,tidr.response_manager_exception_type ,tidr.response_manager_message,tidr.response_data 
+    ,et.response_reference ,et.request_payload_data as sagrequestpayload,et.transaction_id as senderID,et.transaction_run_detail_id as transactionIDSAGReqPayload,et.response_payload_data ,et.response_type,et.transaction_status as workertransactionstatus
+ 
+    ,ewr.response_code as sagTransresponsecode,ewr.response_description as sagTransresponse_description,ewr.error_code as sagTranserrorcode,ewr.error_description as sagTranserror_description,ewr.callback_data
+ 
+    from transaction t 
+    INNer Join transaction_status ts on t.transaction_status_id = ts.transaction_status_id 
+    INNER Join transaction_item ti on t.transaction_id = ti.transaction_id 
+    INNER Join transaction_item_status tis on ti.transaction_item_status_id = tis.transaction_item_status_id 
+    INNER JOIN transaction_item_detail tid on ti.transaction_item_id = tid.transaction_item_id 
+    INNER JOIN service s on tid.service_id = s.service_id 
+    INNER JOIN transaction_item_detail_status tids on tid.transaction_item_detail_status_id = tids.transaction_item_detail_status_id 
+    INNER JOIN transaction_item_detail_run tidr on tidr.transaction_item_detail_id = tid.transaction_item_detail_id 
+    INNER JOIN transaction_item_detail_run_status tidrs on tidr.transaction_item_detail_run_status_id = tidrs.transaction_item_detail_run_status_id 
+    INNER JOIN WORKFLOW_WORKER_EFT_PAYMENTS_SALARYDAY.salaryday_eft_payment_transaction et on et.transaction_run_detail_id = tidr.transaction_item_detail_run_id 
+    INNER JOIN WORKFLOW_WORKER_EFT_PAYMENTS_SALARYDAY.salaryday_eft_payment_worker_responses ewr on ewr.transaction_id = et.transaction_id 
+    
+    WHERE t.client_message_id = ?
+  
+DB Result after load created (attempt 8): []
+Waiting for DB record... (8/10)
+DB results query: 
+    SELECT t.workflow_execution_id,t.transaction_id 
+    ,ti.client_transaction_id ,ti.transaction_item_id 
+    ,tidr.child_workflow_execution_id 
+    ,ts.transaction_status_name as trxBatchStatus,tis.transaction_item_status_name as trxStatus,tids.transaction_item_detail_status_name as trxItemDetailStatus
+ 
+    -- t.client_message_id,t.workflow_id,t.transaction_id,ti.transaction_item_id,tid.transaction_item_detail_id 
+    ,s.service_name ,tid.transaction_item_detail_id 
+    ,tidrs.transaction_item_detail_run_status_name 
+    ,tidr.response_manager_code ,tidr.response_manager_exception_type ,tidr.response_manager_message,tidr.response_data 
+    ,et.response_reference ,et.request_payload_data as sagrequestpayload,et.transaction_id as senderID,et.transaction_run_detail_id as transactionIDSAGReqPayload,et.response_payload_data ,et.response_type,et.transaction_status as workertransactionstatus
+ 
+    ,ewr.response_code as sagTransresponsecode,ewr.response_description as sagTransresponse_description,ewr.error_code as sagTranserrorcode,ewr.error_description as sagTranserror_description,ewr.callback_data
+ 
+    from transaction t 
+    INNer Join transaction_status ts on t.transaction_status_id = ts.transaction_status_id 
+    INNER Join transaction_item ti on t.transaction_id = ti.transaction_id 
+    INNER Join transaction_item_status tis on ti.transaction_item_status_id = tis.transaction_item_status_id 
+    INNER JOIN transaction_item_detail tid on ti.transaction_item_id = tid.transaction_item_id 
+    INNER JOIN service s on tid.service_id = s.service_id 
+    INNER JOIN transaction_item_detail_status tids on tid.transaction_item_detail_status_id = tids.transaction_item_detail_status_id 
+    INNER JOIN transaction_item_detail_run tidr on tidr.transaction_item_detail_id = tid.transaction_item_detail_id 
+    INNER JOIN transaction_item_detail_run_status tidrs on tidr.transaction_item_detail_run_status_id = tidrs.transaction_item_detail_run_status_id 
+    INNER JOIN WORKFLOW_WORKER_EFT_PAYMENTS_SALARYDAY.salaryday_eft_payment_transaction et on et.transaction_run_detail_id = tidr.transaction_item_detail_run_id 
+    INNER JOIN WORKFLOW_WORKER_EFT_PAYMENTS_SALARYDAY.salaryday_eft_payment_worker_responses ewr on ewr.transaction_id = et.transaction_id 
+    
+    WHERE t.client_message_id = ?
+  
+DB Result after load created (attempt 9): []
+Waiting for DB record... (9/10)
+DB results query: 
+    SELECT t.workflow_execution_id,t.transaction_id 
+    ,ti.client_transaction_id ,ti.transaction_item_id 
+    ,tidr.child_workflow_execution_id 
+    ,ts.transaction_status_name as trxBatchStatus,tis.transaction_item_status_name as trxStatus,tids.transaction_item_detail_status_name as trxItemDetailStatus
+ 
+    -- t.client_message_id,t.workflow_id,t.transaction_id,ti.transaction_item_id,tid.transaction_item_detail_id 
+    ,s.service_name ,tid.transaction_item_detail_id 
+    ,tidrs.transaction_item_detail_run_status_name 
+    ,tidr.response_manager_code ,tidr.response_manager_exception_type ,tidr.response_manager_message,tidr.response_data 
+    ,et.response_reference ,et.request_payload_data as sagrequestpayload,et.transaction_id as senderID,et.transaction_run_detail_id as transactionIDSAGReqPayload,et.response_payload_data ,et.response_type,et.transaction_status as workertransactionstatus
+ 
+    ,ewr.response_code as sagTransresponsecode,ewr.response_description as sagTransresponse_description,ewr.error_code as sagTranserrorcode,ewr.error_description as sagTranserror_description,ewr.callback_data
+ 
+    from transaction t 
+    INNer Join transaction_status ts on t.transaction_status_id = ts.transaction_status_id 
+    INNER Join transaction_item ti on t.transaction_id = ti.transaction_id 
+    INNER Join transaction_item_status tis on ti.transaction_item_status_id = tis.transaction_item_status_id 
+    INNER JOIN transaction_item_detail tid on ti.transaction_item_id = tid.transaction_item_id 
+    INNER JOIN service s on tid.service_id = s.service_id 
+    INNER JOIN transaction_item_detail_status tids on tid.transaction_item_detail_status_id = tids.transaction_item_detail_status_id 
+    INNER JOIN transaction_item_detail_run tidr on tidr.transaction_item_detail_id = tid.transaction_item_detail_id 
+    INNER JOIN transaction_item_detail_run_status tidrs on tidr.transaction_item_detail_run_status_id = tidrs.transaction_item_detail_run_status_id 
+    INNER JOIN WORKFLOW_WORKER_EFT_PAYMENTS_SALARYDAY.salaryday_eft_payment_transaction et on et.transaction_run_detail_id = tidr.transaction_item_detail_run_id 
+    INNER JOIN WORKFLOW_WORKER_EFT_PAYMENTS_SALARYDAY.salaryday_eft_payment_worker_responses ewr on ewr.transaction_id = et.transaction_id 
+    
+    WHERE t.client_message_id = ?
+  
+DB Result after load created (attempt 10): []
+Waiting for DB record... (10/10)

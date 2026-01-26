@@ -1,0 +1,59 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+LOAD_CREATED_URL: http://10.10.21.65:9183/workflow-worker-eft-payments-salaryday/api/v1/callback
+Load Created Payload: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "57e6c77c-d6bd-4976-8065-168c2155c1fc",
+      "senderMessageId": "a2df03d6-2915-444d-88af-24cd6f565dae"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "transactionId": "029f02dc-e443-4f20-8812-54fa7f24608a",
+          "actionDate": "2026-01-20",
+          "effectiveDate": "2026-01-20",
+          "serviceType": "EFTPAYMENT",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-20",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Load Created Status: 200
+Load Created Response: {"versionNumber":1,"traceId":"1d85436e-835b-43ab-aadb-b8c7de08d427","correlationId":"3bbd57f1-8e14-417f-b293-5793f19741be","result":{"success":true,"origin":"WORKER_SERVICE"},"profile":{"zone":"SAT","lang":"ENG","country":"USA","offset":"+02:00","requestDate":"2026-01-20 13:15:34.074","responseDate":"2026-01-20 13:15:34.096","hostDateUtc":"2026-01-20 11:15:34.074","hostDate":"2026-01-20 13:15:34.074","durationInMillis":22}}
+Load Created Response: {
+  versionNumber: 1,
+  traceId: '1d85436e-835b-43ab-aadb-b8c7de08d427',
+  correlationId: '3bbd57f1-8e14-417f-b293-5793f19741be',
+  result: { success: true, origin: 'WORKER_SERVICE' },
+  profile: {
+    zone: 'SAT',
+    lang: 'ENG',
+    country: 'USA',
+    offset: '+02:00',
+    requestDate: '2026-01-20 13:15:34.074',
+    responseDate: '2026-01-20 13:15:34.096',
+    hostDateUtc: '2026-01-20 11:15:34.074',
+    hostDate: '2026-01-20 13:15:34.074',
+    durationInMillis: 22
+  }
+}

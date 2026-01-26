@@ -1,0 +1,70 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+2026-01-19T13:05:51
+2026-01-19T13:05:51
+{
+  "workflowID": "c5d1f3b5-508e-4f47-9997-a4912d486466",
+  "clientCorrelationID": "0d6b8888-6f8b-42b8-9fe1-4531bbadfb6e",
+  "requestDate": "2026-01-19T13:05:51",
+  "totalCount": 1,
+  "transactions": [
+    {
+      "transactionID": "317616dd-04c6-48f2-b5e1-e834ac41e8e1",
+      "transactionAmount": 300,
+      "actionDate": "2026-01-19",
+      "subjectReference": "SREF000-23042025",
+      "clientReference": "CREF000-23042025",
+      "mandateReference": "00032024091612QRZ2ZDWW",
+      "contractReference": "Thato Auto",
+      "trackingDays": 10,
+      "collectionReoccurance": "OOFF",
+      "subjectDetails": {
+        "accountNumber": "62006677069",
+        "accountType": "02",
+        "branchCode": "250655",
+        "country": "ZAF",
+        "idType": "EntityRegistrationNumber",
+        "idValue": "1951/000009/07",
+        "initials": "SK",
+        "firstName": "john",
+        "lastName": "doe",
+        "phoneNumber": "+27721234567",
+        "emailAddress": "Hyphen@RMB.com",
+        "profileReference": "Thatos"
+      }
+    }
+  ]
+}
+API Response Status: 200
+API Response Body: {
+  "success": true,
+  "message": [
+    "Total transactions posted: 1",
+    "Total valid transactions saved: 1",
+    "Total invalid transactions: 0"
+  ],
+  "clientCorrelationID": "0d6b8888-6f8b-42b8-9fe1-4531bbadfb6e",
+  "hyphenCorrelationID": "5f44a2a3-27f0-49c3-bbe6-2f07a81fc8bc"
+}
+API Response Body: {
+  success: true,
+  message: [
+    'Total transactions posted: 1',
+    'Total valid transactions saved: 1',
+    'Total invalid transactions: 0'
+  ],
+  clientCorrelationID: '0d6b8888-6f8b-42b8-9fe1-4531bbadfb6e',
+  hyphenCorrelationID: '5f44a2a3-27f0-49c3-bbe6-2f07a81fc8bc'
+}
+Params: [ '0d6b8888-6f8b-42b8-9fe1-4531bbadfb6e' ]
+Waiting for DB record... (1/10)
+Waiting for DB record... (2/10)
+Waiting for DB record... (3/10)
+Waiting for DB record... (4/10)
+Waiting for DB record... (5/10)
+Waiting for DB record... (6/10)
+Waiting for DB record... (7/10)
+Waiting for DB record... (8/10)
+Waiting for DB record... (9/10)
+Waiting for DB record... (10/10)

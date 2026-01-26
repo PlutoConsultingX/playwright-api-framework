@@ -1,0 +1,63 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+2026-01-21T08:15:07
+2026-01-21T08:15:07
+{
+  "workflowID": "c5d1f3b5-508e-4f47-9997-a4912d486466",
+  "clientCorrelationID": "0d5f2da5-d269-4b42-a9d5-68692a759e2c",
+  "requestDate": "2026-01-21T08:15:07",
+  "totalCount": 1,
+  "transactions": [
+    {
+      "transactionID": "ea13f04f-d29d-4e31-89a0-4e8b0257fa6b",
+      "transactionAmount": 300,
+      "actionDate": "2026-01-21",
+      "subjectReference": "SREF000-23042025",
+      "clientReference": "CREF000-23042025",
+      "mandateReference": "00032024091612QRZ2ZDWW",
+      "contractReference": "Thato Auto",
+      "trackingDays": 10,
+      "collectionReoccurance": "OOFF",
+      "subjectDetails": {
+        "accountNumber": "62006677069",
+        "accountType": "02",
+        "branchCode": "250655",
+        "country": "ZAF",
+        "idType": "EntityRegistrationNumber",
+        "idValue": "1951/000009/07",
+        "initials": "SK",
+        "firstName": "john",
+        "lastName": "doe",
+        "phoneNumber": "+27721234567",
+        "emailAddress": "Hyphen@RMB.com",
+        "profileReference": "Thatos"
+      }
+    }
+  ]
+}
+API Response Status: 200
+API Response Body: {
+  "success": true,
+  "message": [
+    "Total transactions posted: 1",
+    "Total valid transactions saved: 1",
+    "Total invalid transactions: 0"
+  ],
+  "clientCorrelationID": "0d5f2da5-d269-4b42-a9d5-68692a759e2c",
+  "hyphenCorrelationID": "e0930462-5733-481c-bfef-d09dfca5f4b9"
+}
+Validation Response: {
+  success: true,
+  message: [
+    'Total transactions posted: 1',
+    'Total valid transactions saved: 1',
+    'Total invalid transactions: 0'
+  ],
+  clientCorrelationID: '0d5f2da5-d269-4b42-a9d5-68692a759e2c',
+  hyphenCorrelationID: 'e0930462-5733-481c-bfef-d09dfca5f4b9'
+}
+Waiting for DB record... (1/10)
+Waiting for DB record... (2/10)
+Transaction ID: cbd465b3-d536-4da5-a356-e848ff912fd5
+Sender Message ID: 072b864a-a33b-4402-80e2-dc21ef71d1e6

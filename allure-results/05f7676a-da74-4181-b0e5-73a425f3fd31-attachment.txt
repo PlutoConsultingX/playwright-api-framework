@@ -1,0 +1,124 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Polling DB (attempt 1) for correlationId: a9c6fcf3-3e81-4a44-a7f3-92626ccd3d33
+Polling DB (attempt 2) for correlationId: a9c6fcf3-3e81-4a44-a7f3-92626ccd3d33
+Polling DB (attempt 3) for correlationId: a9c6fcf3-3e81-4a44-a7f3-92626ccd3d33
+Polling DB (attempt 4) for correlationId: a9c6fcf3-3e81-4a44-a7f3-92626ccd3d33
+Polling DB (attempt 5) for correlationId: a9c6fcf3-3e81-4a44-a7f3-92626ccd3d33
+Polling DB (attempt 6) for correlationId: a9c6fcf3-3e81-4a44-a7f3-92626ccd3d33
+Polling DB (attempt 7) for correlationId: a9c6fcf3-3e81-4a44-a7f3-92626ccd3d33
+Polling DB (attempt 8) for correlationId: a9c6fcf3-3e81-4a44-a7f3-92626ccd3d33
+Polling DB (attempt 9) for correlationId: a9c6fcf3-3e81-4a44-a7f3-92626ccd3d33
+Polling DB (attempt 10) for correlationId: a9c6fcf3-3e81-4a44-a7f3-92626ccd3d33
+✅ Parsed callback_data: {
+  "isInfo": {
+    "senderMessageId": "b81a2714-030e-4a6a-879f-a94ef81e270a",
+    "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+    "responseId": "3afc076a-90e2-4615-8709-d5f66699bcf2",
+    "isCorrelationId": "47bfe94c-658a-4341-87ab-c1a24d9bb64c"
+  },
+  "responseHeader": {
+    "totalCount": 1,
+    "responseTimestamp": "2026-01-23 11:45:39.046",
+    "clientIntegrationId": "HYT0002",
+    "clientProfile": "FACHYTQ1",
+    "responseType": "LOAD",
+    "responseCode": "PROCESSED",
+    "nativeMsgId": "c61481a4-6606-46a0-96cf-7a989e6199cf"
+  },
+  "responseDetail": {
+    "transactions": [
+      {
+        "transactionId": "ac2b5230-e527-4541-a9fa-ac5e9e57e4e7",
+        "serviceType": "EFTPAYMENT",
+        "transactionAmount": "300",
+        "effectiveDate": "2026-01-23",
+        "actionDate": "2026-01-23",
+        "nativeTransactionId": "P926 -EF-000000180-00000100",
+        "transactionResponse": {
+          "responseType": "CREATED",
+          "responseDescription": "Transaction created"
+        },
+        "transactionError": {
+          "errorCode": "",
+          "errorDescription": ""
+        }
+      }
+    ]
+  }
+}
+Processed To Bank Payload: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-EFT-TRANSACTION-01",
+      "responseId": "{{$guid}}",
+      "isCorrelationId": "c5919c23-a691-4cc8-a3fe-b918b9c04f94"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "actionDate": "2026-01-23",
+          "serviceType": "EFTCOLLECTION",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "PROCESSED",
+            "responseDescription": "Processed to bank"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "RESPONSE",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-23",
+      "nativeMsgId": "11049bd1-5fea-4bb2-b97e-0afa064ac82a",
+      "clientIntegrationId": "HYT0003"
+    }
+  }
+}
+Processed to bank Status: 200
+Processed to bank Response: {"versionNumber":1,"traceId":"e20ae645-6445-4c2a-8051-c6a216232db7","correlationId":"a330fdba-8415-4505-b9cb-624f9f066201","result":{"success":true,"origin":"WORKER_SERVICE"},"profile":{"zone":"SAT","lang":"ENG","country":"USA","offset":"+02:00","requestDate":"2026-01-23 11:45:39.763","responseDate":"2026-01-23 11:45:39.771","hostDateUtc":"2026-01-23 09:45:39.763","hostDate":"2026-01-23 11:45:39.763","durationInMillis":7}}
+Processed To Bank API Response: {
+  "versionNumber": 1,
+  "traceId": "e20ae645-6445-4c2a-8051-c6a216232db7",
+  "correlationId": "a330fdba-8415-4505-b9cb-624f9f066201",
+  "result": {
+    "success": true,
+    "origin": "WORKER_SERVICE"
+  },
+  "profile": {
+    "zone": "SAT",
+    "lang": "ENG",
+    "country": "USA",
+    "offset": "+02:00",
+    "requestDate": "2026-01-23 11:45:39.763",
+    "responseDate": "2026-01-23 11:45:39.771",
+    "hostDateUtc": "2026-01-23 09:45:39.763",
+    "hostDate": "2026-01-23 11:45:39.763",
+    "durationInMillis": 7
+  }
+}
+body {
+  versionNumber: 1,
+  traceId: 'e20ae645-6445-4c2a-8051-c6a216232db7',
+  correlationId: 'a330fdba-8415-4505-b9cb-624f9f066201',
+  result: { success: true, origin: 'WORKER_SERVICE' },
+  profile: {
+    zone: 'SAT',
+    lang: 'ENG',
+    country: 'USA',
+    offset: '+02:00',
+    requestDate: '2026-01-23 11:45:39.763',
+    responseDate: '2026-01-23 11:45:39.771',
+    hostDateUtc: '2026-01-23 09:45:39.763',
+    hostDate: '2026-01-23 11:45:39.763',
+    durationInMillis: 7
+  }
+}

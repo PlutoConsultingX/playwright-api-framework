@@ -1,0 +1,108 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Polling DB (attempt 1) for correlationId: 1812e45c-bafc-4dc0-b128-e3d1139e6b17
+Polling DB (attempt 2) for correlationId: 1812e45c-bafc-4dc0-b128-e3d1139e6b17
+Polling DB (attempt 3) for correlationId: 1812e45c-bafc-4dc0-b128-e3d1139e6b17
+Polling DB (attempt 4) for correlationId: 1812e45c-bafc-4dc0-b128-e3d1139e6b17
+Polling DB (attempt 5) for correlationId: 1812e45c-bafc-4dc0-b128-e3d1139e6b17
+Polling DB (attempt 6) for correlationId: 1812e45c-bafc-4dc0-b128-e3d1139e6b17
+Polling DB (attempt 7) for correlationId: 1812e45c-bafc-4dc0-b128-e3d1139e6b17
+Polling DB (attempt 8) for correlationId: 1812e45c-bafc-4dc0-b128-e3d1139e6b17
+Polling DB (attempt 9) for correlationId: 1812e45c-bafc-4dc0-b128-e3d1139e6b17
+Polling DB (attempt 10) for correlationId: 1812e45c-bafc-4dc0-b128-e3d1139e6b17
+Polling DB (attempt 11) for correlationId: 1812e45c-bafc-4dc0-b128-e3d1139e6b17
+✅ Parsed callback_data: {
+  "isInfo": {
+    "senderMessageId": "bf622069-4813-4455-a118-af280d1a0e2d",
+    "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+    "responseId": "522c60f1-e24f-4c1b-9c7b-718b7b812f0e",
+    "isCorrelationId": "84457e43-29b6-4152-86dc-601bf2740ad6"
+  },
+  "responseHeader": {
+    "totalCount": 1,
+    "responseTimestamp": "2026-01-23 11:27:54.717",
+    "clientIntegrationId": "HYT0002",
+    "clientProfile": "FACHYTQ1",
+    "responseType": "LOAD",
+    "responseCode": "PROCESSED",
+    "nativeMsgId": "b8e40f8b-1a5b-47bf-b91a-1066ed9942a8"
+  },
+  "responseDetail": {
+    "transactions": [
+      {
+        "transactionId": "cff9b876-4920-4be2-8f30-f26cbc42c612",
+        "serviceType": "EFTPAYMENT",
+        "transactionAmount": "300",
+        "effectiveDate": "2026-01-23",
+        "actionDate": "2026-01-23",
+        "nativeTransactionId": "P926 -EF-000000176-00000100",
+        "transactionResponse": {
+          "responseType": "CREATED",
+          "responseDescription": "Transaction created"
+        },
+        "transactionError": {
+          "errorCode": "",
+          "errorDescription": ""
+        }
+      }
+    ]
+  }
+}
+Processed To Bank Payload: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-EFT-TRANSACTION-01",
+      "responseId": "{{$guid}}",
+      "isCorrelationId": "c5919c23-a691-4cc8-a3fe-b918b9c04f94"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "actionDate": "2026-01-23",
+          "serviceType": "EFTCOLLECTION",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "PROCESSED",
+            "responseDescription": "Processed to bank"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "RESPONSE",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-23",
+      "nativeMsgId": "11049bd1-5fea-4bb2-b97e-0afa064ac82a",
+      "clientIntegrationId": "HYT0003"
+    }
+  }
+}
+Processed to bank Status: 200
+Processed to bank Response: {"versionNumber":1,"traceId":"eb1eed60-16ad-487a-8825-4b0151877ccc","correlationId":"a2721c4b-477f-4ace-a36b-7e86eecf2559","result":{"success":true,"origin":"WORKER_SERVICE"},"profile":{"zone":"SAT","lang":"ENG","country":"USA","offset":"+02:00","requestDate":"2026-01-23 11:27:55.340","responseDate":"2026-01-23 11:27:55.350","hostDateUtc":"2026-01-23 09:27:55.340","hostDate":"2026-01-23 11:27:55.340","durationInMillis":10}}
+Processed To Bank API Response: {
+  "versionNumber": 1,
+  "traceId": "eb1eed60-16ad-487a-8825-4b0151877ccc",
+  "correlationId": "a2721c4b-477f-4ace-a36b-7e86eecf2559",
+  "result": {
+    "success": true,
+    "origin": "WORKER_SERVICE"
+  },
+  "profile": {
+    "zone": "SAT",
+    "lang": "ENG",
+    "country": "USA",
+    "offset": "+02:00",
+    "requestDate": "2026-01-23 11:27:55.340",
+    "responseDate": "2026-01-23 11:27:55.350",
+    "hostDateUtc": "2026-01-23 09:27:55.340",
+    "hostDate": "2026-01-23 11:27:55.340",
+    "durationInMillis": 10
+  }
+}

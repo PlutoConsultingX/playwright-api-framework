@@ -1,0 +1,106 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Load Created Payload: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "706b87f7-7847-441e-a244-227bd2fa7ee1"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "actionDate": "2026-01-22",
+          "effectiveDate": "2026-01-22",
+          "serviceType": "EFTPAYMENT",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-22",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Load Created Status: 200
+Load Created Response: {"versionNumber":1,"traceId":"e02e7d8d-7870-445b-b0ed-406311375983","correlationId":"645f9ae0-e6b5-487f-b5fd-43d423d0e3ac","result":{"success":true,"origin":"WORKER_SERVICE"},"profile":{"zone":"SAT","lang":"ENG","country":"USA","offset":"+02:00","requestDate":"2026-01-22 11:27:53.576","responseDate":"2026-01-22 11:27:53.591","hostDateUtc":"2026-01-22 09:27:53.577","hostDate":"2026-01-22 11:27:53.576","durationInMillis":14}}
+Load Created Response: {
+  versionNumber: 1,
+  traceId: 'e02e7d8d-7870-445b-b0ed-406311375983',
+  correlationId: '645f9ae0-e6b5-487f-b5fd-43d423d0e3ac',
+  result: { success: true, origin: 'WORKER_SERVICE' },
+  profile: {
+    zone: 'SAT',
+    lang: 'ENG',
+    country: 'USA',
+    offset: '+02:00',
+    requestDate: '2026-01-22 11:27:53.576',
+    responseDate: '2026-01-22 11:27:53.591',
+    hostDateUtc: '2026-01-22 09:27:53.577',
+    hostDate: '2026-01-22 11:27:53.576',
+    durationInMillis: 14
+  }
+}
+DB Result after load created (attempt 1):
+[]
+Waiting for DB record... (1/10)
+DB Result after load created (attempt 2):
+[]
+Waiting for DB record... (2/10)
+DB Result after load created (attempt 3):
+[]
+Waiting for DB record... (3/10)
+DB Result after load created (attempt 4):
+[]
+Waiting for DB record... (4/10)
+DB Result after load created (attempt 5):
+[]
+Waiting for DB record... (5/10)
+DB Result after load created (attempt 6):
+[]
+Waiting for DB record... (6/10)
+DB Result after load created (attempt 7):
+[
+  {
+    "workflow_execution_id": "a107f9fc-d446-495d-9767-f57bf38b0397",
+    "transaction_id": "f0d092c8-eac1-4758-afcc-7eddc1c5eac5",
+    "client_transaction_id": "ce73508a-656f-475a-bd41-841429838c06",
+    "transaction_item_id": "cda0d37e-6ed9-4c2f-a2f3-41854e65bbfa",
+    "child_workflow_execution_id": "0c55e8ff-f6a1-300d-8520-b35949bc8711",
+    "trxBatchStatus": "In Progress",
+    "trxStatus": "In progress",
+    "trxItemDetailStatus": "In progress",
+    "service_name": "SALARY_EFT_PAYMENTS",
+    "transaction_item_detail_id": "5d9a438b-126d-42cf-81ef-1dd56e4b80a7",
+    "transaction_item_detail_run_status_name": "In progress",
+    "response_manager_code": null,
+    "response_manager_exception_type": null,
+    "response_manager_message": null,
+    "response_data": null,
+    "response_reference": "baac014b-6a47-4c31-8543-acc0a3c49cd2",
+    "sagrequestpayload": "{\n  \"transactionId\": \"2b681411-9140-436b-96cc-b59f522657c9\",\n  \"beneficiaryAccountNumber\": \"62006677069\",\n  \"branchCode\": \"250655\",\n  \"accountType\": \"2\",\n  \"serviceType\": \"EFTPAYMENT\",\n  \"transactionType\": \"P926\",\n  \"documentType\": \"EF\",\n  \"customerName\": \"john doe\",\n  \"napsBeneficiaryCode\": \"\",\n  \"globalRecipient\": \"\",\n  \"transactionAmount\": \"300\",\n  \"actionDate\": \"2026-01-22\",\n  \"reference1\": \"SREF000-23042025\",\n  \"reference2\": \"CREF000-23042025\",\n  \"reference3\": \"\",\n  \"bicCode\": \"\",\n  \"processingOption1\": \"I\",\n  \"processingOption2\": \"S\",\n  \"mandateReference\": \"\",\n  \"collectionReoccurence\": \"OOFF\",\n  \"contractReference\": \"Thato Auto\",\n  \"emailAddress\": \"Hyphen@RMB.com\",\n  \"cellphoneNumber\": \"+27721234567\"\n}",
+    "senderID": "e1658cc2-5460-4679-8837-b7257d7609be",
+    "transactionIDSAGReqPayload": "2b681411-9140-436b-96cc-b59f522657c9",
+    "response_payload_data": "{\n  \"response\": {\n    \"isInfo\": {\n      \"senderMessageId\": \"86d219be-0014-4b12-89f0-a41dcb127c37\",\n      \"serviceId\": \"FACS-SALARYDAY-TRANSACTION-01\",\n      \"responseId\": \"baac014b-6a47-4c31-8543-acc0a3c49cd2\",\n      \"isCorrelationId\": \"6fb8a182-e71d-41eb-8d55-b9dddafd8756\"\n    },\n    \"responseHeader\": {\n      \"responseTimestamp\": \"2026-01-22 11:28:00.280\",\n      \"responseType\": \"ack\",\n      \"responseCode\": \"accepted\"\n    }\n  }\n}",
+    "response_type": "ack",
+    "workertransactionstatus": 1,
+    "sagTransresponsecode": "CREATED",
+    "sagTransresponse_description": "Transaction created",
+    "sagTranserrorcode": null,
+    "sagTranserror_description": null,
+    "callback_data": "{\n  \"isInfo\": {\n    \"senderMessageId\": \"86d219be-0014-4b12-89f0-a41dcb127c37\",\n    \"serviceId\": \"FACS-SALARYDAY-TRANSACTION-01\",\n    \"responseId\": \"f56d7a3f-ae59-45e5-832b-df5f7834add6\",\n    \"isCorrelationId\": \"6fb8a182-e71d-41eb-8d55-b9dddafd8756\"\n  },\n  \"responseHeader\": {\n    \"totalCount\": 1,\n    \"responseTimestamp\": \"2026-01-22 11:28:04.785\",\n    \"clientIntegrationId\": \"HYT0002\",\n    \"clientProfile\": \"FACHYTQ1\",\n    \"responseType\": \"LOAD\",\n    \"responseCode\": \"PROCESSED\",\n    \"nativeMsgId\": \"cda3b1ee-dd09-4114-a764-99e8542691d8\"\n  },\n  \"responseDetail\": {\n    \"transactions\": [\n      {\n        \"transactionId\": \"2b681411-9140-436b-96cc-b59f522657c9\",\n        \"serviceType\": \"EFTPAYMENT\",\n        \"transactionAmount\": \"300\",\n        \"effectiveDate\": \"2026-01-22\",\n        \"actionDate\": \"2026-01-22\",\n        \"nativeTransactionId\": \"P926 -EF-000000135-00000100\",\n        \"transactionResponse\": {\n          \"responseType\": \"CREATED\",\n          \"responseDescription\": \"Transaction created\"\n        },\n        \"transactionError\": {\n          \"errorCode\": \"\",\n          \"errorDescription\": \"\"\n        }\n      }\n    ]\n  }\n}"
+  }
+]

@@ -1,0 +1,64 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+2026-01-21T08:15:07
+2026-01-21T08:15:07
+{
+  "workflowID": "c5d1f3b5-508e-4f47-9997-a4912d486466",
+  "clientCorrelationID": "52a14a20-6ab3-4103-9839-220334571070",
+  "requestDate": "2026-01-21T08:15:07",
+  "totalCount": 1,
+  "transactions": [
+    {
+      "transactionID": "bdc0bd21-cce0-4892-b2ce-1def9deceb64",
+      "transactionAmount": 300,
+      "actionDate": "2026-01-21",
+      "subjectReference": "SREF000-23042025",
+      "clientReference": "CREF000-23042025",
+      "mandateReference": "00032024091612QRZ2ZDWW",
+      "contractReference": "Thato Auto",
+      "trackingDays": 10,
+      "collectionReoccurance": "OOFF",
+      "subjectDetails": {
+        "accountNumber": "62006677069",
+        "accountType": "02",
+        "branchCode": "250655",
+        "country": "ZAF",
+        "idType": "EntityRegistrationNumber",
+        "idValue": "1951/000009/07",
+        "initials": "SK",
+        "firstName": "john",
+        "lastName": "doe",
+        "phoneNumber": "+27721234567",
+        "emailAddress": "Hyphen@RMB.com",
+        "profileReference": "Thatos"
+      }
+    }
+  ]
+}
+API Response Status: 200
+API Response Body: {
+  "success": true,
+  "message": [
+    "Total transactions posted: 1",
+    "Total valid transactions saved: 1",
+    "Total invalid transactions: 0"
+  ],
+  "clientCorrelationID": "52a14a20-6ab3-4103-9839-220334571070",
+  "hyphenCorrelationID": "27004dfe-2012-43f1-aff8-b32adc7b3de5"
+}
+API Response Body: {
+  success: true,
+  message: [
+    'Total transactions posted: 1',
+    'Total valid transactions saved: 1',
+    'Total invalid transactions: 0'
+  ],
+  clientCorrelationID: '52a14a20-6ab3-4103-9839-220334571070',
+  hyphenCorrelationID: '27004dfe-2012-43f1-aff8-b32adc7b3de5'
+}
+Params: [ '52a14a20-6ab3-4103-9839-220334571070' ]
+Waiting for DB record... (1/10)
+Waiting for DB record... (2/10)
+Transaction ID from DB: 9b61b3e7-17a1-4d8f-9fba-80b2b1439a4b
+Sender Message ID from DB: 5f9f197b-8144-4b14-a3a4-935358ceffd6

@@ -1,0 +1,105 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+2026-01-21T10:29:03
+2026-01-21T10:29:03
+{
+  "workflowID": "c5d1f3b5-508e-4f47-9997-a4912d486466",
+  "clientCorrelationID": "8fde5791-ebc5-4c3f-9ab4-83fbd43efb18",
+  "requestDate": "2026-01-21T10:29:03",
+  "totalCount": 1,
+  "transactions": [
+    {
+      "transactionID": "3df5155e-c3f1-4e1e-900a-dc5d3ae9f2ea",
+      "transactionAmount": 300,
+      "actionDate": "2026-01-21",
+      "subjectReference": "SREF000-23042025",
+      "clientReference": "CREF000-23042025",
+      "mandateReference": "00032024091612QRZ2ZDWW",
+      "contractReference": "Thato Auto",
+      "trackingDays": 10,
+      "collectionReoccurance": "OOFF",
+      "subjectDetails": {
+        "accountNumber": "62006677069",
+        "accountType": "02",
+        "branchCode": "250655",
+        "country": "ZAF",
+        "idType": "EntityRegistrationNumber",
+        "idValue": "1951/000009/07",
+        "initials": "SK",
+        "firstName": "john",
+        "lastName": "doe",
+        "phoneNumber": "+27721234567",
+        "emailAddress": "Hyphen@RMB.com",
+        "profileReference": "Thatos"
+      }
+    }
+  ]
+}
+API Response Status: 200
+API Response Body: {
+  "success": true,
+  "message": [
+    "Total transactions posted: 1",
+    "Total valid transactions saved: 1",
+    "Total invalid transactions: 0"
+  ],
+  "clientCorrelationID": "8fde5791-ebc5-4c3f-9ab4-83fbd43efb18",
+  "hyphenCorrelationID": "ac96734f-2c64-46ec-8708-6035b98a082e"
+}
+Validation Response: {
+  success: true,
+  message: [
+    'Total transactions posted: 1',
+    'Total valid transactions saved: 1',
+    'Total invalid transactions: 0'
+  ],
+  clientCorrelationID: '8fde5791-ebc5-4c3f-9ab4-83fbd43efb18',
+  hyphenCorrelationID: 'ac96734f-2c64-46ec-8708-6035b98a082e'
+}
+Validate Response: {
+  success: true,
+  message: [
+    'Total transactions posted: 1',
+    'Total valid transactions saved: 1',
+    'Total invalid transactions: 0'
+  ],
+  clientCorrelationID: '8fde5791-ebc5-4c3f-9ab4-83fbd43efb18',
+  hyphenCorrelationID: 'ac96734f-2c64-46ec-8708-6035b98a082e'
+}
+DB Result (attempt 1): []
+Waiting for DB record... (1/10)
+DB Result (attempt 2): []
+Waiting for DB record... (2/10)
+DB Result (attempt 3): []
+Waiting for DB record... (3/10)
+DB Result (attempt 4): []
+Waiting for DB record... (4/10)
+DB Result (attempt 5): [
+  {
+    "workflow_execution_id": "a40cf61e-d23a-49f0-913e-bc5b6b000146",
+    "transaction_id": "b4455274-b529-497d-9ca0-e567083d219f",
+    "client_transaction_id": "3df5155e-c3f1-4e1e-900a-dc5d3ae9f2ea",
+    "transaction_item_id": "5bb12f4e-37cc-4ecf-b631-6f3c972d659d",
+    "child_workflow_execution_id": "740afd38-3c28-3b36-98cf-2ef96041d045",
+    "trxBatchStatus": "In Progress",
+    "trxStatus": "In progress",
+    "trxItemDetailStatus": "In progress",
+    "service_name": "SALARY_EFT_PAYMENTS",
+    "transaction_item_detail_id": "a34a051c-1960-4e62-ba6a-da37fc663615",
+    "transaction_item_detail_run_status_name": "In progress",
+    "response_manager_code": null,
+    "response_manager_exception_type": null,
+    "response_manager_message": null,
+    "response_data": null,
+    "response_reference": null,
+    "sagrequestpayload": "{\n  \"transactionId\": \"586e3dd9-4d1a-427d-aa74-b9a436ed9f1c\",\n  \"beneficiaryAccountNumber\": \"62006677069\",\n  \"branchCode\": \"250655\",\n  \"accountType\": \"2\",\n  \"serviceType\": \"EFTPAYMENT\",\n  \"transactionType\": \"P926\",\n  \"documentType\": \"EF\",\n  \"customerName\": \"john doe\",\n  \"napsBeneficiaryCode\": \"\",\n  \"globalRecipient\": \"\",\n  \"transactionAmount\": \"300\",\n  \"actionDate\": \"2026-01-21\",\n  \"reference1\": \"SREF000-23042025\",\n  \"reference2\": \"CREF000-23042025\",\n  \"reference3\": \"\",\n  \"bicCode\": \"\",\n  \"processingOption1\": \"I\",\n  \"processingOption2\": \"S\",\n  \"mandateReference\": \"\",\n  \"collectionReoccurence\": \"OOFF\",\n  \"contractReference\": \"Thato Auto\",\n  \"emailAddress\": \"Hyphen@RMB.com\",\n  \"cellphoneNumber\": \"+27721234567\"\n}",
+    "senderID": "d8b90fac-f586-4462-884c-0c7cadf72c53",
+    "transactionIDSAGReqPayload": "586e3dd9-4d1a-427d-aa74-b9a436ed9f1c",
+    "response_payload_data": null,
+    "response_type": null,
+    "workertransactionstatus": 1
+  }
+]
+Transaction ID: b4455274-b529-497d-9ca0-e567083d219f
+Sender Message ID: d8b90fac-f586-4462-884c-0c7cadf72c53

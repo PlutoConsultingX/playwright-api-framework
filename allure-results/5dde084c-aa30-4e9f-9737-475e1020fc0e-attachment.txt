@@ -1,0 +1,75 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Load Created Request: {
+  Response: {
+    ISInfo: {
+      serviceId: 'FACS-SALARYDAY-TRANSACTION-01',
+      responseId: '{{$guid}}',
+      isCorrelationId: '4332489f-7273-4f93-b989-53436a1277ab',
+      senderMessageId: '8381a889-c20a-4d6b-8c33-ca77d605ed52'
+    },
+    responseDetail: { transactions: [Array] },
+    responseHeader: {
+      totalCount: 1,
+      responseCode: 'PROCESSED',
+      responseType: 'LOAD',
+      clientProfile: 'FACHYTQ1',
+      responseTimestamp: '2026-01-20',
+      clientIntegrationId: 'HYT0002'
+    }
+  }
+}
+Load Created Payload: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "c6c4b828-ce7d-4d1d-a375-5f02584f2b0d"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "actionDate": "2026-01-20",
+          "effectiveDate": "2026-01-20",
+          "serviceType": "EFTPAYMENT",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-20",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Load Created Status: 200
+Load Created Response: {"versionNumber":1,"traceId":"ffa9e2e5-acc8-4dee-b8a4-27c890e29dc1","correlationId":"23e8ee0d-fa6c-4d8f-aeb2-24228b9276e1","result":{"success":true,"origin":"WORKER_SERVICE"},"profile":{"zone":"SAT","lang":"ENG","country":"USA","offset":"+02:00","requestDate":"2026-01-20 13:29:06.106","responseDate":"2026-01-20 13:29:06.118","hostDateUtc":"2026-01-20 11:29:06.106","hostDate":"2026-01-20 13:29:06.106","durationInMillis":12}}
+Load Created Response: {
+  versionNumber: 1,
+  traceId: 'ffa9e2e5-acc8-4dee-b8a4-27c890e29dc1',
+  correlationId: '23e8ee0d-fa6c-4d8f-aeb2-24228b9276e1',
+  result: { success: true, origin: 'WORKER_SERVICE' },
+  profile: {
+    zone: 'SAT',
+    lang: 'ENG',
+    country: 'USA',
+    offset: '+02:00',
+    requestDate: '2026-01-20 13:29:06.106',
+    responseDate: '2026-01-20 13:29:06.118',
+    hostDateUtc: '2026-01-20 11:29:06.106',
+    hostDate: '2026-01-20 13:29:06.106',
+    durationInMillis: 12
+  }
+}

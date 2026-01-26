@@ -1,0 +1,73 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+2026-01-21T09:04:58
+2026-01-21T09:04:58
+{
+  "workflowID": "c5d1f3b5-508e-4f47-9997-a4912d486466",
+  "clientCorrelationID": "dc8fe967-0b20-4ce7-bedf-a9aefc605c33",
+  "requestDate": "2026-01-21T09:04:58",
+  "totalCount": 1,
+  "transactions": [
+    {
+      "transactionID": "5cc5b1db-7352-41c0-b665-515915f22377",
+      "transactionAmount": 300,
+      "actionDate": "2026-01-21",
+      "subjectReference": "SREF000-23042025",
+      "clientReference": "CREF000-23042025",
+      "mandateReference": "00032024091612QRZ2ZDWW",
+      "contractReference": "Thato Auto",
+      "trackingDays": 10,
+      "collectionReoccurance": "OOFF",
+      "subjectDetails": {
+        "accountNumber": "62006677069",
+        "accountType": "02",
+        "branchCode": "250655",
+        "country": "ZAF",
+        "idType": "EntityRegistrationNumber",
+        "idValue": "1951/000009/07",
+        "initials": "SK",
+        "firstName": "john",
+        "lastName": "doe",
+        "phoneNumber": "+27721234567",
+        "emailAddress": "Hyphen@RMB.com",
+        "profileReference": "Thatos"
+      }
+    }
+  ]
+}
+API Response Status: 200
+API Response Body: {
+  "success": true,
+  "message": [
+    "Total transactions posted: 1",
+    "Total valid transactions saved: 1",
+    "Total invalid transactions: 0"
+  ],
+  "clientCorrelationID": "dc8fe967-0b20-4ce7-bedf-a9aefc605c33",
+  "hyphenCorrelationID": "bf68ae01-ddc0-4204-b6bc-49913c7e0138"
+}
+Validation Response: {
+  success: true,
+  message: [
+    'Total transactions posted: 1',
+    'Total valid transactions saved: 1',
+    'Total invalid transactions: 0'
+  ],
+  clientCorrelationID: 'dc8fe967-0b20-4ce7-bedf-a9aefc605c33',
+  hyphenCorrelationID: 'bf68ae01-ddc0-4204-b6bc-49913c7e0138'
+}
+Validate Response: {
+  success: true,
+  message: [
+    'Total transactions posted: 1',
+    'Total valid transactions saved: 1',
+    'Total invalid transactions: 0'
+  ],
+  clientCorrelationID: 'dc8fe967-0b20-4ce7-bedf-a9aefc605c33',
+  hyphenCorrelationID: 'bf68ae01-ddc0-4204-b6bc-49913c7e0138'
+}
+Waiting for DB record... (1/10)
+Database results []
+Transaction ID: 1845a6aa-ea53-4df0-93f1-61d0bf661bb8
+Sender Message ID: 89537057-7a4f-497d-8f9a-7580e516c9bc

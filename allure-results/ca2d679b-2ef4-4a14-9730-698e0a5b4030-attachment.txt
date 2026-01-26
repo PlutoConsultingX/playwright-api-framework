@@ -1,0 +1,76 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Load Created Payload: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "28a0debc-1563-42d2-967d-688936a7569b"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "actionDate": "2026-01-22",
+          "effectiveDate": "2026-01-22",
+          "serviceType": "EFTPAYMENT",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-22",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Load Created Status: 200
+Load Created Response: {"versionNumber":1,"traceId":"69fae0ca-83d5-467b-991e-ed1494332e56","correlationId":"03a32877-6fe5-4b66-96cb-19e70a3ee97c","result":{"success":true,"origin":"WORKER_SERVICE"},"profile":{"zone":"SAT","lang":"ENG","country":"USA","offset":"+02:00","requestDate":"2026-01-22 09:40:08.479","responseDate":"2026-01-22 09:40:08.490","hostDateUtc":"2026-01-22 07:40:08.479","hostDate":"2026-01-22 09:40:08.479","durationInMillis":10}}
+Load Created Response: {
+  versionNumber: 1,
+  traceId: '69fae0ca-83d5-467b-991e-ed1494332e56',
+  correlationId: '03a32877-6fe5-4b66-96cb-19e70a3ee97c',
+  result: { success: true, origin: 'WORKER_SERVICE' },
+  profile: {
+    zone: 'SAT',
+    lang: 'ENG',
+    country: 'USA',
+    offset: '+02:00',
+    requestDate: '2026-01-22 09:40:08.479',
+    responseDate: '2026-01-22 09:40:08.490',
+    hostDateUtc: '2026-01-22 07:40:08.479',
+    hostDate: '2026-01-22 09:40:08.479',
+    durationInMillis: 10
+  }
+}
+DB Result after load created (attempt 1): []
+Waiting for DB record... (1/10)
+DB Result after load created (attempt 2): []
+Waiting for DB record... (2/10)
+DB Result after load created (attempt 3): []
+Waiting for DB record... (3/10)
+DB Result after load created (attempt 4): []
+Waiting for DB record... (4/10)
+DB Result after load created (attempt 5): []
+Waiting for DB record... (5/10)
+DB Result after load created (attempt 6): []
+Waiting for DB record... (6/10)
+DB Result after load created (attempt 7): []
+Waiting for DB record... (7/10)
+DB Result after load created (attempt 8): []
+Waiting for DB record... (8/10)
+DB Result after load created (attempt 9): []
+Waiting for DB record... (9/10)
+DB Result after load created (attempt 10): []
+Waiting for DB record... (10/10)

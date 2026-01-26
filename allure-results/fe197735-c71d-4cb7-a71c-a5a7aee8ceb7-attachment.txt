@@ -1,0 +1,127 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Load Created Payload: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "22f5acb0-5029-4120-a65d-57968e06b64b"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "actionDate": "2026-01-22",
+          "effectiveDate": "2026-01-22",
+          "serviceType": "EFTPAYMENT",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-22",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Load Created Status: 200
+Load Created Response: {"versionNumber":1,"traceId":"ace6107a-3b1f-40a8-b914-cf107870eb8f","correlationId":"b92cac87-e102-4845-8dcd-b5f4b29f0d38","result":{"success":true,"origin":"WORKER_SERVICE"},"profile":{"zone":"SAT","lang":"ENG","country":"USA","offset":"+02:00","requestDate":"2026-01-22 10:32:58.632","responseDate":"2026-01-22 10:32:58.644","hostDateUtc":"2026-01-22 08:32:58.632","hostDate":"2026-01-22 10:32:58.632","durationInMillis":12}}
+Load Created Response: {
+  versionNumber: 1,
+  traceId: 'ace6107a-3b1f-40a8-b914-cf107870eb8f',
+  correlationId: 'b92cac87-e102-4845-8dcd-b5f4b29f0d38',
+  result: { success: true, origin: 'WORKER_SERVICE' },
+  profile: {
+    zone: 'SAT',
+    lang: 'ENG',
+    country: 'USA',
+    offset: '+02:00',
+    requestDate: '2026-01-22 10:32:58.632',
+    responseDate: '2026-01-22 10:32:58.644',
+    hostDateUtc: '2026-01-22 08:32:58.632',
+    hostDate: '2026-01-22 10:32:58.632',
+    durationInMillis: 12
+  }
+}
+Determining the type of dbResult: object
+Keys: []
+DB Result after load created (attempt 1):
+[]
+We are moving now, I am reaching my maximum horse power
+Waiting for DB record... (1/10)
+Determining the type of dbResult: object
+Keys: []
+DB Result after load created (attempt 2):
+[]
+We are moving now, I am reaching my maximum horse power
+Waiting for DB record... (2/10)
+Determining the type of dbResult: object
+Keys: []
+DB Result after load created (attempt 3):
+[]
+We are moving now, I am reaching my maximum horse power
+Waiting for DB record... (3/10)
+Determining the type of dbResult: object
+Keys: []
+DB Result after load created (attempt 4):
+[]
+We are moving now, I am reaching my maximum horse power
+Waiting for DB record... (4/10)
+Determining the type of dbResult: object
+Keys: []
+DB Result after load created (attempt 5):
+[]
+We are moving now, I am reaching my maximum horse power
+Waiting for DB record... (5/10)
+Determining the type of dbResult: object
+Keys: []
+DB Result after load created (attempt 6):
+[]
+We are moving now, I am reaching my maximum horse power
+Waiting for DB record... (6/10)
+Determining the type of dbResult: object
+Keys: [ '0' ]
+DB Result after load created (attempt 7):
+[
+  {
+    "workflow_execution_id": "47d33ee2-d3ce-4feb-a8a7-1130e9a8b4d8",
+    "transaction_id": "9a4425f5-1939-4432-a59c-ea3db7a424e6",
+    "client_transaction_id": "6de07e53-9025-48f4-b5d4-125d1defdcd1",
+    "transaction_item_id": "7ddb64d5-fea4-446a-8a43-92fd2d576e43",
+    "child_workflow_execution_id": "adb9a8c8-7a7a-3820-8508-606fa51d5474",
+    "trxBatchStatus": "In Progress",
+    "trxStatus": "In progress",
+    "trxItemDetailStatus": "In progress",
+    "service_name": "SALARY_EFT_PAYMENTS",
+    "transaction_item_detail_id": "b1e17392-9bee-4fff-989f-9eb8f0bd0636",
+    "transaction_item_detail_run_status_name": "In progress",
+    "response_manager_code": null,
+    "response_manager_exception_type": null,
+    "response_manager_message": null,
+    "response_data": null,
+    "response_reference": "13fc786b-dfa0-4a21-87d5-bc8878f8ae2a",
+    "sagrequestpayload": "{\n  \"transactionId\": \"0d8eb431-70c5-4096-a202-4fc097b8dcc1\",\n  \"beneficiaryAccountNumber\": \"62006677069\",\n  \"branchCode\": \"250655\",\n  \"accountType\": \"2\",\n  \"serviceType\": \"EFTPAYMENT\",\n  \"transactionType\": \"P926\",\n  \"documentType\": \"EF\",\n  \"customerName\": \"john doe\",\n  \"napsBeneficiaryCode\": \"\",\n  \"globalRecipient\": \"\",\n  \"transactionAmount\": \"300\",\n  \"actionDate\": \"2026-01-22\",\n  \"reference1\": \"SREF000-23042025\",\n  \"reference2\": \"CREF000-23042025\",\n  \"reference3\": \"\",\n  \"bicCode\": \"\",\n  \"processingOption1\": \"I\",\n  \"processingOption2\": \"S\",\n  \"mandateReference\": \"\",\n  \"collectionReoccurence\": \"OOFF\",\n  \"contractReference\": \"Thato Auto\",\n  \"emailAddress\": \"Hyphen@RMB.com\",\n  \"cellphoneNumber\": \"+27721234567\"\n}",
+    "senderID": "f2d4e98c-ffa6-43d0-a93b-3b8a0fcff833",
+    "transactionIDSAGReqPayload": "0d8eb431-70c5-4096-a202-4fc097b8dcc1",
+    "response_payload_data": "{\n  \"response\": {\n    \"isInfo\": {\n      \"senderMessageId\": \"87e90e11-84d5-4f25-89ad-5e440d908bf9\",\n      \"serviceId\": \"FACS-SALARYDAY-TRANSACTION-01\",\n      \"responseId\": \"13fc786b-dfa0-4a21-87d5-bc8878f8ae2a\",\n      \"isCorrelationId\": \"93a08988-14a2-4678-86b7-85d4c6a6160e\"\n    },\n    \"responseHeader\": {\n      \"responseTimestamp\": \"2026-01-22 10:33:00.270\",\n      \"responseType\": \"ack\",\n      \"responseCode\": \"accepted\"\n    }\n  }\n}",
+    "response_type": "ack",
+    "workertransactionstatus": 1,
+    "sagTransresponsecode": "CREATED",
+    "sagTransresponse_description": "Transaction created",
+    "sagTranserrorcode": null,
+    "sagTranserror_description": null,
+    "callback_data": "{\n  \"isInfo\": {\n    \"senderMessageId\": \"87e90e11-84d5-4f25-89ad-5e440d908bf9\",\n    \"serviceId\": \"FACS-SALARYDAY-TRANSACTION-01\",\n    \"responseId\": \"071d0608-22cc-4d65-9294-6567162818fb\",\n    \"isCorrelationId\": \"93a08988-14a2-4678-86b7-85d4c6a6160e\"\n  },\n  \"responseHeader\": {\n    \"totalCount\": 1,\n    \"responseTimestamp\": \"2026-01-22 10:33:05.246\",\n    \"clientIntegrationId\": \"HYT0002\",\n    \"clientProfile\": \"FACHYTQ1\",\n    \"responseType\": \"LOAD\",\n    \"responseCode\": \"PROCESSED\",\n    \"nativeMsgId\": \"905a9ad1-3765-4ffc-89ae-3d5fb9ae62f7\"\n  },\n  \"responseDetail\": {\n    \"transactions\": [\n      {\n        \"transactionId\": \"0d8eb431-70c5-4096-a202-4fc097b8dcc1\",\n        \"serviceType\": \"EFTPAYMENT\",\n        \"transactionAmount\": \"300\",\n        \"effectiveDate\": \"2026-01-22\",\n        \"actionDate\": \"2026-01-22\",\n        \"nativeTransactionId\": \"P926 -EF-000000130-00000100\",\n        \"transactionResponse\": {\n          \"responseType\": \"CREATED\",\n          \"responseDescription\": \"Transaction created\"\n        },\n        \"transactionError\": {\n          \"errorCode\": \"\",\n          \"errorDescription\": \"\"\n        }\n      }\n    ]\n  }\n}"
+  }
+]
+We are moving now, I am reaching my maximum horse power

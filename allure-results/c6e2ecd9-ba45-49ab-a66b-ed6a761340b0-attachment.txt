@@ -1,0 +1,58 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Load Created Payload: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "1db084cb-02cd-4524-90da-54edfbf3cec6",
+      "senderMessageId": "42ec260d-006a-4672-bc58-3b1ac2bba18d"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "transactionId": "bee41640-958f-4409-a100-ec5bbae03f72",
+          "actionDate": "2026-01-20",
+          "effectiveDate": "2026-01-20",
+          "serviceType": "EFTPAYMENT",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-20",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Load Created Status: 200
+Load Created Response: {"versionNumber":1,"traceId":"593fd774-5fba-45be-bcda-7cb70113b991","correlationId":"a060415e-9b29-44b1-bf9c-860ba9db972d","result":{"success":true,"origin":"WORKER_SERVICE"},"profile":{"zone":"SAT","lang":"ENG","country":"USA","offset":"+02:00","requestDate":"2026-01-20 13:21:40.343","responseDate":"2026-01-20 13:21:40.363","hostDateUtc":"2026-01-20 11:21:40.343","hostDate":"2026-01-20 13:21:40.343","durationInMillis":19}}
+Load Created Response: {
+  versionNumber: 1,
+  traceId: '593fd774-5fba-45be-bcda-7cb70113b991',
+  correlationId: 'a060415e-9b29-44b1-bf9c-860ba9db972d',
+  result: { success: true, origin: 'WORKER_SERVICE' },
+  profile: {
+    zone: 'SAT',
+    lang: 'ENG',
+    country: 'USA',
+    offset: '+02:00',
+    requestDate: '2026-01-20 13:21:40.343',
+    responseDate: '2026-01-20 13:21:40.363',
+    hostDateUtc: '2026-01-20 11:21:40.343',
+    hostDate: '2026-01-20 13:21:40.343',
+    durationInMillis: 19
+  }
+}

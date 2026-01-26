@@ -1,0 +1,65 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+2026-01-20T13:26:20
+2026-01-20T13:26:20
+{
+  "workflowID": "c5d1f3b5-508e-4f47-9997-a4912d486466",
+  "clientCorrelationID": "45b46db1-185c-4a7e-9421-0dbe9b0aebff",
+  "requestDate": "2026-01-20T13:26:20",
+  "totalCount": 1,
+  "transactions": [
+    {
+      "transactionID": "e0f42bbf-6ad2-4f28-bdc1-6714666c2da6",
+      "transactionAmount": 300,
+      "actionDate": "2026-01-20",
+      "subjectReference": "SREF000-23042025",
+      "clientReference": "CREF000-23042025",
+      "mandateReference": "00032024091612QRZ2ZDWW",
+      "contractReference": "Thato Auto",
+      "trackingDays": 10,
+      "collectionReoccurance": "OOFF",
+      "subjectDetails": {
+        "accountNumber": "62006677069",
+        "accountType": "02",
+        "branchCode": "250655",
+        "country": "ZAF",
+        "idType": "EntityRegistrationNumber",
+        "idValue": "1951/000009/07",
+        "initials": "SK",
+        "firstName": "john",
+        "lastName": "doe",
+        "phoneNumber": "+27721234567",
+        "emailAddress": "Hyphen@RMB.com",
+        "profileReference": "Thatos"
+      }
+    }
+  ]
+}
+API Response Status: 200
+API Response Body: {
+  "success": true,
+  "message": [
+    "Total transactions posted: 1",
+    "Total valid transactions saved: 1",
+    "Total invalid transactions: 0"
+  ],
+  "clientCorrelationID": "45b46db1-185c-4a7e-9421-0dbe9b0aebff",
+  "hyphenCorrelationID": "ee89889d-8676-4d10-b35f-6846aef651e1"
+}
+API Response Body: {
+  success: true,
+  message: [
+    'Total transactions posted: 1',
+    'Total valid transactions saved: 1',
+    'Total invalid transactions: 0'
+  ],
+  clientCorrelationID: '45b46db1-185c-4a7e-9421-0dbe9b0aebff',
+  hyphenCorrelationID: 'ee89889d-8676-4d10-b35f-6846aef651e1'
+}
+Params: [ '45b46db1-185c-4a7e-9421-0dbe9b0aebff' ]
+Waiting for DB record... (1/10)
+Waiting for DB record... (2/10)
+Waiting for DB record... (3/10)
+Transaction ID from DB: 1b7b7889-4a09-4bc0-8769-ac1b110b5cce
+Sender Message ID from DB: a7c6552b-1915-4ac2-b69d-5c348914017b

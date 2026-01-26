@@ -1,0 +1,106 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Polling DB (attempt 1) for correlationId: 781fb49a-fd44-45bb-8501-3bed9bdd4f52
+Polling DB (attempt 2) for correlationId: 781fb49a-fd44-45bb-8501-3bed9bdd4f52
+Polling DB (attempt 3) for correlationId: 781fb49a-fd44-45bb-8501-3bed9bdd4f52
+Polling DB (attempt 4) for correlationId: 781fb49a-fd44-45bb-8501-3bed9bdd4f52
+Polling DB (attempt 5) for correlationId: 781fb49a-fd44-45bb-8501-3bed9bdd4f52
+Polling DB (attempt 6) for correlationId: 781fb49a-fd44-45bb-8501-3bed9bdd4f52
+Polling DB (attempt 7) for correlationId: 781fb49a-fd44-45bb-8501-3bed9bdd4f52
+Polling DB (attempt 8) for correlationId: 781fb49a-fd44-45bb-8501-3bed9bdd4f52
+Polling DB (attempt 9) for correlationId: 781fb49a-fd44-45bb-8501-3bed9bdd4f52
+✅ Parsed callback_data: {
+  "isInfo": {
+    "senderMessageId": "30743929-fc1a-42c7-9971-7fbf38925887",
+    "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+    "responseId": "86a20a32-4c39-4d0f-bc91-0d4cbf6fa837",
+    "isCorrelationId": "d15ef6a4-8215-43f8-8ff9-f10db51ba789"
+  },
+  "responseHeader": {
+    "totalCount": 1,
+    "responseTimestamp": "2026-01-23 11:31:37.114",
+    "clientIntegrationId": "HYT0002",
+    "clientProfile": "FACHYTQ1",
+    "responseType": "LOAD",
+    "responseCode": "PROCESSED",
+    "nativeMsgId": "0cfaefd5-9357-4e73-ba96-48dde24e00ff"
+  },
+  "responseDetail": {
+    "transactions": [
+      {
+        "transactionId": "39a4aaef-fe36-461c-afdd-e2f24069a660",
+        "serviceType": "EFTPAYMENT",
+        "transactionAmount": "300",
+        "effectiveDate": "2026-01-23",
+        "actionDate": "2026-01-23",
+        "nativeTransactionId": "P926 -EF-000000177-00000100",
+        "transactionResponse": {
+          "responseType": "CREATED",
+          "responseDescription": "Transaction created"
+        },
+        "transactionError": {
+          "errorCode": "",
+          "errorDescription": ""
+        }
+      }
+    ]
+  }
+}
+Processed To Bank Payload: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-EFT-TRANSACTION-01",
+      "responseId": "{{$guid}}",
+      "isCorrelationId": "c5919c23-a691-4cc8-a3fe-b918b9c04f94"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "actionDate": "2026-01-23",
+          "serviceType": "EFTCOLLECTION",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "PROCESSED",
+            "responseDescription": "Processed to bank"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "RESPONSE",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-23",
+      "nativeMsgId": "11049bd1-5fea-4bb2-b97e-0afa064ac82a",
+      "clientIntegrationId": "HYT0003"
+    }
+  }
+}
+Processed to bank Status: 200
+Processed to bank Response: {"versionNumber":1,"traceId":"69b1d876-6202-4a85-83e0-a514631221d0","correlationId":"77c2076d-9c05-4808-8d9e-57507d1e87b6","result":{"success":true,"origin":"WORKER_SERVICE"},"profile":{"zone":"SAT","lang":"ENG","country":"USA","offset":"+02:00","requestDate":"2026-01-23 11:31:39.657","responseDate":"2026-01-23 11:31:39.676","hostDateUtc":"2026-01-23 09:31:39.657","hostDate":"2026-01-23 11:31:39.657","durationInMillis":18}}
+Processed To Bank API Response: {
+  "versionNumber": 1,
+  "traceId": "69b1d876-6202-4a85-83e0-a514631221d0",
+  "correlationId": "77c2076d-9c05-4808-8d9e-57507d1e87b6",
+  "result": {
+    "success": true,
+    "origin": "WORKER_SERVICE"
+  },
+  "profile": {
+    "zone": "SAT",
+    "lang": "ENG",
+    "country": "USA",
+    "offset": "+02:00",
+    "requestDate": "2026-01-23 11:31:39.657",
+    "responseDate": "2026-01-23 11:31:39.676",
+    "hostDateUtc": "2026-01-23 09:31:39.657",
+    "hostDate": "2026-01-23 11:31:39.657",
+    "durationInMillis": 18
+  }
+}

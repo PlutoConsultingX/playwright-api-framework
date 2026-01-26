@@ -1,11 +1,12 @@
 import { Helpers } from '../utils/helpers.js';
 
 export class TransactionFactory {
+
   static createTransactionPayload() {
     return {
       workflowID: "99590d04-add1-4f6f-b025-61ecb93b82a6",
       clientCorrelationID: Helpers.generateGUID(),
-      requestDate:Helpers.getExactFormatCurrentDateTime(),
+      requestDate: Helpers.getExactFormatCurrentDateTime(),
       totalCount: 1,
       transactions: [
         {
@@ -73,6 +74,51 @@ export class TransactionFactory {
           clientIntegrationId: "HYT0002"
         }
       }
-    }
+    };
+  }
+
+ static processedToBankPayload({senderMessageId,transactionId,nativeTransactionId})
+ {
+    return {
+      Response: {
+        ISInfo: {
+          serviceId: "FACS-SALARYDAY-TRANSACTION-01",
+          responseId: "{{$guid}}",
+          isCorrelationId: "c5919c23-a691-4cc8-a3fe-b918b9c04f94",
+          senderMessageId
+        },
+        responseDetail: {
+          transactions: [
+            {
+              transactionId,
+              actionDate: Helpers.getCurrentDate(),
+              actionDate: Helpers.getCurrentDate(),
+              nativeTransactionId,
+              serviceType: "EFTCOLLECTION",
+              transactionError: {
+                errorCode: "",
+                errorDescription: ""
+              },
+              transactionAmount: "100",
+              transactionResponse: {
+                responseType: "PROCESSED",
+                responseDescription: "Processed to bank"
+              }
+            }
+          ]
+        },
+        responseHeader: {
+          totalCount: 1,
+          responseCode: "PROCESSED",
+          responseType: "RESPONSE",
+          clientProfile: "FACHYTQ1",
+          responseTimestamp: Helpers.getCurrentDate(),
+          nativeMsgId: "11049bd1-5fea-4bb2-b97e-0afa064ac82a",
+          clientIntegrationId: "HYT0002"
+        }
+      }
+    };
+
   }
 }
+

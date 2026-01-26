@@ -1,0 +1,110 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Processed To Bank Payload: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-EFT-TRANSACTION-01",
+      "responseId": "{{$guid}}",
+      "isCorrelationId": "c5919c23-a691-4cc8-a3fe-b918b9c04f94"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "actionDate": "2026-01-22",
+          "serviceType": "EFTCOLLECTION",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "PROCESSED",
+            "responseDescription": "Processed to bank"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "RESPONSE",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-22",
+      "nativeMsgId": "11049bd1-5fea-4bb2-b97e-0afa064ac82a",
+      "clientIntegrationId": "HYT0003"
+    }
+  }
+}
+Processed to bank Status: 200
+Processed to bank Response: {"versionNumber":1,"traceId":"e2dc76c8-2406-4927-92ba-cc907b2416ee","correlationId":"265f9982-d2fd-417d-a7a1-73ae112875e9","result":{"success":true,"origin":"WORKER_SERVICE"},"profile":{"zone":"SAT","lang":"ENG","country":"USA","offset":"+02:00","requestDate":"2026-01-22 14:28:16.918","responseDate":"2026-01-22 14:28:16.929","hostDateUtc":"2026-01-22 12:28:16.918","hostDate":"2026-01-22 14:28:16.918","durationInMillis":10}}
+-------API Response for Processed to Bank heeeeeeereeeeeeee------
+Processed To Bank API Response: {
+  "versionNumber": 1,
+  "traceId": "e2dc76c8-2406-4927-92ba-cc907b2416ee",
+  "correlationId": "265f9982-d2fd-417d-a7a1-73ae112875e9",
+  "result": {
+    "success": true,
+    "origin": "WORKER_SERVICE"
+  },
+  "profile": {
+    "zone": "SAT",
+    "lang": "ENG",
+    "country": "USA",
+    "offset": "+02:00",
+    "requestDate": "2026-01-22 14:28:16.918",
+    "responseDate": "2026-01-22 14:28:16.929",
+    "hostDateUtc": "2026-01-22 12:28:16.918",
+    "hostDate": "2026-01-22 14:28:16.918",
+    "durationInMillis": 10
+  }
+}
+Polling DB for processed to bank (attempt 1) for clientCorrelationID: 362dbc70-0b80-4919-9cdf-a29dca5b9462
+DB rows returned: 0
+Waiting for DB record... (1/10)
+Polling DB for processed to bank (attempt 2) for clientCorrelationID: 362dbc70-0b80-4919-9cdf-a29dca5b9462
+DB rows returned: 0
+Waiting for DB record... (2/10)
+Polling DB for processed to bank (attempt 3) for clientCorrelationID: 362dbc70-0b80-4919-9cdf-a29dca5b9462
+DB rows returned: 1
+✅ Parsed callback_data JSON: {
+  "isInfo": {
+    "senderMessageId": "10ab5afc-55ca-42b8-85cd-eb856c3e177a",
+    "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+    "responseId": "506f345b-a10a-44a9-b97e-54e3b1413202",
+    "isCorrelationId": "2924925d-2409-4f37-ab81-4733e23edc8b"
+  },
+  "responseHeader": {
+    "totalCount": 1,
+    "responseTimestamp": "2026-01-22 14:28:19.913",
+    "clientIntegrationId": "HYT0002",
+    "clientProfile": "FACHYTQ1",
+    "responseType": "LOAD",
+    "responseCode": "PROCESSED",
+    "nativeMsgId": "b5f10ae4-cfaa-4fc0-9a8f-f4d5a342f5a3"
+  },
+  "responseDetail": {
+    "transactions": [
+      {
+        "transactionId": "a37871c9-9c8c-4e96-a4b9-5a43d4eb2027",
+        "serviceType": "EFTPAYMENT",
+        "transactionAmount": "300",
+        "effectiveDate": "2026-01-22",
+        "actionDate": "2026-01-22",
+        "nativeTransactionId": "P926 -EF-000000163-00000100",
+        "transactionResponse": {
+          "responseType": "CREATED",
+          "responseDescription": "Transaction created"
+        },
+        "transactionError": {
+          "errorCode": "",
+          "errorDescription": ""
+        }
+      }
+    ]
+  }
+}
+------Extracted Fields from callback_data:------
+senderMessageId: 10ab5afc-55ca-42b8-85cd-eb856c3e177a
+transactionId: a37871c9-9c8c-4e96-a4b9-5a43d4eb2027
+nativeTransactionId: P926 -EF-000000163-00000100

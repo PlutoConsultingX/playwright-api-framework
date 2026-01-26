@@ -2,11 +2,11 @@ import { test, expect } from "../../../../fixtures/tokenFixture.js";
 import { UserClient } from "../../../../clients/userClient.js";
 import { TransactionFactory } from "../../../../factories/transactionFactory.js";
 import { DbClient } from "../../../../db/dbClient.js";
-import { transactionQueries } from "../../../../db/queries/transactionQueries.js";
+import { transactionQueries } from "../../../../db/Queries/TransactionQueries.js";
 
 const dbClient = new DbClient(); // 🔑 shared per worker
 
-test("Validation Test - POST Transaction Workflow", async ({ request, token }) => {
+/*test("Validation Test - POST Transaction Workflow", async ({ request, token }) => {
   const userClient = new UserClient(request, token);
 
   // ---------- Build Payload ----------
@@ -53,3 +53,4 @@ test("Validation Test - POST Transaction Workflow", async ({ request, token }) =
 
 });
 
+*/

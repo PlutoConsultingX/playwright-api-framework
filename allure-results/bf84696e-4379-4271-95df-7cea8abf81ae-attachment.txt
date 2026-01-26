@@ -1,0 +1,77 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+2026-01-22T13:30:14
+2026-01-22T13:30:14
+{
+  "workflowID": "c5d1f3b5-508e-4f47-9997-a4912d486466",
+  "clientCorrelationID": "64480e78-ad69-48c8-b461-694240d8d13b",
+  "requestDate": "2026-01-22T13:30:14",
+  "totalCount": 1,
+  "transactions": [
+    {
+      "transactionID": "b40a852a-1b24-4ada-9ae9-e9fd15b31d6d",
+      "transactionAmount": 300,
+      "actionDate": "2026-01-22",
+      "subjectReference": "SREF000-23042025",
+      "clientReference": "CREF000-23042025",
+      "mandateReference": "00032024091612QRZ2ZDWW",
+      "contractReference": "Thato Auto",
+      "trackingDays": 10,
+      "collectionReoccurance": "OOFF",
+      "subjectDetails": {
+        "accountNumber": "62006677069",
+        "accountType": "02",
+        "branchCode": "250655",
+        "country": "ZAF",
+        "idType": "EntityRegistrationNumber",
+        "idValue": "1951/000009/07",
+        "initials": "SK",
+        "firstName": "john",
+        "lastName": "doe",
+        "phoneNumber": "+27721234567",
+        "emailAddress": "Hyphen@RMB.com",
+        "profileReference": "Thatos"
+      }
+    }
+  ]
+}
+API Response Status: 200
+API Response Body: {
+  "success": true,
+  "message": [
+    "Total transactions posted: 1",
+    "Total valid transactions saved: 1",
+    "Total invalid transactions: 0"
+  ],
+  "clientCorrelationID": "64480e78-ad69-48c8-b461-694240d8d13b",
+  "hyphenCorrelationID": "16301c1a-aba4-4e79-bdf6-c999df245b7a"
+}
+DB Result validation (attempt 1): []
+Waiting for DB record... (1/10)
+DB Result validation (attempt 2): [
+  {
+    "workflow_execution_id": "a513ec2d-d3c5-4da3-8a6e-ce1238e1930a",
+    "transaction_id": "9d1f28aa-7ec0-408a-b253-b1d5486bddb2",
+    "client_transaction_id": "b40a852a-1b24-4ada-9ae9-e9fd15b31d6d",
+    "transaction_item_id": "a608ed79-3cff-4b79-a6ad-1e9b9abb5853",
+    "child_workflow_execution_id": "41119529-4b06-342a-9d27-69b21dce334f",
+    "trxBatchStatus": "In Progress",
+    "trxStatus": "In progress",
+    "trxItemDetailStatus": "In progress",
+    "service_name": "SALARY_EFT_PAYMENTS",
+    "transaction_item_detail_id": "9fbe8ba8-844f-4b91-96ee-a7feb2938763",
+    "transaction_item_detail_run_status_name": "In progress",
+    "response_manager_code": null,
+    "response_manager_exception_type": null,
+    "response_manager_message": null,
+    "response_data": null,
+    "response_reference": "bb0b0d46-6bfa-4f44-9636-bc6868a864ca",
+    "sagrequestpayload": "{\n  \"transactionId\": \"07b26ced-13dd-4343-b1bc-d55430d89c3a\",\n  \"beneficiaryAccountNumber\": \"62006677069\",\n  \"branchCode\": \"250655\",\n  \"accountType\": \"2\",\n  \"serviceType\": \"EFTPAYMENT\",\n  \"transactionType\": \"P926\",\n  \"documentType\": \"EF\",\n  \"customerName\": \"john doe\",\n  \"napsBeneficiaryCode\": \"\",\n  \"globalRecipient\": \"\",\n  \"transactionAmount\": \"300\",\n  \"actionDate\": \"2026-01-22\",\n  \"reference1\": \"SREF000-23042025\",\n  \"reference2\": \"CREF000-23042025\",\n  \"reference3\": \"\",\n  \"bicCode\": \"\",\n  \"processingOption1\": \"I\",\n  \"processingOption2\": \"S\",\n  \"mandateReference\": \"\",\n  \"collectionReoccurence\": \"OOFF\",\n  \"contractReference\": \"Thato Auto\",\n  \"emailAddress\": \"Hyphen@RMB.com\",\n  \"cellphoneNumber\": \"+27721234567\"\n}",
+    "senderID": "9cc3af48-274a-4816-8647-d15eec3b2fb7",
+    "transactionIDSAGReqPayload": "07b26ced-13dd-4343-b1bc-d55430d89c3a",
+    "response_payload_data": "{\n  \"response\": {\n    \"isInfo\": {\n      \"senderMessageId\": \"2f419798-9884-4634-9764-afb70b716b0a\",\n      \"serviceId\": \"FACS-SALARYDAY-TRANSACTION-01\",\n      \"responseId\": \"bb0b0d46-6bfa-4f44-9636-bc6868a864ca\",\n      \"isCorrelationId\": \"9073b0b8-1f42-42d5-9fbd-a6b4a5f0dfb4\"\n    },\n    \"responseHeader\": {\n      \"responseTimestamp\": \"2026-01-22 13:30:15.291\",\n      \"responseType\": \"ack\",\n      \"responseCode\": \"accepted\"\n    }\n  }\n}",
+    "response_type": "ack",
+    "workertransactionstatus": 1
+  }
+]

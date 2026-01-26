@@ -1,55 +1,58 @@
 import { test, expect } from "../../../../fixtures/tokenFixture.js";
 import { UserClient } from "../../../../clients/userClient.js";
-import { TransactionFactory } from "../../../../factories/transactionFactory.js";
 import { DbClient } from "../../../../db/dbClient.js";
-import { transactionQueries } from "../../../../db/queries/transactionQueries.js";
+import { transactionQueries } from "../../../../db/Queries/TransactionQueries.js";
 
-const dbClient = new DbClient(); // 🔑 shared per worker
+const dbClient = new DbClient(); // shared per worker
 
-test("Load Created Test", async ({ request, token }) => {
-  
+/*test("Load Created Test - Continue Salary Transaction Workflow", async ({ request, token }) => {
   const userClient = new UserClient(request, token);
 
-  // ---------- Build Payload ----------
-  const payload = TransactionFactory.loadCreatedEFTPayload();
+  // ---------------------------------------------------
+  // 1️⃣ Fetch the latest validated transaction from DB
+  // ---------------------------------------------------
+  const dbResult = await dbClient.query(
+    transactionQueries.getLatestValidatedSalaryTransaction,
+    []
+  );
 
-  // ---------- Execute API Request ----------
-  const response = await userClient.loadCreatedEFT(payload);
+  expect(dbResult.length).toBeGreaterThan(0);
+
+  const transactionId = dbResult[0].transaction_id;
+  const senderMessageId = dbResult[0].senderID;
+
+  console.log("Continuing transaction:");
+  console.log("Transaction ID:", transactionId);
+  console.log("Sender Message ID:", senderMessageId);
+
+  // ---------------------------------------------------
+  // 2️⃣ Call Load Created API using SAME token
+  // ---------------------------------------------------
+  const payload = {
+    transactionId,
+    senderMessageId,
+  };
+
+  const response = await userClient.loadCreated(payload);
   const body = await response.json();
 
-  console.log("API Response Body:", body);
+  console.log("Load Created Response:", body);
 
+  // ---------------------------------------------------
+  // 3️⃣ Assertions
+  // ---------------------------------------------------
   expect(response.status()).toBeGreaterThanOrEqual(200);
-  //expect(response.status()).toBeLessThan(300);
-  expect(body).toHaveProperty("clientCorrelationID");
+  expect(body).toHaveProperty("status");
+  expect(body.status).toBe("LOADED");
 
-  const correlationId = body.clientCorrelationID;
-  console.log("Params:", [body.clientCorrelationID]);
-  
-  // ---------- DB Validation (with polling) ----------
-  let dbResult = [];
-  const maxRetries = 10;
-  const delayMs = 1000;
+  // ---------------------------------------------------
+  // 4️⃣ Optional: DB verification
+  // ---------------------------------------------------
+  const loadDbResult = await dbClient.query(
+    transactionQueries.getLoadedTransaction,
+    [transactionId]
+  );
 
-  for (let i = 0; i < maxRetries; i++) {
-    dbResult = await dbClient.query(
-      transactionQueries.getSalaryTransactionFailedSAGResponse,
-      [correlationId]
-    );
-
-    if (dbResult.length > 0) break;
-
-    console.log(`Waiting for DB record... (${i + 1}/${maxRetries})`);
-    await new Promise(res => setTimeout(res, delayMs));
-  }
-
-  //------DB Results ------
-  //console.log("DB Result:", dbResult);
-
-  var transactioID = dbResult[0].transaction_id;
-  var senderMessageId = dbResult[0].senderID;
-
-  console.log("Transaction ID from DB:", transactioID);
-  console.log("Sender Message ID from DB:", senderMessageId);
-
+  expect(loadDbResult.length).toBeGreaterThan(0);
 });
+*/

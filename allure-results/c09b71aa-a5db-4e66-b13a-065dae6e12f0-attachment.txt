@@ -1,0 +1,17 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Polling DB (attempt 1) for correlationId: b9c9a973-7e67-4be7-a782-a32e51028fef
+Polling DB (attempt 2) for correlationId: b9c9a973-7e67-4be7-a782-a32e51028fef
+Polling DB (attempt 3) for correlationId: b9c9a973-7e67-4be7-a782-a32e51028fef
+Polling DB (attempt 4) for correlationId: b9c9a973-7e67-4be7-a782-a32e51028fef
+Polling DB (attempt 5) for correlationId: b9c9a973-7e67-4be7-a782-a32e51028fef
+Polling DB (attempt 6) for correlationId: b9c9a973-7e67-4be7-a782-a32e51028fef
+Polling DB (attempt 7) for correlationId: b9c9a973-7e67-4be7-a782-a32e51028fef
+Polling DB (attempt 8) for correlationId: b9c9a973-7e67-4be7-a782-a32e51028fef
+Polling DB (attempt 9) for correlationId: b9c9a973-7e67-4be7-a782-a32e51028fef
+Polling DB (attempt 10) for correlationId: b9c9a973-7e67-4be7-a782-a32e51028fef
+Polling DB (attempt 11) for correlationId: b9c9a973-7e67-4be7-a782-a32e51028fef
+Polling DB (attempt 12) for correlationId: b9c9a973-7e67-4be7-a782-a32e51028fef
+Polling DB (attempt 13) for correlationId: b9c9a973-7e67-4be7-a782-a32e51028fef
+Polling DB (attempt 14) for correlationId: b9c9a973-7e67-4be7-a782-a32e51028fef

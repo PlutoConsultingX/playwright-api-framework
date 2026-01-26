@@ -1,0 +1,95 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Load Created Request: {
+  Response: {
+    ISInfo: {
+      serviceId: 'FACS-SALARYDAY-TRANSACTION-01',
+      responseId: '{{$guid}}',
+      isCorrelationId: '4332489f-7273-4f93-b989-53436a1277ab',
+      senderMessageId: '8381a889-c20a-4d6b-8c33-ca77d605ed52'
+    },
+    responseDetail: { transactions: [Array] },
+    responseHeader: {
+      totalCount: 1,
+      responseCode: 'PROCESSED',
+      responseType: 'LOAD',
+      clientProfile: 'FACHYTQ1',
+      responseTimestamp: '2026-01-22',
+      clientIntegrationId: 'HYT0002'
+    }
+  }
+}
+Load Created Payload: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "1b03e06c-ff4e-4a8f-af07-db3a51f99d2d"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "actionDate": "2026-01-22",
+          "effectiveDate": "2026-01-22",
+          "serviceType": "EFTPAYMENT",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-22",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Load Created Status: 200
+Load Created Response: {"versionNumber":1,"traceId":"96e6f3c1-96a8-4ce1-953b-aa7a91ac70bf","correlationId":"f4625a2a-f633-4821-b1fa-bdcb49e905f6","result":{"success":true,"origin":"WORKER_SERVICE"},"profile":{"zone":"SAT","lang":"ENG","country":"USA","offset":"+02:00","requestDate":"2026-01-22 09:29:25.672","responseDate":"2026-01-22 09:29:25.684","hostDateUtc":"2026-01-22 07:29:25.672","hostDate":"2026-01-22 09:29:25.672","durationInMillis":11}}
+Load Created Response: {
+  versionNumber: 1,
+  traceId: '96e6f3c1-96a8-4ce1-953b-aa7a91ac70bf',
+  correlationId: 'f4625a2a-f633-4821-b1fa-bdcb49e905f6',
+  result: { success: true, origin: 'WORKER_SERVICE' },
+  profile: {
+    zone: 'SAT',
+    lang: 'ENG',
+    country: 'USA',
+    offset: '+02:00',
+    requestDate: '2026-01-22 09:29:25.672',
+    responseDate: '2026-01-22 09:29:25.684',
+    hostDateUtc: '2026-01-22 07:29:25.672',
+    hostDate: '2026-01-22 09:29:25.672',
+    durationInMillis: 11
+  }
+}
+DB Result after load created (attempt 1): []
+Waiting for DB record... (1/10)
+DB Result after load created (attempt 2): []
+Waiting for DB record... (2/10)
+DB Result after load created (attempt 3): []
+Waiting for DB record... (3/10)
+DB Result after load created (attempt 4): []
+Waiting for DB record... (4/10)
+DB Result after load created (attempt 5): []
+Waiting for DB record... (5/10)
+DB Result after load created (attempt 6): []
+Waiting for DB record... (6/10)
+DB Result after load created (attempt 7): []
+Waiting for DB record... (7/10)
+DB Result after load created (attempt 8): []
+Waiting for DB record... (8/10)
+DB Result after load created (attempt 9): []
+Waiting for DB record... (9/10)
+DB Result after load created (attempt 10): []
+Waiting for DB record... (10/10)

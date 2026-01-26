@@ -1,0 +1,66 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+2026-01-21T07:44:43
+2026-01-21T07:44:43
+{
+  "workflowID": "c5d1f3b5-508e-4f47-9997-a4912d486466",
+  "clientCorrelationID": "7eeb9342-c940-43d7-88c1-e144731ccde8",
+  "requestDate": "2026-01-21T07:44:43",
+  "totalCount": 1,
+  "transactions": [
+    {
+      "transactionID": "1ae24758-583a-46b4-809b-05395af215a2",
+      "transactionAmount": 300,
+      "actionDate": "2026-01-21",
+      "subjectReference": "SREF000-23042025",
+      "clientReference": "CREF000-23042025",
+      "mandateReference": "00032024091612QRZ2ZDWW",
+      "contractReference": "Thato Auto",
+      "trackingDays": 10,
+      "collectionReoccurance": "OOFF",
+      "subjectDetails": {
+        "accountNumber": "62006677069",
+        "accountType": "02",
+        "branchCode": "250655",
+        "country": "ZAF",
+        "idType": "EntityRegistrationNumber",
+        "idValue": "1951/000009/07",
+        "initials": "SK",
+        "firstName": "john",
+        "lastName": "doe",
+        "phoneNumber": "+27721234567",
+        "emailAddress": "Hyphen@RMB.com",
+        "profileReference": "Thatos"
+      }
+    }
+  ]
+}
+API Response Status: 200
+API Response Body: {
+  "success": true,
+  "message": [
+    "Total transactions posted: 1",
+    "Total valid transactions saved: 1",
+    "Total invalid transactions: 0"
+  ],
+  "clientCorrelationID": "7eeb9342-c940-43d7-88c1-e144731ccde8",
+  "hyphenCorrelationID": "317e4883-3041-4712-9006-99556a90400f"
+}
+Validation Response: {
+  success: true,
+  message: [
+    'Total transactions posted: 1',
+    'Total valid transactions saved: 1',
+    'Total invalid transactions: 0'
+  ],
+  clientCorrelationID: '7eeb9342-c940-43d7-88c1-e144731ccde8',
+  hyphenCorrelationID: '317e4883-3041-4712-9006-99556a90400f'
+}
+Waiting for DB record... (1/10)
+Waiting for DB record... (2/10)
+Waiting for DB record... (3/10)
+Waiting for DB record... (4/10)
+Waiting for DB record... (5/10)
+Transaction ID: 4fa3a410-212f-4cff-909c-310e0b184a74
+Sender Message ID: 25aff739-f26d-429d-9865-1ee3dfd16dae

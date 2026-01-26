@@ -1,0 +1,56 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Load Created Payload: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "b93434e8-2b15-4211-bcf4-c8760ab6442d"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "actionDate": "2026-01-20",
+          "effectiveDate": "2026-01-20",
+          "serviceType": "EFTPAYMENT",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-20",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Load Created Status: 200
+Load Created Response: {"versionNumber":1,"traceId":"afedb6d5-c42c-4728-a248-dc59ecb36e58","correlationId":"a39b280f-5a4a-4600-94d6-d80aceb98e83","result":{"success":true,"origin":"WORKER_SERVICE"},"profile":{"zone":"SAT","lang":"ENG","country":"USA","offset":"+02:00","requestDate":"2026-01-20 13:26:23.443","responseDate":"2026-01-20 13:26:23.469","hostDateUtc":"2026-01-20 11:26:23.444","hostDate":"2026-01-20 13:26:23.443","durationInMillis":25}}
+Load Created Response: {
+  versionNumber: 1,
+  traceId: 'afedb6d5-c42c-4728-a248-dc59ecb36e58',
+  correlationId: 'a39b280f-5a4a-4600-94d6-d80aceb98e83',
+  result: { success: true, origin: 'WORKER_SERVICE' },
+  profile: {
+    zone: 'SAT',
+    lang: 'ENG',
+    country: 'USA',
+    offset: '+02:00',
+    requestDate: '2026-01-20 13:26:23.443',
+    responseDate: '2026-01-20 13:26:23.469',
+    hostDateUtc: '2026-01-20 11:26:23.444',
+    hostDate: '2026-01-20 13:26:23.443',
+    durationInMillis: 25
+  }
+}

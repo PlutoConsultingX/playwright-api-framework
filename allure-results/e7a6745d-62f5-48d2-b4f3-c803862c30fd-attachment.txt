@@ -1,0 +1,63 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+2026-01-22T09:29:17
+2026-01-22T09:29:17
+{
+  "workflowID": "c5d1f3b5-508e-4f47-9997-a4912d486466",
+  "clientCorrelationID": "ba58b6bc-ec0b-43c1-9f58-6ecdea381f43",
+  "requestDate": "2026-01-22T09:29:17",
+  "totalCount": 1,
+  "transactions": [
+    {
+      "transactionID": "0b6b6344-ca91-40d0-97f6-31e4267db661",
+      "transactionAmount": 300,
+      "actionDate": "2026-01-22",
+      "subjectReference": "SREF000-23042025",
+      "clientReference": "CREF000-23042025",
+      "mandateReference": "00032024091612QRZ2ZDWW",
+      "contractReference": "Thato Auto",
+      "trackingDays": 10,
+      "collectionReoccurance": "OOFF",
+      "subjectDetails": {
+        "accountNumber": "62006677069",
+        "accountType": "02",
+        "branchCode": "250655",
+        "country": "ZAF",
+        "idType": "EntityRegistrationNumber",
+        "idValue": "1951/000009/07",
+        "initials": "SK",
+        "firstName": "john",
+        "lastName": "doe",
+        "phoneNumber": "+27721234567",
+        "emailAddress": "Hyphen@RMB.com",
+        "profileReference": "Thatos"
+      }
+    }
+  ]
+}
+API Response Status: 200
+API Response Body: {
+  "success": true,
+  "message": [
+    "Total transactions posted: 1",
+    "Total valid transactions saved: 1",
+    "Total invalid transactions: 0"
+  ],
+  "clientCorrelationID": "ba58b6bc-ec0b-43c1-9f58-6ecdea381f43",
+  "hyphenCorrelationID": "31600cdc-6d83-401b-a3d7-17a3e9fe8846"
+}
+API Response Body: {
+  success: true,
+  message: [
+    'Total transactions posted: 1',
+    'Total valid transactions saved: 1',
+    'Total invalid transactions: 0'
+  ],
+  clientCorrelationID: 'ba58b6bc-ec0b-43c1-9f58-6ecdea381f43',
+  hyphenCorrelationID: '31600cdc-6d83-401b-a3d7-17a3e9fe8846'
+}
+Params: [ 'ba58b6bc-ec0b-43c1-9f58-6ecdea381f43' ]
+Waiting for DB record... (1/10)
+Transaction ID from DB: cb800ad7-7048-4d14-8287-5fb30caee8b9
+Sender Message ID from DB: 3b3dc9da-f0c8-4d43-9ccb-4fac079254df
