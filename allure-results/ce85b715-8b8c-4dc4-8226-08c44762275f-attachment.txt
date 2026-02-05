@@ -1,0 +1,115 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Load created Payload to send: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "{{$guid}}",
+      "isCorrelationId": "4332489f-7273-4f93-b989-53436a1277ab",
+      "senderMessageId": "a7d9859d-2580-4171-8b61-3c9c809dc187"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "transactionId": "4a740ffa-a460-46ed-a413-1748e3b3b8ad",
+          "actionDate": "2026-01-27",
+          "nativeTransactionId": "P540705-EF-000000161-00000100",
+          "effectiveDate": "2026-01-27",
+          "serviceType": "EFTPAYMENT",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-27",
+      "nativeMsgId": "{{$guid}}",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Load Created Payload: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "cd54e209-c0bb-4803-810a-b24bbf8ba1e1"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "actionDate": "2026-01-27",
+          "effectiveDate": "2026-01-27",
+          "serviceType": "EFTPAYMENT",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-27",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Load Created Status: 200
+Load Created Response: {"versionNumber":1,"traceId":"6aba14f5-dfa6-4763-ab87-c55c351db03b","correlationId":"e525c8fc-4891-4cce-8d63-141486cfaa1d","result":{"success":true,"origin":"WORKER_SERVICE"},"profile":{"zone":"SAT","lang":"ENG","country":"USA","offset":"+02:00","requestDate":"2026-01-27 11:32:18.279","responseDate":"2026-01-27 11:32:18.294","hostDateUtc":"2026-01-27 09:32:18.280","hostDate":"2026-01-27 11:32:18.280","durationInMillis":14}}
+Load Created Response: [Function: status] {
+  versionNumber: 1,
+  traceId: '6aba14f5-dfa6-4763-ab87-c55c351db03b',
+  correlationId: 'e525c8fc-4891-4cce-8d63-141486cfaa1d',
+  result: { success: true, origin: 'WORKER_SERVICE' },
+  profile: {
+    zone: 'SAT',
+    lang: 'ENG',
+    country: 'USA',
+    offset: '+02:00',
+    requestDate: '2026-01-27 11:32:18.279',
+    responseDate: '2026-01-27 11:32:18.294',
+    hostDateUtc: '2026-01-27 09:32:18.280',
+    hostDate: '2026-01-27 11:32:18.280',
+    durationInMillis: 14
+  }
+}
+DB rows returned: 0
+⏳ Waiting for response_data... (1/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (2/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (3/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (4/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (5/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (6/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (7/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (8/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (9/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (10/15)

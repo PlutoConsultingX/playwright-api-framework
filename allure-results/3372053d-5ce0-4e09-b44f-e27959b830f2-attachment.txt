@@ -1,0 +1,50 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+✅ Step 2 using values: {
+  transactionId: '3d4dc2c0-069f-493b-a723-8b847a221545',
+  senderMessageId: '49df8e38-f587-4144-bd2d-49bcb599436f',
+  correlationId: 'ed03bde1-4c4b-4066-9339-d03cd26e9391'
+}
+Generated nativeTransactionId: P926 -EF-000000158-00000100
+Load created Payload to send: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "13a61ed0-1e7e-41e5-8d48-db70b77e725f",
+      "isCorrelationId": "ed03bde1-4c4b-4066-9339-d03cd26e9391",
+      "senderMessageId": "49df8e38-f587-4144-bd2d-49bcb599436f"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "transactionId": "3d4dc2c0-069f-493b-a723-8b847a221545",
+          "actionDate": "2026-01-27",
+          "effectiveDate": "2026-01-27",
+          "serviceType": "EFTPAYMENT",
+          "nativeTransactionId": "P926 -EF-000000158-00000100",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-27",
+      "nativeMsgId": "aef081c6-052b-4c83-b95f-6cb91b4d0039",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+THis is the Load Created URL: http://10.10.21.65:9183/workflow-worker-eft-payments-salaryday/api/v1/callback
+This is the load created parameters undefined undefined undefined

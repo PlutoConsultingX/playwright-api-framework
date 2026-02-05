@@ -1,0 +1,94 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+2026-02-05T11:53:41
+2026-02-05T11:53:41
+{
+  "workflowID": "c5d1f3b5-508e-4f47-9997-a4912d486466",
+  "clientCorrelationID": "e528c0fa-1738-450c-b37e-115982067215",
+  "requestDate": "2026-02-05T11:53:41",
+  "totalCount": 1,
+  "transactions": [
+    {
+      "transactionID": "0e498fb1-241e-4e8e-87eb-c95db9547d56",
+      "transactionAmount": 300,
+      "actionDate": "2026-02-05",
+      "subjectReference": "SREF000-23042025",
+      "clientReference": "CREF000-23042025",
+      "mandateReference": "00032024091612QRZ2ZDWW",
+      "contractReference": "Thato Auto",
+      "trackingDays": 10,
+      "collectionReoccurance": "OOFF",
+      "subjectDetails": {
+        "accountNumber": "62006677069",
+        "accountType": "02",
+        "branchCode": "250655",
+        "country": "ZAF",
+        "idType": "EntityRegistrationNumber",
+        "idValue": "1951/000009/07",
+        "initials": "SK",
+        "firstName": "john",
+        "lastName": "doe",
+        "phoneNumber": "+27721234567",
+        "emailAddress": "Hyphen@RMB.com",
+        "profileReference": "Thatos"
+      }
+    }
+  ]
+}
+API Validation Response Status: 200
+API Validation Response Body: {
+  "success": true,
+  "message": [
+    "Total transactions posted: 1",
+    "Total valid transactions saved: 1",
+    "Total invalid transactions: 0"
+  ],
+  "clientCorrelationID": "e528c0fa-1738-450c-b37e-115982067215",
+  "hyphenCorrelationID": "1984795e-f126-4129-996f-200e952aad23"
+}
+CorrelationID from validation response : e528c0fa-1738-450c-b37e-115982067215
+DB Result validation (attempt 1): []
+Waiting for DB record... (1/10)
+DB Result validation (attempt 2): []
+Waiting for DB record... (2/10)
+DB Result validation (attempt 3): []
+Waiting for DB record... (3/10)
+DB Result validation (attempt 4): []
+Waiting for DB record... (4/10)
+DB Result validation (attempt 5): []
+Waiting for DB record... (5/10)
+DB Result validation (attempt 6): []
+Waiting for DB record... (6/10)
+DB Result validation (attempt 7): [
+  {
+    "workflow_execution_id": "2ed02d71-3462-40bb-9e8f-8a759f609659",
+    "transaction_id": "e3b21d19-eec7-43a8-b329-a4d0bfc86ae0",
+    "client_transaction_id": "0e498fb1-241e-4e8e-87eb-c95db9547d56",
+    "transaction_item_id": "9740229e-493d-401d-a553-1979906b5d07",
+    "child_workflow_execution_id": "76a439bf-2a34-355b-8efb-3255140f66b1",
+    "trxBatchStatus": "In Progress",
+    "trxStatus": "In progress",
+    "trxItemDetailStatus": "In progress",
+    "service_name": "SALARY_EFT_PAYMENTS",
+    "transaction_item_detail_id": "1d247c25-7c36-41b1-8f04-07b54e8a4a97",
+    "transaction_item_detail_run_status_name": "In progress",
+    "response_manager_code": null,
+    "response_manager_exception_type": null,
+    "response_manager_message": null,
+    "response_data": null,
+    "response_reference": "c3fcf3f5-8735-48df-a0c2-0273c4ed07e0",
+    "sagrequestpayload": "{\n  \"transactionId\": \"c139a4cb-0a41-407a-8400-189a666c6792\",\n  \"beneficiaryAccountNumber\": \"62006677069\",\n  \"branchCode\": \"250655\",\n  \"accountType\": \"2\",\n  \"serviceType\": \"EFTPAYMENT\",\n  \"transactionType\": \"P926\",\n  \"documentType\": \"EF\",\n  \"customerName\": \"john doe\",\n  \"napsBeneficiaryCode\": \"\",\n  \"globalRecipient\": \"\",\n  \"transactionAmount\": \"300\",\n  \"actionDate\": \"2026-02-05\",\n  \"reference1\": \"SREF000-23042025\",\n  \"reference2\": \"CREF000-23042025\",\n  \"reference3\": \"\",\n  \"bicCode\": \"\",\n  \"processingOption1\": \"I\",\n  \"processingOption2\": \"S\",\n  \"mandateReference\": \"\",\n  \"collectionReoccurence\": \"OOFF\",\n  \"contractReference\": \"Thato Auto\",\n  \"emailAddress\": \"Hyphen@RMB.com\",\n  \"cellphoneNumber\": \"+27721234567\"\n}",
+    "senderID": "10389107-9350-454e-ae92-3aacac5dda63",
+    "transactionIDSAGReqPayload": "c139a4cb-0a41-407a-8400-189a666c6792",
+    "response_payload_data": "{\n  \"response\": {\n    \"isInfo\": {\n      \"senderMessageId\": \"2bced0b8-766a-4cb9-818e-2b67b0116386\",\n      \"serviceId\": \"FACS-SALARYDAY-TRANSACTION-01\",\n      \"responseId\": \"c3fcf3f5-8735-48df-a0c2-0273c4ed07e0\",\n      \"isCorrelationId\": \"0bf1afc7-98fa-45f2-8657-bf3fc7c4fde0\"\n    },\n    \"responseHeader\": {\n      \"responseTimestamp\": \"2026-02-05 11:53:45.219\",\n      \"responseType\": \"ack\",\n      \"responseCode\": \"accepted\"\n    }\n  }\n}",
+    "response_type": "ack",
+    "workertransactionstatus": 1,
+    "sagTransresponsecode": "CREATED",
+    "sagTransresponse_description": "Transaction created",
+    "sagTranserrorcode": null,
+    "sagTranserror_description": null,
+    "callback_data": "{\n  \"isInfo\": {\n    \"senderMessageId\": \"2bced0b8-766a-4cb9-818e-2b67b0116386\",\n    \"serviceId\": \"FACS-SALARYDAY-TRANSACTION-01\",\n    \"responseId\": \"4204572e-e4f3-4795-9f60-28541eeb34b3\",\n    \"isCorrelationId\": \"0bf1afc7-98fa-45f2-8657-bf3fc7c4fde0\"\n  },\n  \"responseHeader\": {\n    \"totalCount\": 1,\n    \"responseTimestamp\": \"2026-02-05 11:53:52.457\",\n    \"clientIntegrationId\": \"HYT0002\",\n    \"clientProfile\": \"FACHYTQ1\",\n    \"responseType\": \"LOAD\",\n    \"responseCode\": \"PROCESSED\",\n    \"nativeMsgId\": \"76baf8df-c940-4e03-934f-869f4941e561\"\n  },\n  \"responseDetail\": {\n    \"transactions\": [\n      {\n        \"transactionId\": \"c139a4cb-0a41-407a-8400-189a666c6792\",\n        \"serviceType\": \"EFTPAYMENT\",\n        \"transactionAmount\": \"300\",\n        \"effectiveDate\": \"2026-02-05\",\n        \"actionDate\": \"2026-02-05\",\n        \"nativeTransactionId\": \"P926 -EF-000000460-00000100\",\n        \"transactionResponse\": {\n          \"responseType\": \"CREATED\",\n          \"responseDescription\": \"Transaction created\"\n        },\n        \"transactionError\": {\n          \"errorCode\": \"\",\n          \"errorDescription\": \"\"\n        }\n      }\n    ]\n  }\n}"
+  }
+]
+Database results after validation  undefined

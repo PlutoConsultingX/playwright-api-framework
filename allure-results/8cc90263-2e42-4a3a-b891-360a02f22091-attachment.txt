@@ -1,0 +1,39 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Step 2 using values from Step 1: {
+  transactionId: '64074bdf-93fe-486d-9476-fb16d065f627',
+  senderMessageId: 'a8cd673d-4198-4ecd-aab8-18dc76a33cc0',
+  correlationId: '99b379a8-bfc7-4751-8d98-3d6cad907df3'
+}
+DB Poll (attempt 1): [
+  {
+    "workflow_execution_id": "10745f27-35e0-4866-9ceb-f1bb8fe6e3e5",
+    "transaction_id": "ba83f640-cd18-4011-ab33-654a11edfe28",
+    "client_transaction_id": "1f841969-fbf4-47da-b190-eaf741dbe519",
+    "transaction_item_id": "cee96db2-645a-4b48-8295-7ddee6b0318a",
+    "child_workflow_execution_id": "debf3bb3-3615-3ed9-a4d4-6f19c3966721",
+    "trxBatchStatus": "In Progress",
+    "trxStatus": "In progress",
+    "trxItemDetailStatus": "In progress",
+    "service_name": "SALARY_EFT_PAYMENTS",
+    "transaction_item_detail_id": "237211e0-6632-436c-b24f-eb2e78665aa0",
+    "transaction_item_detail_run_status_name": "In progress",
+    "response_manager_code": null,
+    "response_manager_exception_type": null,
+    "response_manager_message": null,
+    "response_data": null,
+    "response_reference": "53de7826-cb1b-4f22-afba-2b2b7de0bb9d",
+    "sagrequestpayload": "{\n  \"transactionId\": \"64074bdf-93fe-486d-9476-fb16d065f627\",\n  \"beneficiaryAccountNumber\": \"62006677069\",\n  \"branchCode\": \"250655\",\n  \"accountType\": \"2\",\n  \"serviceType\": \"EFTPAYMENT\",\n  \"transactionType\": \"P926\",\n  \"documentType\": \"EF\",\n  \"customerName\": \"john doe\",\n  \"napsBeneficiaryCode\": \"\",\n  \"globalRecipient\": \"\",\n  \"transactionAmount\": \"300\",\n  \"actionDate\": \"2026-02-03\",\n  \"reference1\": \"SREF000-23042025\",\n  \"reference2\": \"CREF000-23042025\",\n  \"reference3\": \"\",\n  \"bicCode\": \"\",\n  \"processingOption1\": \"I\",\n  \"processingOption2\": \"S\",\n  \"mandateReference\": \"\",\n  \"collectionReoccurence\": \"OOFF\",\n  \"contractReference\": \"Thato Auto\",\n  \"emailAddress\": \"Hyphen@RMB.com\",\n  \"cellphoneNumber\": \"+27721234567\"\n}",
+    "senderID": "a8cd673d-4198-4ecd-aab8-18dc76a33cc0",
+    "transactionIDSAGReqPayload": "64074bdf-93fe-486d-9476-fb16d065f627",
+    "response_payload_data": "{\n  \"response\": {\n    \"isInfo\": {\n      \"senderMessageId\": \"12e93077-f3ed-40d5-a57d-7c79c3889bec\",\n      \"serviceId\": \"FACS-SALARYDAY-TRANSACTION-01\",\n      \"responseId\": \"53de7826-cb1b-4f22-afba-2b2b7de0bb9d\",\n      \"isCorrelationId\": \"42299172-2cd6-4771-afe1-5a8f33cd4b7c\"\n    },\n    \"responseHeader\": {\n      \"responseTimestamp\": \"2026-02-03 13:45:00.240\",\n      \"responseType\": \"ack\",\n      \"responseCode\": \"accepted\"\n    }\n  }\n}",
+    "response_type": "ack",
+    "workertransactionstatus": 1,
+    "sagTransresponsecode": "CREATED",
+    "sagTransresponse_description": "Transaction created",
+    "sagTranserrorcode": null,
+    "sagTranserror_description": null,
+    "callback_data": "{\n  \"isInfo\": {\n    \"senderMessageId\": \"12e93077-f3ed-40d5-a57d-7c79c3889bec\",\n    \"serviceId\": \"FACS-SALARYDAY-TRANSACTION-01\",\n    \"responseId\": \"319083f8-abe7-44dd-9eaf-6b3ee2ca6204\",\n    \"isCorrelationId\": \"42299172-2cd6-4771-afe1-5a8f33cd4b7c\"\n  },\n  \"responseHeader\": {\n    \"totalCount\": 1,\n    \"responseTimestamp\": \"2026-02-03 13:45:07.614\",\n    \"clientIntegrationId\": \"HYT0002\",\n    \"clientProfile\": \"FACHYTQ1\",\n    \"responseType\": \"LOAD\",\n    \"responseCode\": \"PROCESSED\",\n    \"nativeMsgId\": \"021dc29b-36d2-41c4-a56e-7279b5f1a667\"\n  },\n  \"responseDetail\": {\n    \"transactions\": [\n      {\n        \"transactionId\": \"64074bdf-93fe-486d-9476-fb16d065f627\",\n        \"serviceType\": \"EFTPAYMENT\",\n        \"transactionAmount\": \"300\",\n        \"effectiveDate\": \"2026-02-03\",\n        \"actionDate\": \"2026-02-03\",\n        \"nativeTransactionId\": \"P926 -EF-000000397-00000100\",\n        \"transactionResponse\": {\n          \"responseType\": \"CREATED\",\n          \"responseDescription\": \"Transaction created\"\n        },\n        \"transactionError\": {\n          \"errorCode\": \"\",\n          \"errorDescription\": \"\"\n        }\n      }\n    ]\n  }\n}"
+  }
+]

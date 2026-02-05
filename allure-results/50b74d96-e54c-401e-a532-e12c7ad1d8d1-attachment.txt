@@ -1,0 +1,78 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+2026-02-03T12:57:25
+2026-02-03T12:57:25
+{
+  "workflowID": "c5d1f3b5-508e-4f47-9997-a4912d486466",
+  "clientCorrelationID": "b924cce2-fb46-4ce5-8c28-06330071f6ce",
+  "requestDate": "2026-02-03T12:57:25",
+  "totalCount": 1,
+  "transactions": [
+    {
+      "transactionID": "2ce79c2e-7b29-44b9-b380-2265a7438897",
+      "transactionAmount": 300,
+      "actionDate": "2026-02-03",
+      "subjectReference": "SREF000-23042025",
+      "clientReference": "CREF000-23042025",
+      "mandateReference": "00032024091612QRZ2ZDWW",
+      "contractReference": "Thato Auto",
+      "trackingDays": 10,
+      "collectionReoccurance": "OOFF",
+      "subjectDetails": {
+        "accountNumber": "62006677069",
+        "accountType": "02",
+        "branchCode": "250655",
+        "country": "ZAF",
+        "idType": "EntityRegistrationNumber",
+        "idValue": "1951/000009/07",
+        "initials": "SK",
+        "firstName": "john",
+        "lastName": "doe",
+        "phoneNumber": "+27721234567",
+        "emailAddress": "Hyphen@RMB.com",
+        "profileReference": "Thatos"
+      }
+    }
+  ]
+}
+API Response Status: 200
+API Response Body: {
+  "success": true,
+  "message": [
+    "Total transactions posted: 1",
+    "Total valid transactions saved: 1",
+    "Total invalid transactions: 0"
+  ],
+  "clientCorrelationID": "b924cce2-fb46-4ce5-8c28-06330071f6ce",
+  "hyphenCorrelationID": "da8472b4-7e6b-462c-8a2c-43ed0cc7cc9f"
+}
+CorrelationID from validation response : b924cce2-fb46-4ce5-8c28-06330071f6ce
+DB Result validation (attempt 1): []
+Waiting for DB record... (1/10)
+DB Result validation (attempt 2): [
+  {
+    "workflow_execution_id": "aabb97ed-3107-419d-a95e-051d2ebc5e2a",
+    "transaction_id": "53d696e8-4a04-48eb-bf2f-bac54b28e677",
+    "client_transaction_id": "2ce79c2e-7b29-44b9-b380-2265a7438897",
+    "transaction_item_id": "8912b8a7-2d49-4780-8ef1-f4e35048b153",
+    "child_workflow_execution_id": "ea6398a5-02c7-38cf-a301-071c142b7965",
+    "trxBatchStatus": "In Progress",
+    "trxStatus": "In progress",
+    "trxItemDetailStatus": "In progress",
+    "service_name": "SALARY_EFT_PAYMENTS",
+    "transaction_item_detail_id": "90302bb3-2904-4783-a8ae-d3d9b71492d7",
+    "transaction_item_detail_run_status_name": "In progress",
+    "response_manager_code": null,
+    "response_manager_exception_type": null,
+    "response_manager_message": null,
+    "response_data": null,
+    "response_reference": null,
+    "sagrequestpayload": "{\n  \"transactionId\": \"7de42f13-2761-4371-a3d4-1557c8bed832\",\n  \"beneficiaryAccountNumber\": \"62006677069\",\n  \"branchCode\": \"250655\",\n  \"accountType\": \"2\",\n  \"serviceType\": \"EFTPAYMENT\",\n  \"transactionType\": \"P926\",\n  \"documentType\": \"EF\",\n  \"customerName\": \"john doe\",\n  \"napsBeneficiaryCode\": \"\",\n  \"globalRecipient\": \"\",\n  \"transactionAmount\": \"300\",\n  \"actionDate\": \"2026-02-03\",\n  \"reference1\": \"SREF000-23042025\",\n  \"reference2\": \"CREF000-23042025\",\n  \"reference3\": \"\",\n  \"bicCode\": \"\",\n  \"processingOption1\": \"I\",\n  \"processingOption2\": \"S\",\n  \"mandateReference\": \"\",\n  \"collectionReoccurence\": \"OOFF\",\n  \"contractReference\": \"Thato Auto\",\n  \"emailAddress\": \"Hyphen@RMB.com\",\n  \"cellphoneNumber\": \"+27721234567\"\n}",
+    "senderID": "7ee76471-e95c-4d1b-829b-a0c52c57c7ab",
+    "transactionIDSAGReqPayload": "7de42f13-2761-4371-a3d4-1557c8bed832",
+    "response_payload_data": null,
+    "response_type": null,
+    "workertransactionstatus": 1
+  }
+]

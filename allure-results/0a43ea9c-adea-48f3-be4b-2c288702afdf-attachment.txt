@@ -1,0 +1,3 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.

@@ -1,0 +1,44 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Load created Payload to send: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "ac90ba48-47c0-4a99-94d4-6551a33454fd",
+      "isCorrelationId": "01566c36-ec2b-4293-b121-971d7cd100c9",
+      "senderMessageId": "2c78c45e-59bb-430f-be1b-d048f47b5e9e"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "transactionId": "6d2a2cd6-1440-40fc-87cc-692713a4bd7d",
+          "actionDate": "2026-01-27",
+          "effectiveDate": "2026-01-27",
+          "serviceType": "EFTPAYMENT",
+          "nativeTransactionId": "P926 -EF-000000163-00000100",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-27",
+      "nativeMsgId": "a36ca04a-292e-4ba2-8665-4b45b67e4806",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+THis is the Load Created URL: http://10.10.21.65:9183/workflow-worker-eft-payments-salaryday/api/v1/callback
+This is the load created parameters undefined undefined undefined

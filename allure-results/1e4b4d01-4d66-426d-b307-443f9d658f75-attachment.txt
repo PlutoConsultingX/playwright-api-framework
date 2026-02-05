@@ -1,0 +1,1086 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Step 2 using values: {
+  transactionId: 'f3aa614d-e61c-4520-9f41-766a34139c64',
+  senderMessageId: '9312bb0e-41a6-402c-b1d0-3ad5f0b707ea',
+  correlationId: '8830a0e5-96c7-4fb6-9e2a-dd5509140207'
+}
+Generated nativeTransactionId: P926 -EF-000000153-00000100
+Load created Payload to send: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "fdef338a-7eb0-44ce-921b-82684119b588",
+      "isCorrelationId": "8830a0e5-96c7-4fb6-9e2a-dd5509140207",
+      "senderMessageId": "9312bb0e-41a6-402c-b1d0-3ad5f0b707ea"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "transactionId": "f3aa614d-e61c-4520-9f41-766a34139c64",
+          "actionDate": "2026-01-29",
+          "effectiveDate": "2026-01-29",
+          "serviceType": "EFTPAYMENT",
+          "nativeTransactionId": "P926 -EF-000000153-00000100",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-29",
+      "nativeMsgId": "23ff3974-1e44-41ce-91ca-d91ced9db4cc",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Load Created Body (from factory): {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "50691ffd-22da-4fdc-8078-e1abd9a02916",
+      "isCorrelationId": "8830a0e5-96c7-4fb6-9e2a-dd5509140207",
+      "senderMessageId": "9312bb0e-41a6-402c-b1d0-3ad5f0b707ea"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "transactionId": "f3aa614d-e61c-4520-9f41-766a34139c64",
+          "actionDate": "2026-01-29",
+          "effectiveDate": "2026-01-29",
+          "serviceType": "EFTPAYMENT",
+          "nativeTransactionId": "P926 -EF-000000153-00000100",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-29",
+      "nativeMsgId": "195436de-e2b4-4972-a013-a567b4222672",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Sending Load Created Body: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "fdef338a-7eb0-44ce-921b-82684119b588",
+      "isCorrelationId": "8830a0e5-96c7-4fb6-9e2a-dd5509140207",
+      "senderMessageId": "9312bb0e-41a6-402c-b1d0-3ad5f0b707ea"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "transactionId": "f3aa614d-e61c-4520-9f41-766a34139c64",
+          "actionDate": "2026-01-29",
+          "effectiveDate": "2026-01-29",
+          "serviceType": "EFTPAYMENT",
+          "nativeTransactionId": "P926 -EF-000000153-00000100",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-29",
+      "nativeMsgId": "23ff3974-1e44-41ce-91ca-d91ced9db4cc",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+This is the DB results after Load Created call with a Query that does not return callback_data: [
+  {
+    workflow_execution_id: 'ca60d91d-407e-4e72-b36d-d7028bf007a6',
+    transaction_id: 'b1943fd2-8dc9-4cf6-abd6-a8f115f4266b',
+    client_transaction_id: 'a3d4f9ad-d077-4133-be27-7b32c7ab02b3',
+    transaction_item_id: 'ae7341b5-6230-4e5e-ba6f-1c2b08489f14',
+    child_workflow_execution_id: '6342a4a3-4f40-3ee1-b872-72f4763552be',
+    trxBatchStatus: 'In Progress',
+    trxStatus: 'In progress',
+    trxItemDetailStatus: 'In progress',
+    service_name: 'SALARY_EFT_PAYMENTS',
+    transaction_item_detail_id: '7c8a2b6e-3ff4-40c7-b651-178108a01992',
+    transaction_item_detail_run_status_name: 'In progress',
+    response_manager_code: null,
+    response_manager_exception_type: null,
+    response_manager_message: null,
+    response_data: null,
+    response_reference: '40b80b1c-6c5b-44c4-9756-4f7ac6e65458',
+    sagrequestpayload: '{\n' +
+      '  "transactionId": "f3aa614d-e61c-4520-9f41-766a34139c64",\n' +
+      '  "beneficiaryAccountNumber": "62006677069",\n' +
+      '  "branchCode": "250655",\n' +
+      '  "accountType": "2",\n' +
+      '  "serviceType": "EFTPAYMENT",\n' +
+      '  "transactionType": "P926",\n' +
+      '  "documentType": "EF",\n' +
+      '  "customerName": "john doe",\n' +
+      '  "napsBeneficiaryCode": "",\n' +
+      '  "globalRecipient": "",\n' +
+      '  "transactionAmount": "300",\n' +
+      '  "actionDate": "2026-01-29",\n' +
+      '  "reference1": "SREF000-23042025",\n' +
+      '  "reference2": "CREF000-23042025",\n' +
+      '  "reference3": "",\n' +
+      '  "bicCode": "",\n' +
+      '  "processingOption1": "I",\n' +
+      '  "processingOption2": "S",\n' +
+      '  "mandateReference": "",\n' +
+      '  "collectionReoccurence": "OOFF",\n' +
+      '  "contractReference": "Thato Auto",\n' +
+      '  "emailAddress": "Hyphen@RMB.com",\n' +
+      '  "cellphoneNumber": "+27721234567"\n' +
+      '}',
+    senderID: '9312bb0e-41a6-402c-b1d0-3ad5f0b707ea',
+    transactionIDSAGReqPayload: 'f3aa614d-e61c-4520-9f41-766a34139c64',
+    response_payload_data: '{\n' +
+      '  "response": {\n' +
+      '    "isInfo": {\n' +
+      '      "senderMessageId": "07f19f9a-644f-455f-a1cb-dfe0b2a25e77",\n' +
+      '      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",\n' +
+      '      "responseId": "40b80b1c-6c5b-44c4-9756-4f7ac6e65458",\n' +
+      '      "isCorrelationId": "2513623c-00c4-4a95-b9f0-098e7318dc73"\n' +
+      '    },\n' +
+      '    "responseHeader": {\n' +
+      '      "responseTimestamp": "2026-01-29 12:57:30.237",\n' +
+      '      "responseType": "ack",\n' +
+      '      "responseCode": "accepted"\n' +
+      '    }\n' +
+      '  }\n' +
+      '}',
+    response_type: 'ack',
+    workertransactionstatus: 1
+  }
+]
+This is the DB results after Load Created call with a Query that does not return callback_data: [
+  {
+    workflow_execution_id: 'ca60d91d-407e-4e72-b36d-d7028bf007a6',
+    transaction_id: 'b1943fd2-8dc9-4cf6-abd6-a8f115f4266b',
+    client_transaction_id: 'a3d4f9ad-d077-4133-be27-7b32c7ab02b3',
+    transaction_item_id: 'ae7341b5-6230-4e5e-ba6f-1c2b08489f14',
+    child_workflow_execution_id: '6342a4a3-4f40-3ee1-b872-72f4763552be',
+    trxBatchStatus: 'In Progress',
+    trxStatus: 'In progress',
+    trxItemDetailStatus: 'In progress',
+    service_name: 'SALARY_EFT_PAYMENTS',
+    transaction_item_detail_id: '7c8a2b6e-3ff4-40c7-b651-178108a01992',
+    transaction_item_detail_run_status_name: 'In progress',
+    response_manager_code: null,
+    response_manager_exception_type: null,
+    response_manager_message: null,
+    response_data: null,
+    response_reference: '40b80b1c-6c5b-44c4-9756-4f7ac6e65458',
+    sagrequestpayload: '{\n' +
+      '  "transactionId": "f3aa614d-e61c-4520-9f41-766a34139c64",\n' +
+      '  "beneficiaryAccountNumber": "62006677069",\n' +
+      '  "branchCode": "250655",\n' +
+      '  "accountType": "2",\n' +
+      '  "serviceType": "EFTPAYMENT",\n' +
+      '  "transactionType": "P926",\n' +
+      '  "documentType": "EF",\n' +
+      '  "customerName": "john doe",\n' +
+      '  "napsBeneficiaryCode": "",\n' +
+      '  "globalRecipient": "",\n' +
+      '  "transactionAmount": "300",\n' +
+      '  "actionDate": "2026-01-29",\n' +
+      '  "reference1": "SREF000-23042025",\n' +
+      '  "reference2": "CREF000-23042025",\n' +
+      '  "reference3": "",\n' +
+      '  "bicCode": "",\n' +
+      '  "processingOption1": "I",\n' +
+      '  "processingOption2": "S",\n' +
+      '  "mandateReference": "",\n' +
+      '  "collectionReoccurence": "OOFF",\n' +
+      '  "contractReference": "Thato Auto",\n' +
+      '  "emailAddress": "Hyphen@RMB.com",\n' +
+      '  "cellphoneNumber": "+27721234567"\n' +
+      '}',
+    senderID: '9312bb0e-41a6-402c-b1d0-3ad5f0b707ea',
+    transactionIDSAGReqPayload: 'f3aa614d-e61c-4520-9f41-766a34139c64',
+    response_payload_data: '{\n' +
+      '  "response": {\n' +
+      '    "isInfo": {\n' +
+      '      "senderMessageId": "07f19f9a-644f-455f-a1cb-dfe0b2a25e77",\n' +
+      '      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",\n' +
+      '      "responseId": "40b80b1c-6c5b-44c4-9756-4f7ac6e65458",\n' +
+      '      "isCorrelationId": "2513623c-00c4-4a95-b9f0-098e7318dc73"\n' +
+      '    },\n' +
+      '    "responseHeader": {\n' +
+      '      "responseTimestamp": "2026-01-29 12:57:30.237",\n' +
+      '      "responseType": "ack",\n' +
+      '      "responseCode": "accepted"\n' +
+      '    }\n' +
+      '  }\n' +
+      '}',
+    response_type: 'ack',
+    workertransactionstatus: 1
+  }
+]
+This is the DB results after Load Created call with a Query that does not return callback_data: [
+  {
+    workflow_execution_id: 'ca60d91d-407e-4e72-b36d-d7028bf007a6',
+    transaction_id: 'b1943fd2-8dc9-4cf6-abd6-a8f115f4266b',
+    client_transaction_id: 'a3d4f9ad-d077-4133-be27-7b32c7ab02b3',
+    transaction_item_id: 'ae7341b5-6230-4e5e-ba6f-1c2b08489f14',
+    child_workflow_execution_id: '6342a4a3-4f40-3ee1-b872-72f4763552be',
+    trxBatchStatus: 'In Progress',
+    trxStatus: 'In progress',
+    trxItemDetailStatus: 'In progress',
+    service_name: 'SALARY_EFT_PAYMENTS',
+    transaction_item_detail_id: '7c8a2b6e-3ff4-40c7-b651-178108a01992',
+    transaction_item_detail_run_status_name: 'In progress',
+    response_manager_code: null,
+    response_manager_exception_type: null,
+    response_manager_message: null,
+    response_data: null,
+    response_reference: '40b80b1c-6c5b-44c4-9756-4f7ac6e65458',
+    sagrequestpayload: '{\n' +
+      '  "transactionId": "f3aa614d-e61c-4520-9f41-766a34139c64",\n' +
+      '  "beneficiaryAccountNumber": "62006677069",\n' +
+      '  "branchCode": "250655",\n' +
+      '  "accountType": "2",\n' +
+      '  "serviceType": "EFTPAYMENT",\n' +
+      '  "transactionType": "P926",\n' +
+      '  "documentType": "EF",\n' +
+      '  "customerName": "john doe",\n' +
+      '  "napsBeneficiaryCode": "",\n' +
+      '  "globalRecipient": "",\n' +
+      '  "transactionAmount": "300",\n' +
+      '  "actionDate": "2026-01-29",\n' +
+      '  "reference1": "SREF000-23042025",\n' +
+      '  "reference2": "CREF000-23042025",\n' +
+      '  "reference3": "",\n' +
+      '  "bicCode": "",\n' +
+      '  "processingOption1": "I",\n' +
+      '  "processingOption2": "S",\n' +
+      '  "mandateReference": "",\n' +
+      '  "collectionReoccurence": "OOFF",\n' +
+      '  "contractReference": "Thato Auto",\n' +
+      '  "emailAddress": "Hyphen@RMB.com",\n' +
+      '  "cellphoneNumber": "+27721234567"\n' +
+      '}',
+    senderID: '9312bb0e-41a6-402c-b1d0-3ad5f0b707ea',
+    transactionIDSAGReqPayload: 'f3aa614d-e61c-4520-9f41-766a34139c64',
+    response_payload_data: '{\n' +
+      '  "response": {\n' +
+      '    "isInfo": {\n' +
+      '      "senderMessageId": "07f19f9a-644f-455f-a1cb-dfe0b2a25e77",\n' +
+      '      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",\n' +
+      '      "responseId": "40b80b1c-6c5b-44c4-9756-4f7ac6e65458",\n' +
+      '      "isCorrelationId": "2513623c-00c4-4a95-b9f0-098e7318dc73"\n' +
+      '    },\n' +
+      '    "responseHeader": {\n' +
+      '      "responseTimestamp": "2026-01-29 12:57:30.237",\n' +
+      '      "responseType": "ack",\n' +
+      '      "responseCode": "accepted"\n' +
+      '    }\n' +
+      '  }\n' +
+      '}',
+    response_type: 'ack',
+    workertransactionstatus: 1
+  }
+]
+This is the DB results after Load Created call with a Query that does not return callback_data: [
+  {
+    workflow_execution_id: 'ca60d91d-407e-4e72-b36d-d7028bf007a6',
+    transaction_id: 'b1943fd2-8dc9-4cf6-abd6-a8f115f4266b',
+    client_transaction_id: 'a3d4f9ad-d077-4133-be27-7b32c7ab02b3',
+    transaction_item_id: 'ae7341b5-6230-4e5e-ba6f-1c2b08489f14',
+    child_workflow_execution_id: '6342a4a3-4f40-3ee1-b872-72f4763552be',
+    trxBatchStatus: 'In Progress',
+    trxStatus: 'In progress',
+    trxItemDetailStatus: 'In progress',
+    service_name: 'SALARY_EFT_PAYMENTS',
+    transaction_item_detail_id: '7c8a2b6e-3ff4-40c7-b651-178108a01992',
+    transaction_item_detail_run_status_name: 'In progress',
+    response_manager_code: null,
+    response_manager_exception_type: null,
+    response_manager_message: null,
+    response_data: null,
+    response_reference: '40b80b1c-6c5b-44c4-9756-4f7ac6e65458',
+    sagrequestpayload: '{\n' +
+      '  "transactionId": "f3aa614d-e61c-4520-9f41-766a34139c64",\n' +
+      '  "beneficiaryAccountNumber": "62006677069",\n' +
+      '  "branchCode": "250655",\n' +
+      '  "accountType": "2",\n' +
+      '  "serviceType": "EFTPAYMENT",\n' +
+      '  "transactionType": "P926",\n' +
+      '  "documentType": "EF",\n' +
+      '  "customerName": "john doe",\n' +
+      '  "napsBeneficiaryCode": "",\n' +
+      '  "globalRecipient": "",\n' +
+      '  "transactionAmount": "300",\n' +
+      '  "actionDate": "2026-01-29",\n' +
+      '  "reference1": "SREF000-23042025",\n' +
+      '  "reference2": "CREF000-23042025",\n' +
+      '  "reference3": "",\n' +
+      '  "bicCode": "",\n' +
+      '  "processingOption1": "I",\n' +
+      '  "processingOption2": "S",\n' +
+      '  "mandateReference": "",\n' +
+      '  "collectionReoccurence": "OOFF",\n' +
+      '  "contractReference": "Thato Auto",\n' +
+      '  "emailAddress": "Hyphen@RMB.com",\n' +
+      '  "cellphoneNumber": "+27721234567"\n' +
+      '}',
+    senderID: '9312bb0e-41a6-402c-b1d0-3ad5f0b707ea',
+    transactionIDSAGReqPayload: 'f3aa614d-e61c-4520-9f41-766a34139c64',
+    response_payload_data: '{\n' +
+      '  "response": {\n' +
+      '    "isInfo": {\n' +
+      '      "senderMessageId": "07f19f9a-644f-455f-a1cb-dfe0b2a25e77",\n' +
+      '      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",\n' +
+      '      "responseId": "40b80b1c-6c5b-44c4-9756-4f7ac6e65458",\n' +
+      '      "isCorrelationId": "2513623c-00c4-4a95-b9f0-098e7318dc73"\n' +
+      '    },\n' +
+      '    "responseHeader": {\n' +
+      '      "responseTimestamp": "2026-01-29 12:57:30.237",\n' +
+      '      "responseType": "ack",\n' +
+      '      "responseCode": "accepted"\n' +
+      '    }\n' +
+      '  }\n' +
+      '}',
+    response_type: 'ack',
+    workertransactionstatus: 1
+  }
+]
+This is the DB results after Load Created call with a Query that does not return callback_data: [
+  {
+    workflow_execution_id: 'ca60d91d-407e-4e72-b36d-d7028bf007a6',
+    transaction_id: 'b1943fd2-8dc9-4cf6-abd6-a8f115f4266b',
+    client_transaction_id: 'a3d4f9ad-d077-4133-be27-7b32c7ab02b3',
+    transaction_item_id: 'ae7341b5-6230-4e5e-ba6f-1c2b08489f14',
+    child_workflow_execution_id: '6342a4a3-4f40-3ee1-b872-72f4763552be',
+    trxBatchStatus: 'In Progress',
+    trxStatus: 'In progress',
+    trxItemDetailStatus: 'In progress',
+    service_name: 'SALARY_EFT_PAYMENTS',
+    transaction_item_detail_id: '7c8a2b6e-3ff4-40c7-b651-178108a01992',
+    transaction_item_detail_run_status_name: 'In progress',
+    response_manager_code: null,
+    response_manager_exception_type: null,
+    response_manager_message: null,
+    response_data: null,
+    response_reference: '40b80b1c-6c5b-44c4-9756-4f7ac6e65458',
+    sagrequestpayload: '{\n' +
+      '  "transactionId": "f3aa614d-e61c-4520-9f41-766a34139c64",\n' +
+      '  "beneficiaryAccountNumber": "62006677069",\n' +
+      '  "branchCode": "250655",\n' +
+      '  "accountType": "2",\n' +
+      '  "serviceType": "EFTPAYMENT",\n' +
+      '  "transactionType": "P926",\n' +
+      '  "documentType": "EF",\n' +
+      '  "customerName": "john doe",\n' +
+      '  "napsBeneficiaryCode": "",\n' +
+      '  "globalRecipient": "",\n' +
+      '  "transactionAmount": "300",\n' +
+      '  "actionDate": "2026-01-29",\n' +
+      '  "reference1": "SREF000-23042025",\n' +
+      '  "reference2": "CREF000-23042025",\n' +
+      '  "reference3": "",\n' +
+      '  "bicCode": "",\n' +
+      '  "processingOption1": "I",\n' +
+      '  "processingOption2": "S",\n' +
+      '  "mandateReference": "",\n' +
+      '  "collectionReoccurence": "OOFF",\n' +
+      '  "contractReference": "Thato Auto",\n' +
+      '  "emailAddress": "Hyphen@RMB.com",\n' +
+      '  "cellphoneNumber": "+27721234567"\n' +
+      '}',
+    senderID: '9312bb0e-41a6-402c-b1d0-3ad5f0b707ea',
+    transactionIDSAGReqPayload: 'f3aa614d-e61c-4520-9f41-766a34139c64',
+    response_payload_data: '{\n' +
+      '  "response": {\n' +
+      '    "isInfo": {\n' +
+      '      "senderMessageId": "07f19f9a-644f-455f-a1cb-dfe0b2a25e77",\n' +
+      '      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",\n' +
+      '      "responseId": "40b80b1c-6c5b-44c4-9756-4f7ac6e65458",\n' +
+      '      "isCorrelationId": "2513623c-00c4-4a95-b9f0-098e7318dc73"\n' +
+      '    },\n' +
+      '    "responseHeader": {\n' +
+      '      "responseTimestamp": "2026-01-29 12:57:30.237",\n' +
+      '      "responseType": "ack",\n' +
+      '      "responseCode": "accepted"\n' +
+      '    }\n' +
+      '  }\n' +
+      '}',
+    response_type: 'ack',
+    workertransactionstatus: 1
+  }
+]
+This is the DB results after Load Created call with a Query that does not return callback_data: [
+  {
+    workflow_execution_id: 'ca60d91d-407e-4e72-b36d-d7028bf007a6',
+    transaction_id: 'b1943fd2-8dc9-4cf6-abd6-a8f115f4266b',
+    client_transaction_id: 'a3d4f9ad-d077-4133-be27-7b32c7ab02b3',
+    transaction_item_id: 'ae7341b5-6230-4e5e-ba6f-1c2b08489f14',
+    child_workflow_execution_id: '6342a4a3-4f40-3ee1-b872-72f4763552be',
+    trxBatchStatus: 'In Progress',
+    trxStatus: 'In progress',
+    trxItemDetailStatus: 'In progress',
+    service_name: 'SALARY_EFT_PAYMENTS',
+    transaction_item_detail_id: '7c8a2b6e-3ff4-40c7-b651-178108a01992',
+    transaction_item_detail_run_status_name: 'In progress',
+    response_manager_code: null,
+    response_manager_exception_type: null,
+    response_manager_message: null,
+    response_data: null,
+    response_reference: '40b80b1c-6c5b-44c4-9756-4f7ac6e65458',
+    sagrequestpayload: '{\n' +
+      '  "transactionId": "f3aa614d-e61c-4520-9f41-766a34139c64",\n' +
+      '  "beneficiaryAccountNumber": "62006677069",\n' +
+      '  "branchCode": "250655",\n' +
+      '  "accountType": "2",\n' +
+      '  "serviceType": "EFTPAYMENT",\n' +
+      '  "transactionType": "P926",\n' +
+      '  "documentType": "EF",\n' +
+      '  "customerName": "john doe",\n' +
+      '  "napsBeneficiaryCode": "",\n' +
+      '  "globalRecipient": "",\n' +
+      '  "transactionAmount": "300",\n' +
+      '  "actionDate": "2026-01-29",\n' +
+      '  "reference1": "SREF000-23042025",\n' +
+      '  "reference2": "CREF000-23042025",\n' +
+      '  "reference3": "",\n' +
+      '  "bicCode": "",\n' +
+      '  "processingOption1": "I",\n' +
+      '  "processingOption2": "S",\n' +
+      '  "mandateReference": "",\n' +
+      '  "collectionReoccurence": "OOFF",\n' +
+      '  "contractReference": "Thato Auto",\n' +
+      '  "emailAddress": "Hyphen@RMB.com",\n' +
+      '  "cellphoneNumber": "+27721234567"\n' +
+      '}',
+    senderID: '9312bb0e-41a6-402c-b1d0-3ad5f0b707ea',
+    transactionIDSAGReqPayload: 'f3aa614d-e61c-4520-9f41-766a34139c64',
+    response_payload_data: '{\n' +
+      '  "response": {\n' +
+      '    "isInfo": {\n' +
+      '      "senderMessageId": "07f19f9a-644f-455f-a1cb-dfe0b2a25e77",\n' +
+      '      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",\n' +
+      '      "responseId": "40b80b1c-6c5b-44c4-9756-4f7ac6e65458",\n' +
+      '      "isCorrelationId": "2513623c-00c4-4a95-b9f0-098e7318dc73"\n' +
+      '    },\n' +
+      '    "responseHeader": {\n' +
+      '      "responseTimestamp": "2026-01-29 12:57:30.237",\n' +
+      '      "responseType": "ack",\n' +
+      '      "responseCode": "accepted"\n' +
+      '    }\n' +
+      '  }\n' +
+      '}',
+    response_type: 'ack',
+    workertransactionstatus: 1
+  }
+]
+This is the DB results after Load Created call with a Query that does not return callback_data: [
+  {
+    workflow_execution_id: 'ca60d91d-407e-4e72-b36d-d7028bf007a6',
+    transaction_id: 'b1943fd2-8dc9-4cf6-abd6-a8f115f4266b',
+    client_transaction_id: 'a3d4f9ad-d077-4133-be27-7b32c7ab02b3',
+    transaction_item_id: 'ae7341b5-6230-4e5e-ba6f-1c2b08489f14',
+    child_workflow_execution_id: '6342a4a3-4f40-3ee1-b872-72f4763552be',
+    trxBatchStatus: 'In Progress',
+    trxStatus: 'In progress',
+    trxItemDetailStatus: 'In progress',
+    service_name: 'SALARY_EFT_PAYMENTS',
+    transaction_item_detail_id: '7c8a2b6e-3ff4-40c7-b651-178108a01992',
+    transaction_item_detail_run_status_name: 'In progress',
+    response_manager_code: null,
+    response_manager_exception_type: null,
+    response_manager_message: null,
+    response_data: null,
+    response_reference: '40b80b1c-6c5b-44c4-9756-4f7ac6e65458',
+    sagrequestpayload: '{\n' +
+      '  "transactionId": "f3aa614d-e61c-4520-9f41-766a34139c64",\n' +
+      '  "beneficiaryAccountNumber": "62006677069",\n' +
+      '  "branchCode": "250655",\n' +
+      '  "accountType": "2",\n' +
+      '  "serviceType": "EFTPAYMENT",\n' +
+      '  "transactionType": "P926",\n' +
+      '  "documentType": "EF",\n' +
+      '  "customerName": "john doe",\n' +
+      '  "napsBeneficiaryCode": "",\n' +
+      '  "globalRecipient": "",\n' +
+      '  "transactionAmount": "300",\n' +
+      '  "actionDate": "2026-01-29",\n' +
+      '  "reference1": "SREF000-23042025",\n' +
+      '  "reference2": "CREF000-23042025",\n' +
+      '  "reference3": "",\n' +
+      '  "bicCode": "",\n' +
+      '  "processingOption1": "I",\n' +
+      '  "processingOption2": "S",\n' +
+      '  "mandateReference": "",\n' +
+      '  "collectionReoccurence": "OOFF",\n' +
+      '  "contractReference": "Thato Auto",\n' +
+      '  "emailAddress": "Hyphen@RMB.com",\n' +
+      '  "cellphoneNumber": "+27721234567"\n' +
+      '}',
+    senderID: '9312bb0e-41a6-402c-b1d0-3ad5f0b707ea',
+    transactionIDSAGReqPayload: 'f3aa614d-e61c-4520-9f41-766a34139c64',
+    response_payload_data: '{\n' +
+      '  "response": {\n' +
+      '    "isInfo": {\n' +
+      '      "senderMessageId": "07f19f9a-644f-455f-a1cb-dfe0b2a25e77",\n' +
+      '      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",\n' +
+      '      "responseId": "40b80b1c-6c5b-44c4-9756-4f7ac6e65458",\n' +
+      '      "isCorrelationId": "2513623c-00c4-4a95-b9f0-098e7318dc73"\n' +
+      '    },\n' +
+      '    "responseHeader": {\n' +
+      '      "responseTimestamp": "2026-01-29 12:57:30.237",\n' +
+      '      "responseType": "ack",\n' +
+      '      "responseCode": "accepted"\n' +
+      '    }\n' +
+      '  }\n' +
+      '}',
+    response_type: 'ack',
+    workertransactionstatus: 1
+  }
+]
+This is the DB results after Load Created call with a Query that does not return callback_data: [
+  {
+    workflow_execution_id: 'ca60d91d-407e-4e72-b36d-d7028bf007a6',
+    transaction_id: 'b1943fd2-8dc9-4cf6-abd6-a8f115f4266b',
+    client_transaction_id: 'a3d4f9ad-d077-4133-be27-7b32c7ab02b3',
+    transaction_item_id: 'ae7341b5-6230-4e5e-ba6f-1c2b08489f14',
+    child_workflow_execution_id: '6342a4a3-4f40-3ee1-b872-72f4763552be',
+    trxBatchStatus: 'In Progress',
+    trxStatus: 'In progress',
+    trxItemDetailStatus: 'In progress',
+    service_name: 'SALARY_EFT_PAYMENTS',
+    transaction_item_detail_id: '7c8a2b6e-3ff4-40c7-b651-178108a01992',
+    transaction_item_detail_run_status_name: 'In progress',
+    response_manager_code: null,
+    response_manager_exception_type: null,
+    response_manager_message: null,
+    response_data: null,
+    response_reference: '40b80b1c-6c5b-44c4-9756-4f7ac6e65458',
+    sagrequestpayload: '{\n' +
+      '  "transactionId": "f3aa614d-e61c-4520-9f41-766a34139c64",\n' +
+      '  "beneficiaryAccountNumber": "62006677069",\n' +
+      '  "branchCode": "250655",\n' +
+      '  "accountType": "2",\n' +
+      '  "serviceType": "EFTPAYMENT",\n' +
+      '  "transactionType": "P926",\n' +
+      '  "documentType": "EF",\n' +
+      '  "customerName": "john doe",\n' +
+      '  "napsBeneficiaryCode": "",\n' +
+      '  "globalRecipient": "",\n' +
+      '  "transactionAmount": "300",\n' +
+      '  "actionDate": "2026-01-29",\n' +
+      '  "reference1": "SREF000-23042025",\n' +
+      '  "reference2": "CREF000-23042025",\n' +
+      '  "reference3": "",\n' +
+      '  "bicCode": "",\n' +
+      '  "processingOption1": "I",\n' +
+      '  "processingOption2": "S",\n' +
+      '  "mandateReference": "",\n' +
+      '  "collectionReoccurence": "OOFF",\n' +
+      '  "contractReference": "Thato Auto",\n' +
+      '  "emailAddress": "Hyphen@RMB.com",\n' +
+      '  "cellphoneNumber": "+27721234567"\n' +
+      '}',
+    senderID: '9312bb0e-41a6-402c-b1d0-3ad5f0b707ea',
+    transactionIDSAGReqPayload: 'f3aa614d-e61c-4520-9f41-766a34139c64',
+    response_payload_data: '{\n' +
+      '  "response": {\n' +
+      '    "isInfo": {\n' +
+      '      "senderMessageId": "07f19f9a-644f-455f-a1cb-dfe0b2a25e77",\n' +
+      '      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",\n' +
+      '      "responseId": "40b80b1c-6c5b-44c4-9756-4f7ac6e65458",\n' +
+      '      "isCorrelationId": "2513623c-00c4-4a95-b9f0-098e7318dc73"\n' +
+      '    },\n' +
+      '    "responseHeader": {\n' +
+      '      "responseTimestamp": "2026-01-29 12:57:30.237",\n' +
+      '      "responseType": "ack",\n' +
+      '      "responseCode": "accepted"\n' +
+      '    }\n' +
+      '  }\n' +
+      '}',
+    response_type: 'ack',
+    workertransactionstatus: 1
+  }
+]
+This is the DB results after Load Created call with a Query that does not return callback_data: [
+  {
+    workflow_execution_id: 'ca60d91d-407e-4e72-b36d-d7028bf007a6',
+    transaction_id: 'b1943fd2-8dc9-4cf6-abd6-a8f115f4266b',
+    client_transaction_id: 'a3d4f9ad-d077-4133-be27-7b32c7ab02b3',
+    transaction_item_id: 'ae7341b5-6230-4e5e-ba6f-1c2b08489f14',
+    child_workflow_execution_id: '6342a4a3-4f40-3ee1-b872-72f4763552be',
+    trxBatchStatus: 'In Progress',
+    trxStatus: 'In progress',
+    trxItemDetailStatus: 'In progress',
+    service_name: 'SALARY_EFT_PAYMENTS',
+    transaction_item_detail_id: '7c8a2b6e-3ff4-40c7-b651-178108a01992',
+    transaction_item_detail_run_status_name: 'In progress',
+    response_manager_code: null,
+    response_manager_exception_type: null,
+    response_manager_message: null,
+    response_data: null,
+    response_reference: '40b80b1c-6c5b-44c4-9756-4f7ac6e65458',
+    sagrequestpayload: '{\n' +
+      '  "transactionId": "f3aa614d-e61c-4520-9f41-766a34139c64",\n' +
+      '  "beneficiaryAccountNumber": "62006677069",\n' +
+      '  "branchCode": "250655",\n' +
+      '  "accountType": "2",\n' +
+      '  "serviceType": "EFTPAYMENT",\n' +
+      '  "transactionType": "P926",\n' +
+      '  "documentType": "EF",\n' +
+      '  "customerName": "john doe",\n' +
+      '  "napsBeneficiaryCode": "",\n' +
+      '  "globalRecipient": "",\n' +
+      '  "transactionAmount": "300",\n' +
+      '  "actionDate": "2026-01-29",\n' +
+      '  "reference1": "SREF000-23042025",\n' +
+      '  "reference2": "CREF000-23042025",\n' +
+      '  "reference3": "",\n' +
+      '  "bicCode": "",\n' +
+      '  "processingOption1": "I",\n' +
+      '  "processingOption2": "S",\n' +
+      '  "mandateReference": "",\n' +
+      '  "collectionReoccurence": "OOFF",\n' +
+      '  "contractReference": "Thato Auto",\n' +
+      '  "emailAddress": "Hyphen@RMB.com",\n' +
+      '  "cellphoneNumber": "+27721234567"\n' +
+      '}',
+    senderID: '9312bb0e-41a6-402c-b1d0-3ad5f0b707ea',
+    transactionIDSAGReqPayload: 'f3aa614d-e61c-4520-9f41-766a34139c64',
+    response_payload_data: '{\n' +
+      '  "response": {\n' +
+      '    "isInfo": {\n' +
+      '      "senderMessageId": "07f19f9a-644f-455f-a1cb-dfe0b2a25e77",\n' +
+      '      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",\n' +
+      '      "responseId": "40b80b1c-6c5b-44c4-9756-4f7ac6e65458",\n' +
+      '      "isCorrelationId": "2513623c-00c4-4a95-b9f0-098e7318dc73"\n' +
+      '    },\n' +
+      '    "responseHeader": {\n' +
+      '      "responseTimestamp": "2026-01-29 12:57:30.237",\n' +
+      '      "responseType": "ack",\n' +
+      '      "responseCode": "accepted"\n' +
+      '    }\n' +
+      '  }\n' +
+      '}',
+    response_type: 'ack',
+    workertransactionstatus: 1
+  }
+]
+This is the DB results after Load Created call with a Query that does not return callback_data: [
+  {
+    workflow_execution_id: 'ca60d91d-407e-4e72-b36d-d7028bf007a6',
+    transaction_id: 'b1943fd2-8dc9-4cf6-abd6-a8f115f4266b',
+    client_transaction_id: 'a3d4f9ad-d077-4133-be27-7b32c7ab02b3',
+    transaction_item_id: 'ae7341b5-6230-4e5e-ba6f-1c2b08489f14',
+    child_workflow_execution_id: '6342a4a3-4f40-3ee1-b872-72f4763552be',
+    trxBatchStatus: 'In Progress',
+    trxStatus: 'In progress',
+    trxItemDetailStatus: 'In progress',
+    service_name: 'SALARY_EFT_PAYMENTS',
+    transaction_item_detail_id: '7c8a2b6e-3ff4-40c7-b651-178108a01992',
+    transaction_item_detail_run_status_name: 'In progress',
+    response_manager_code: null,
+    response_manager_exception_type: null,
+    response_manager_message: null,
+    response_data: null,
+    response_reference: '40b80b1c-6c5b-44c4-9756-4f7ac6e65458',
+    sagrequestpayload: '{\n' +
+      '  "transactionId": "f3aa614d-e61c-4520-9f41-766a34139c64",\n' +
+      '  "beneficiaryAccountNumber": "62006677069",\n' +
+      '  "branchCode": "250655",\n' +
+      '  "accountType": "2",\n' +
+      '  "serviceType": "EFTPAYMENT",\n' +
+      '  "transactionType": "P926",\n' +
+      '  "documentType": "EF",\n' +
+      '  "customerName": "john doe",\n' +
+      '  "napsBeneficiaryCode": "",\n' +
+      '  "globalRecipient": "",\n' +
+      '  "transactionAmount": "300",\n' +
+      '  "actionDate": "2026-01-29",\n' +
+      '  "reference1": "SREF000-23042025",\n' +
+      '  "reference2": "CREF000-23042025",\n' +
+      '  "reference3": "",\n' +
+      '  "bicCode": "",\n' +
+      '  "processingOption1": "I",\n' +
+      '  "processingOption2": "S",\n' +
+      '  "mandateReference": "",\n' +
+      '  "collectionReoccurence": "OOFF",\n' +
+      '  "contractReference": "Thato Auto",\n' +
+      '  "emailAddress": "Hyphen@RMB.com",\n' +
+      '  "cellphoneNumber": "+27721234567"\n' +
+      '}',
+    senderID: '9312bb0e-41a6-402c-b1d0-3ad5f0b707ea',
+    transactionIDSAGReqPayload: 'f3aa614d-e61c-4520-9f41-766a34139c64',
+    response_payload_data: '{\n' +
+      '  "response": {\n' +
+      '    "isInfo": {\n' +
+      '      "senderMessageId": "07f19f9a-644f-455f-a1cb-dfe0b2a25e77",\n' +
+      '      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",\n' +
+      '      "responseId": "40b80b1c-6c5b-44c4-9756-4f7ac6e65458",\n' +
+      '      "isCorrelationId": "2513623c-00c4-4a95-b9f0-098e7318dc73"\n' +
+      '    },\n' +
+      '    "responseHeader": {\n' +
+      '      "responseTimestamp": "2026-01-29 12:57:30.237",\n' +
+      '      "responseType": "ack",\n' +
+      '      "responseCode": "accepted"\n' +
+      '    }\n' +
+      '  }\n' +
+      '}',
+    response_type: 'ack',
+    workertransactionstatus: 1
+  }
+]
+This is the DB results after Load Created call with a Query that does not return callback_data: [
+  {
+    workflow_execution_id: 'ca60d91d-407e-4e72-b36d-d7028bf007a6',
+    transaction_id: 'b1943fd2-8dc9-4cf6-abd6-a8f115f4266b',
+    client_transaction_id: 'a3d4f9ad-d077-4133-be27-7b32c7ab02b3',
+    transaction_item_id: 'ae7341b5-6230-4e5e-ba6f-1c2b08489f14',
+    child_workflow_execution_id: '6342a4a3-4f40-3ee1-b872-72f4763552be',
+    trxBatchStatus: 'In Progress',
+    trxStatus: 'In progress',
+    trxItemDetailStatus: 'In progress',
+    service_name: 'SALARY_EFT_PAYMENTS',
+    transaction_item_detail_id: '7c8a2b6e-3ff4-40c7-b651-178108a01992',
+    transaction_item_detail_run_status_name: 'In progress',
+    response_manager_code: null,
+    response_manager_exception_type: null,
+    response_manager_message: null,
+    response_data: null,
+    response_reference: '40b80b1c-6c5b-44c4-9756-4f7ac6e65458',
+    sagrequestpayload: '{\n' +
+      '  "transactionId": "f3aa614d-e61c-4520-9f41-766a34139c64",\n' +
+      '  "beneficiaryAccountNumber": "62006677069",\n' +
+      '  "branchCode": "250655",\n' +
+      '  "accountType": "2",\n' +
+      '  "serviceType": "EFTPAYMENT",\n' +
+      '  "transactionType": "P926",\n' +
+      '  "documentType": "EF",\n' +
+      '  "customerName": "john doe",\n' +
+      '  "napsBeneficiaryCode": "",\n' +
+      '  "globalRecipient": "",\n' +
+      '  "transactionAmount": "300",\n' +
+      '  "actionDate": "2026-01-29",\n' +
+      '  "reference1": "SREF000-23042025",\n' +
+      '  "reference2": "CREF000-23042025",\n' +
+      '  "reference3": "",\n' +
+      '  "bicCode": "",\n' +
+      '  "processingOption1": "I",\n' +
+      '  "processingOption2": "S",\n' +
+      '  "mandateReference": "",\n' +
+      '  "collectionReoccurence": "OOFF",\n' +
+      '  "contractReference": "Thato Auto",\n' +
+      '  "emailAddress": "Hyphen@RMB.com",\n' +
+      '  "cellphoneNumber": "+27721234567"\n' +
+      '}',
+    senderID: '9312bb0e-41a6-402c-b1d0-3ad5f0b707ea',
+    transactionIDSAGReqPayload: 'f3aa614d-e61c-4520-9f41-766a34139c64',
+    response_payload_data: '{\n' +
+      '  "response": {\n' +
+      '    "isInfo": {\n' +
+      '      "senderMessageId": "07f19f9a-644f-455f-a1cb-dfe0b2a25e77",\n' +
+      '      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",\n' +
+      '      "responseId": "40b80b1c-6c5b-44c4-9756-4f7ac6e65458",\n' +
+      '      "isCorrelationId": "2513623c-00c4-4a95-b9f0-098e7318dc73"\n' +
+      '    },\n' +
+      '    "responseHeader": {\n' +
+      '      "responseTimestamp": "2026-01-29 12:57:30.237",\n' +
+      '      "responseType": "ack",\n' +
+      '      "responseCode": "accepted"\n' +
+      '    }\n' +
+      '  }\n' +
+      '}',
+    response_type: 'ack',
+    workertransactionstatus: 1
+  }
+]
+This is the DB results after Load Created call with a Query that does not return callback_data: [
+  {
+    workflow_execution_id: 'ca60d91d-407e-4e72-b36d-d7028bf007a6',
+    transaction_id: 'b1943fd2-8dc9-4cf6-abd6-a8f115f4266b',
+    client_transaction_id: 'a3d4f9ad-d077-4133-be27-7b32c7ab02b3',
+    transaction_item_id: 'ae7341b5-6230-4e5e-ba6f-1c2b08489f14',
+    child_workflow_execution_id: '6342a4a3-4f40-3ee1-b872-72f4763552be',
+    trxBatchStatus: 'In Progress',
+    trxStatus: 'In progress',
+    trxItemDetailStatus: 'In progress',
+    service_name: 'SALARY_EFT_PAYMENTS',
+    transaction_item_detail_id: '7c8a2b6e-3ff4-40c7-b651-178108a01992',
+    transaction_item_detail_run_status_name: 'In progress',
+    response_manager_code: null,
+    response_manager_exception_type: null,
+    response_manager_message: null,
+    response_data: null,
+    response_reference: '40b80b1c-6c5b-44c4-9756-4f7ac6e65458',
+    sagrequestpayload: '{\n' +
+      '  "transactionId": "f3aa614d-e61c-4520-9f41-766a34139c64",\n' +
+      '  "beneficiaryAccountNumber": "62006677069",\n' +
+      '  "branchCode": "250655",\n' +
+      '  "accountType": "2",\n' +
+      '  "serviceType": "EFTPAYMENT",\n' +
+      '  "transactionType": "P926",\n' +
+      '  "documentType": "EF",\n' +
+      '  "customerName": "john doe",\n' +
+      '  "napsBeneficiaryCode": "",\n' +
+      '  "globalRecipient": "",\n' +
+      '  "transactionAmount": "300",\n' +
+      '  "actionDate": "2026-01-29",\n' +
+      '  "reference1": "SREF000-23042025",\n' +
+      '  "reference2": "CREF000-23042025",\n' +
+      '  "reference3": "",\n' +
+      '  "bicCode": "",\n' +
+      '  "processingOption1": "I",\n' +
+      '  "processingOption2": "S",\n' +
+      '  "mandateReference": "",\n' +
+      '  "collectionReoccurence": "OOFF",\n' +
+      '  "contractReference": "Thato Auto",\n' +
+      '  "emailAddress": "Hyphen@RMB.com",\n' +
+      '  "cellphoneNumber": "+27721234567"\n' +
+      '}',
+    senderID: '9312bb0e-41a6-402c-b1d0-3ad5f0b707ea',
+    transactionIDSAGReqPayload: 'f3aa614d-e61c-4520-9f41-766a34139c64',
+    response_payload_data: '{\n' +
+      '  "response": {\n' +
+      '    "isInfo": {\n' +
+      '      "senderMessageId": "07f19f9a-644f-455f-a1cb-dfe0b2a25e77",\n' +
+      '      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",\n' +
+      '      "responseId": "40b80b1c-6c5b-44c4-9756-4f7ac6e65458",\n' +
+      '      "isCorrelationId": "2513623c-00c4-4a95-b9f0-098e7318dc73"\n' +
+      '    },\n' +
+      '    "responseHeader": {\n' +
+      '      "responseTimestamp": "2026-01-29 12:57:30.237",\n' +
+      '      "responseType": "ack",\n' +
+      '      "responseCode": "accepted"\n' +
+      '    }\n' +
+      '  }\n' +
+      '}',
+    response_type: 'ack',
+    workertransactionstatus: 1
+  }
+]
+This is the DB results after Load Created call with a Query that does not return callback_data: [
+  {
+    workflow_execution_id: 'ca60d91d-407e-4e72-b36d-d7028bf007a6',
+    transaction_id: 'b1943fd2-8dc9-4cf6-abd6-a8f115f4266b',
+    client_transaction_id: 'a3d4f9ad-d077-4133-be27-7b32c7ab02b3',
+    transaction_item_id: 'ae7341b5-6230-4e5e-ba6f-1c2b08489f14',
+    child_workflow_execution_id: '6342a4a3-4f40-3ee1-b872-72f4763552be',
+    trxBatchStatus: 'In Progress',
+    trxStatus: 'In progress',
+    trxItemDetailStatus: 'In progress',
+    service_name: 'SALARY_EFT_PAYMENTS',
+    transaction_item_detail_id: '7c8a2b6e-3ff4-40c7-b651-178108a01992',
+    transaction_item_detail_run_status_name: 'In progress',
+    response_manager_code: null,
+    response_manager_exception_type: null,
+    response_manager_message: null,
+    response_data: null,
+    response_reference: '40b80b1c-6c5b-44c4-9756-4f7ac6e65458',
+    sagrequestpayload: '{\n' +
+      '  "transactionId": "f3aa614d-e61c-4520-9f41-766a34139c64",\n' +
+      '  "beneficiaryAccountNumber": "62006677069",\n' +
+      '  "branchCode": "250655",\n' +
+      '  "accountType": "2",\n' +
+      '  "serviceType": "EFTPAYMENT",\n' +
+      '  "transactionType": "P926",\n' +
+      '  "documentType": "EF",\n' +
+      '  "customerName": "john doe",\n' +
+      '  "napsBeneficiaryCode": "",\n' +
+      '  "globalRecipient": "",\n' +
+      '  "transactionAmount": "300",\n' +
+      '  "actionDate": "2026-01-29",\n' +
+      '  "reference1": "SREF000-23042025",\n' +
+      '  "reference2": "CREF000-23042025",\n' +
+      '  "reference3": "",\n' +
+      '  "bicCode": "",\n' +
+      '  "processingOption1": "I",\n' +
+      '  "processingOption2": "S",\n' +
+      '  "mandateReference": "",\n' +
+      '  "collectionReoccurence": "OOFF",\n' +
+      '  "contractReference": "Thato Auto",\n' +
+      '  "emailAddress": "Hyphen@RMB.com",\n' +
+      '  "cellphoneNumber": "+27721234567"\n' +
+      '}',
+    senderID: '9312bb0e-41a6-402c-b1d0-3ad5f0b707ea',
+    transactionIDSAGReqPayload: 'f3aa614d-e61c-4520-9f41-766a34139c64',
+    response_payload_data: '{\n' +
+      '  "response": {\n' +
+      '    "isInfo": {\n' +
+      '      "senderMessageId": "07f19f9a-644f-455f-a1cb-dfe0b2a25e77",\n' +
+      '      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",\n' +
+      '      "responseId": "40b80b1c-6c5b-44c4-9756-4f7ac6e65458",\n' +
+      '      "isCorrelationId": "2513623c-00c4-4a95-b9f0-098e7318dc73"\n' +
+      '    },\n' +
+      '    "responseHeader": {\n' +
+      '      "responseTimestamp": "2026-01-29 12:57:30.237",\n' +
+      '      "responseType": "ack",\n' +
+      '      "responseCode": "accepted"\n' +
+      '    }\n' +
+      '  }\n' +
+      '}',
+    response_type: 'ack',
+    workertransactionstatus: 1
+  }
+]
+This is the DB results after Load Created call with a Query that does not return callback_data: [
+  {
+    workflow_execution_id: 'ca60d91d-407e-4e72-b36d-d7028bf007a6',
+    transaction_id: 'b1943fd2-8dc9-4cf6-abd6-a8f115f4266b',
+    client_transaction_id: 'a3d4f9ad-d077-4133-be27-7b32c7ab02b3',
+    transaction_item_id: 'ae7341b5-6230-4e5e-ba6f-1c2b08489f14',
+    child_workflow_execution_id: '6342a4a3-4f40-3ee1-b872-72f4763552be',
+    trxBatchStatus: 'In Progress',
+    trxStatus: 'In progress',
+    trxItemDetailStatus: 'In progress',
+    service_name: 'SALARY_EFT_PAYMENTS',
+    transaction_item_detail_id: '7c8a2b6e-3ff4-40c7-b651-178108a01992',
+    transaction_item_detail_run_status_name: 'In progress',
+    response_manager_code: null,
+    response_manager_exception_type: null,
+    response_manager_message: null,
+    response_data: null,
+    response_reference: '40b80b1c-6c5b-44c4-9756-4f7ac6e65458',
+    sagrequestpayload: '{\n' +
+      '  "transactionId": "f3aa614d-e61c-4520-9f41-766a34139c64",\n' +
+      '  "beneficiaryAccountNumber": "62006677069",\n' +
+      '  "branchCode": "250655",\n' +
+      '  "accountType": "2",\n' +
+      '  "serviceType": "EFTPAYMENT",\n' +
+      '  "transactionType": "P926",\n' +
+      '  "documentType": "EF",\n' +
+      '  "customerName": "john doe",\n' +
+      '  "napsBeneficiaryCode": "",\n' +
+      '  "globalRecipient": "",\n' +
+      '  "transactionAmount": "300",\n' +
+      '  "actionDate": "2026-01-29",\n' +
+      '  "reference1": "SREF000-23042025",\n' +
+      '  "reference2": "CREF000-23042025",\n' +
+      '  "reference3": "",\n' +
+      '  "bicCode": "",\n' +
+      '  "processingOption1": "I",\n' +
+      '  "processingOption2": "S",\n' +
+      '  "mandateReference": "",\n' +
+      '  "collectionReoccurence": "OOFF",\n' +
+      '  "contractReference": "Thato Auto",\n' +
+      '  "emailAddress": "Hyphen@RMB.com",\n' +
+      '  "cellphoneNumber": "+27721234567"\n' +
+      '}',
+    senderID: '9312bb0e-41a6-402c-b1d0-3ad5f0b707ea',
+    transactionIDSAGReqPayload: 'f3aa614d-e61c-4520-9f41-766a34139c64',
+    response_payload_data: '{\n' +
+      '  "response": {\n' +
+      '    "isInfo": {\n' +
+      '      "senderMessageId": "07f19f9a-644f-455f-a1cb-dfe0b2a25e77",\n' +
+      '      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",\n' +
+      '      "responseId": "40b80b1c-6c5b-44c4-9756-4f7ac6e65458",\n' +
+      '      "isCorrelationId": "2513623c-00c4-4a95-b9f0-098e7318dc73"\n' +
+      '    },\n' +
+      '    "responseHeader": {\n' +
+      '      "responseTimestamp": "2026-01-29 12:57:30.237",\n' +
+      '      "responseType": "ack",\n' +
+      '      "responseCode": "accepted"\n' +
+      '    }\n' +
+      '  }\n' +
+      '}',
+    response_type: 'ack',
+    workertransactionstatus: 1
+  }
+]
+This is the DB results after Load Created call with a Query that does not return callback_data: [
+  {
+    workflow_execution_id: 'ca60d91d-407e-4e72-b36d-d7028bf007a6',
+    transaction_id: 'b1943fd2-8dc9-4cf6-abd6-a8f115f4266b',
+    client_transaction_id: 'a3d4f9ad-d077-4133-be27-7b32c7ab02b3',
+    transaction_item_id: 'ae7341b5-6230-4e5e-ba6f-1c2b08489f14',
+    child_workflow_execution_id: '6342a4a3-4f40-3ee1-b872-72f4763552be',
+    trxBatchStatus: 'In Progress',
+    trxStatus: 'In progress',
+    trxItemDetailStatus: 'In progress',
+    service_name: 'SALARY_EFT_PAYMENTS',
+    transaction_item_detail_id: '7c8a2b6e-3ff4-40c7-b651-178108a01992',
+    transaction_item_detail_run_status_name: 'In progress',
+    response_manager_code: null,
+    response_manager_exception_type: null,
+    response_manager_message: null,
+    response_data: null,
+    response_reference: '40b80b1c-6c5b-44c4-9756-4f7ac6e65458',
+    sagrequestpayload: '{\n' +
+      '  "transactionId": "f3aa614d-e61c-4520-9f41-766a34139c64",\n' +
+      '  "beneficiaryAccountNumber": "62006677069",\n' +
+      '  "branchCode": "250655",\n' +
+      '  "accountType": "2",\n' +
+      '  "serviceType": "EFTPAYMENT",\n' +
+      '  "transactionType": "P926",\n' +
+      '  "documentType": "EF",\n' +
+      '  "customerName": "john doe",\n' +
+      '  "napsBeneficiaryCode": "",\n' +
+      '  "globalRecipient": "",\n' +
+      '  "transactionAmount": "300",\n' +
+      '  "actionDate": "2026-01-29",\n' +
+      '  "reference1": "SREF000-23042025",\n' +
+      '  "reference2": "CREF000-23042025",\n' +
+      '  "reference3": "",\n' +
+      '  "bicCode": "",\n' +
+      '  "processingOption1": "I",\n' +
+      '  "processingOption2": "S",\n' +
+      '  "mandateReference": "",\n' +
+      '  "collectionReoccurence": "OOFF",\n' +
+      '  "contractReference": "Thato Auto",\n' +
+      '  "emailAddress": "Hyphen@RMB.com",\n' +
+      '  "cellphoneNumber": "+27721234567"\n' +
+      '}',
+    senderID: '9312bb0e-41a6-402c-b1d0-3ad5f0b707ea',
+    transactionIDSAGReqPayload: 'f3aa614d-e61c-4520-9f41-766a34139c64',
+    response_payload_data: '{\n' +
+      '  "response": {\n' +
+      '    "isInfo": {\n' +
+      '      "senderMessageId": "07f19f9a-644f-455f-a1cb-dfe0b2a25e77",\n' +
+      '      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",\n' +
+      '      "responseId": "40b80b1c-6c5b-44c4-9756-4f7ac6e65458",\n' +
+      '      "isCorrelationId": "2513623c-00c4-4a95-b9f0-098e7318dc73"\n' +
+      '    },\n' +
+      '    "responseHeader": {\n' +
+      '      "responseTimestamp": "2026-01-29 12:57:30.237",\n' +
+      '      "responseType": "ack",\n' +
+      '      "responseCode": "accepted"\n' +
+      '    }\n' +
+      '  }\n' +
+      '}',
+    response_type: 'ack',
+    workertransactionstatus: 1
+  }
+]

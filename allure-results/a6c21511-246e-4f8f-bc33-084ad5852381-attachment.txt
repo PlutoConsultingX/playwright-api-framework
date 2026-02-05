@@ -1,0 +1,101 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Processed to Bank payload: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "4d4bd86c-8b14-46e0-b74e-ce5875a3bc01",
+      "isCorrelationId": "c7f04d61-bce6-413c-bc99-e4962c7f3238",
+      "senderMessageId": "584c8e5d-45b1-4cdf-9467-7c9877849242"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "transactionId": "1aa9e35a-6f13-4ff4-8bf0-f4e985c1cad3",
+          "actionDate": "2026-02-03",
+          "nativeTransactionId": "P926 -EF-000000427-00000100",
+          "serviceType": "EFTCOLLECTION",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "PROCESSED",
+            "responseDescription": "Processed to bank"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "RESPONSE",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-02-03",
+      "nativeMsgId": "11049bd1-5fea-4bb2-b97e-0afa064ac82a",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Sending processed to bank Body: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "4d4bd86c-8b14-46e0-b74e-ce5875a3bc01",
+      "isCorrelationId": "c7f04d61-bce6-413c-bc99-e4962c7f3238",
+      "senderMessageId": "584c8e5d-45b1-4cdf-9467-7c9877849242"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "transactionId": "1aa9e35a-6f13-4ff4-8bf0-f4e985c1cad3",
+          "actionDate": "2026-02-03",
+          "nativeTransactionId": "P926 -EF-000000427-00000100",
+          "serviceType": "EFTCOLLECTION",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "PROCESSED",
+            "responseDescription": "Processed to bank"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "RESPONSE",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-02-03",
+      "nativeMsgId": "11049bd1-5fea-4bb2-b97e-0afa064ac82a",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Processed to Bank URL: http://10.10.21.65:9183/workflow-worker-eft-payments-salaryday/api/v1/callback
+Processed to Bank status: 200
+Processed to Bank response body: {
+  "versionNumber": 1,
+  "traceId": "a38d0c9f-0c82-4e07-8e48-370b5a065b66",
+  "correlationId": "c2252c51-a7f3-4399-9d1a-125274487aa0",
+  "result": {
+    "success": true,
+    "origin": "WORKER_SERVICE"
+  },
+  "profile": {
+    "zone": "SAT",
+    "lang": "ENG",
+    "country": "USA",
+    "offset": "+02:00",
+    "requestDate": "2026-02-03 20:36:00.914",
+    "responseDate": "2026-02-03 20:36:00.935",
+    "hostDateUtc": "2026-02-03 18:36:00.914",
+    "hostDate": "2026-02-03 20:36:00.914",
+    "durationInMillis": 21
+  }
+}

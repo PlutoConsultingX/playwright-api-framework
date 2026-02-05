@@ -1,0 +1,89 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Load Created Payload: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "1feff7d2-8234-49c2-ab94-16e3934c6f9e"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "actionDate": "2026-01-26",
+          "effectiveDate": "2026-01-26",
+          "serviceType": "EFTPAYMENT",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-26",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Load Created Status: 200
+Load Created Response: {"versionNumber":1,"traceId":"b6a1f566-93f2-4bcc-b3cb-eb584ce10216","correlationId":"264c34bb-8a49-47fd-a206-88248b15891b","result":{"success":true,"origin":"WORKER_SERVICE"},"profile":{"zone":"SAT","lang":"ENG","country":"USA","offset":"+02:00","requestDate":"2026-01-26 12:14:56.981","responseDate":"2026-01-26 12:14:56.995","hostDateUtc":"2026-01-26 10:14:56.981","hostDate":"2026-01-26 12:14:56.981","durationInMillis":14}}
+Load Created API Response: {
+  "versionNumber": 1,
+  "traceId": "b6a1f566-93f2-4bcc-b3cb-eb584ce10216",
+  "correlationId": "264c34bb-8a49-47fd-a206-88248b15891b",
+  "result": {
+    "success": true,
+    "origin": "WORKER_SERVICE"
+  },
+  "profile": {
+    "zone": "SAT",
+    "lang": "ENG",
+    "country": "USA",
+    "offset": "+02:00",
+    "requestDate": "2026-01-26 12:14:56.981",
+    "responseDate": "2026-01-26 12:14:56.995",
+    "hostDateUtc": "2026-01-26 10:14:56.981",
+    "hostDate": "2026-01-26 12:14:56.981",
+    "durationInMillis": 14
+  }
+}
+Polling DB (attempt 1) for clientCorrelationID: 953b7331-cb35-4132-ae44-b06d06f0e586
+DB rows returned: 0
+Waiting for DB record... (1/10)
+Polling DB (attempt 2) for clientCorrelationID: 953b7331-cb35-4132-ae44-b06d06f0e586
+DB rows returned: 0
+Waiting for DB record... (2/10)
+Polling DB (attempt 3) for clientCorrelationID: 953b7331-cb35-4132-ae44-b06d06f0e586
+DB rows returned: 0
+Waiting for DB record... (3/10)
+Polling DB (attempt 4) for clientCorrelationID: 953b7331-cb35-4132-ae44-b06d06f0e586
+DB rows returned: 0
+Waiting for DB record... (4/10)
+Polling DB (attempt 5) for clientCorrelationID: 953b7331-cb35-4132-ae44-b06d06f0e586
+DB rows returned: 0
+Waiting for DB record... (5/10)
+Polling DB (attempt 6) for clientCorrelationID: 953b7331-cb35-4132-ae44-b06d06f0e586
+DB rows returned: 0
+Waiting for DB record... (6/10)
+Polling DB (attempt 7) for clientCorrelationID: 953b7331-cb35-4132-ae44-b06d06f0e586
+DB rows returned: 0
+Waiting for DB record... (7/10)
+Polling DB (attempt 8) for clientCorrelationID: 953b7331-cb35-4132-ae44-b06d06f0e586
+DB rows returned: 0
+Waiting for DB record... (8/10)
+Polling DB (attempt 9) for clientCorrelationID: 953b7331-cb35-4132-ae44-b06d06f0e586
+DB rows returned: 0
+Waiting for DB record... (9/10)
+Polling DB (attempt 10) for clientCorrelationID: 953b7331-cb35-4132-ae44-b06d06f0e586
+DB rows returned: 0
+Waiting for DB record... (10/10)

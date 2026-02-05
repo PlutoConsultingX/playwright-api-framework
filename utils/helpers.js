@@ -14,6 +14,24 @@ export class Helpers {
     return new Date().toISOString().split('T')[1].split('.')[0];
   }
 
+  static responseTimestamp() {
+    const now = new Date();
+  
+    const pad = (num, size = 2) =>
+      String(num).padStart(size, '0');
+  
+    return (
+      `${now.getFullYear()}-` +
+      `${pad(now.getMonth() + 1)}-` +
+      `${pad(now.getDate())} ` +
+      `${pad(now.getHours())}:` +
+      `${pad(now.getMinutes())}:` +
+      `${pad(now.getSeconds())}.` +
+      `${pad(now.getMilliseconds(), 3)}`
+    );
+  }
+  
+
   static getActionDate(offsetDays = 0) {
     const d = new Date();
     d.setDate(d.getDate() + offsetDays);
@@ -61,6 +79,23 @@ export class Helpers {
     console.log(output);
 
     return output;
+  }
+
+
+  static generateNextNativeTransactionId() {
+    const match = currentId.match(/^(P926 -EF-)(\d{9})(-00000100)$/);
+  
+    if (!match) {
+      throw new Error("Invalid format");
+    }
+  
+    const prefix = match[1];
+    const middle = match[2];
+    const suffix = match[3];
+  
+    const nextMiddle = String(Number(middle) + 1).padStart(9, "0");
+  
+    return prefix + nextMiddle + suffix;
   }
 
 }

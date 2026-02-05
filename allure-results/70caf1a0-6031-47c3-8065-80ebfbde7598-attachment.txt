@@ -1,0 +1,44 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Step 2 using values from Step 1: {
+  transactionId: '73bbe947-a454-4737-b9ea-1f1b1f91060b',
+  senderMessageId: '4c4a0c14-b7bc-4859-9c35-31539ec41091',
+  correlationId: '31f0642a-2960-4fa9-81c7-7ffdce352441'
+}
+DB Poll (attempt 1): [
+  {
+    "workflow_execution_id": "b7edc498-82de-4bfc-8cf6-85b11221429e",
+    "transaction_id": "4365101d-9093-41aa-aad6-91b09f7cd40a",
+    "client_transaction_id": "871b6047-9cfd-458b-9025-432ae43fbbcd",
+    "transaction_item_id": "1742ae8d-56a0-46d0-82ad-a1d7de222199",
+    "child_workflow_execution_id": "76ecd07a-d965-3f23-b27d-1f08ad92f3ca",
+    "trxBatchStatus": "In Progress",
+    "trxStatus": "In progress",
+    "trxItemDetailStatus": "In progress",
+    "service_name": "SALARY_EFT_PAYMENTS",
+    "transaction_item_detail_id": "fb9f5aea-7865-4b22-8528-7bb5475ebdd7",
+    "transaction_item_detail_run_status_name": "In progress",
+    "response_manager_code": null,
+    "response_manager_exception_type": null,
+    "response_manager_message": null,
+    "response_data": null,
+    "response_reference": "023c0047-1ce3-40e9-a03f-02540e62613d",
+    "sagrequestpayload": "{\n  \"transactionId\": \"73bbe947-a454-4737-b9ea-1f1b1f91060b\",\n  \"beneficiaryAccountNumber\": \"62006677069\",\n  \"branchCode\": \"250655\",\n  \"accountType\": \"2\",\n  \"serviceType\": \"EFTPAYMENT\",\n  \"transactionType\": \"P926\",\n  \"documentType\": \"EF\",\n  \"customerName\": \"john doe\",\n  \"napsBeneficiaryCode\": \"\",\n  \"globalRecipient\": \"\",\n  \"transactionAmount\": \"300\",\n  \"actionDate\": \"2026-02-03\",\n  \"reference1\": \"SREF000-23042025\",\n  \"reference2\": \"CREF000-23042025\",\n  \"reference3\": \"\",\n  \"bicCode\": \"\",\n  \"processingOption1\": \"I\",\n  \"processingOption2\": \"S\",\n  \"mandateReference\": \"\",\n  \"collectionReoccurence\": \"OOFF\",\n  \"contractReference\": \"Thato Auto\",\n  \"emailAddress\": \"Hyphen@RMB.com\",\n  \"cellphoneNumber\": \"+27721234567\"\n}",
+    "senderID": "4c4a0c14-b7bc-4859-9c35-31539ec41091",
+    "transactionIDSAGReqPayload": "73bbe947-a454-4737-b9ea-1f1b1f91060b",
+    "response_payload_data": "{\n  \"response\": {\n    \"isInfo\": {\n      \"senderMessageId\": \"639d50ab-bdcd-4ff6-8f58-f783b47360b8\",\n      \"serviceId\": \"FACS-SALARYDAY-TRANSACTION-01\",\n      \"responseId\": \"023c0047-1ce3-40e9-a03f-02540e62613d\",\n      \"isCorrelationId\": \"a90039ab-eb9c-43d4-894d-66c8845f0961\"\n    },\n    \"responseHeader\": {\n      \"responseTimestamp\": \"2026-02-03 14:51:00.421\",\n      \"responseType\": \"ack\",\n      \"responseCode\": \"accepted\"\n    }\n  }\n}",
+    "response_type": "ack",
+    "workertransactionstatus": 1,
+    "sagTransresponsecode": "CREATED",
+    "sagTransresponse_description": "Transaction created",
+    "sagTranserrorcode": null,
+    "sagTranserror_description": null,
+    "callback_data": "{\n  \"isInfo\": {\n    \"senderMessageId\": \"639d50ab-bdcd-4ff6-8f58-f783b47360b8\",\n    \"serviceId\": \"FACS-SALARYDAY-TRANSACTION-01\",\n    \"responseId\": \"1d4de73c-cb1a-409c-bac7-45d6ca07510f\",\n    \"isCorrelationId\": \"a90039ab-eb9c-43d4-894d-66c8845f0961\"\n  },\n  \"responseHeader\": {\n    \"totalCount\": 1,\n    \"responseTimestamp\": \"2026-02-03 14:51:07.941\",\n    \"clientIntegrationId\": \"HYT0002\",\n    \"clientProfile\": \"FACHYTQ1\",\n    \"responseType\": \"LOAD\",\n    \"responseCode\": \"PROCESSED\",\n    \"nativeMsgId\": \"b2bac79c-235b-497f-a86c-6b7e16858446\"\n  },\n  \"responseDetail\": {\n    \"transactions\": [\n      {\n        \"transactionId\": \"73bbe947-a454-4737-b9ea-1f1b1f91060b\",\n        \"serviceType\": \"EFTPAYMENT\",\n        \"transactionAmount\": \"300\",\n        \"effectiveDate\": \"2026-02-03\",\n        \"actionDate\": \"2026-02-03\",\n        \"nativeTransactionId\": \"P926 -EF-000000417-00000100\",\n        \"transactionResponse\": {\n          \"responseType\": \"CREATED\",\n          \"responseDescription\": \"Transaction created\"\n        },\n        \"transactionError\": {\n          \"errorCode\": \"\",\n          \"errorDescription\": \"\"\n        }\n      }\n    ]\n  }\n}"
+  }
+]
+Callback_data extracted fields: {
+  cbTransactionId: '73bbe947-a454-4737-b9ea-1f1b1f91060b',
+  cbNativeTransactionId: 'P926 -EF-000000417-00000100',
+  cbSenderMessageId: '639d50ab-bdcd-4ff6-8f58-f783b47360b8'
+}

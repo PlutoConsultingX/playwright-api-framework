@@ -1,0 +1,135 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Load created Payload to send: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "{{$guid}}",
+      "isCorrelationId": "4332489f-7273-4f93-b989-53436a1277ab",
+      "senderMessageId": "18c08b86-052b-434b-a32c-fe5b9cbac2a2"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "transactionId": "c43cd159-b29c-459a-9d59-69d12d41550f",
+          "actionDate": "2026-01-27",
+          "nativeTransactionId": "P143035-EF-000000169-00000100",
+          "effectiveDate": "2026-01-27",
+          "serviceType": "EFTPAYMENT",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-27",
+      "nativeMsgId": "{{$guid}}",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Load Created Payload: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "6897e3d2-14e7-4c3c-acea-8ab7b4b1fa81"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "actionDate": "2026-01-27",
+          "effectiveDate": "2026-01-27",
+          "serviceType": "EFTPAYMENT",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-27",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Load Created Status: 200
+Load Created Response: {"versionNumber":1,"traceId":"7810c30b-30dd-40e8-9044-ecb0533de0c1","correlationId":"ae05fe23-36a5-4c61-9be8-2c8e389d2839","result":{"success":true,"origin":"WORKER_SERVICE"},"profile":{"zone":"SAT","lang":"ENG","country":"USA","offset":"+02:00","requestDate":"2026-01-27 10:38:05.327","responseDate":"2026-01-27 10:38:05.351","hostDateUtc":"2026-01-27 08:38:05.327","hostDate":"2026-01-27 10:38:05.327","durationInMillis":24}}
+Load created Payload final-----: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "{{$guid}}",
+      "isCorrelationId": "4332489f-7273-4f93-b989-53436a1277ab",
+      "senderMessageId": "18c08b86-052b-434b-a32c-fe5b9cbac2a2"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "transactionId": "c43cd159-b29c-459a-9d59-69d12d41550f",
+          "actionDate": "2026-01-27",
+          "nativeTransactionId": "P143035-EF-000000169-00000100",
+          "effectiveDate": "2026-01-27",
+          "serviceType": "EFTPAYMENT",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-27",
+      "nativeMsgId": "{{$guid}}",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+DB rows returned: 0
+⏳ Waiting for response_data... (1/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (2/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (3/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (4/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (5/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (6/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (7/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (8/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (9/15)

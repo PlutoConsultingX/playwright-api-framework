@@ -37,20 +37,24 @@ export class TransactionFactory {
       ]
     };
   }
-  static loadCreatedEFTPayload() {
+  /*
+  static loadCreatedEFTPayload({ transactionId, senderMessageId,nativeTransactionId }) {
+    
     return {
       Response: {
         ISInfo: {
           serviceId: "FACS-SALARYDAY-TRANSACTION-01",
           responseId: "{{$guid}}",
           isCorrelationId: "4332489f-7273-4f93-b989-53436a1277ab",
-          senderMessageId: "8381a889-c20a-4d6b-8c33-ca77d605ed52"
+          senderMessageId
         },
         responseDetail: {
           transactions: [
             {
-              transactionId: "fedc6743-8971-4e89-b868-e5f3328e0562",
+              transactionId,
               actionDate: Helpers.getCurrentDate(),
+              //nativeTransactionId: "P926 -EF-000000151-00000100",
+              nativeTransactionId,
               effectiveDate: Helpers.getCurrentDate(),
               serviceType: "EFTPAYMENT",
               transactionError: {
@@ -71,20 +75,25 @@ export class TransactionFactory {
           responseType: "LOAD",
           clientProfile: "FACHYTQ1",
           responseTimestamp: Helpers.getCurrentDate(),
+          nativeMsgId: "{{$guid}}",
           clientIntegrationId: "HYT0002"
         }
       }
     };
   }
+ */
 
- static processedToBankPayload({senderMessageId,transactionId,nativeTransactionId})
- {
+  static loadCreatedSalaryPayload({ transactionId, senderMessageId, nativeTransactionId, correlationId }) {
+    if (!transactionId || !senderMessageId) {
+      throw new Error("transactionId or senderMessageId is missing for Load Created payload");
+    }
+  
     return {
       Response: {
         ISInfo: {
           serviceId: "FACS-SALARYDAY-TRANSACTION-01",
-          responseId: "{{$guid}}",
-          isCorrelationId: "c5919c23-a691-4cc8-a3fe-b918b9c04f94",
+          responseId: Helpers.generateGUID(),
+          isCorrelationId: correlationId || "4332489f-7273-4f93-b989-53436a1277ab",
           senderMessageId
         },
         responseDetail: {
@@ -92,9 +101,51 @@ export class TransactionFactory {
             {
               transactionId,
               actionDate: Helpers.getCurrentDate(),
+              effectiveDate: Helpers.getCurrentDate(),
+              serviceType: "EFTPAYMENT",
+              nativeTransactionId: nativeTransactionId || Helpers.generateNextNativeTransactionId("P926 -EF-000000151-00000100"),
+              transactionError: {
+                errorCode: "",
+                errorDescription: ""
+              },
+              transactionAmount: "100",
+              transactionResponse: {
+                responseType: "CREATED",
+                responseDescription: "Transaction created"
+              }
+            }
+          ]
+        },
+        responseHeader: {
+          totalCount: 1,
+          responseCode: "PROCESSED",
+          responseType: "LOAD",
+          clientProfile: "FACHYTQ1",
+          responseTimestamp: Helpers.responseTimestamp(),
+          nativeMsgId: Helpers.generateGUID(),
+          clientIntegrationId: "HYT0002"
+        }
+      }
+    };
+  }
+  
+  static processedToBankPayload({ senderMessageId, transactionId, nativeTransactionId, correlationId }) {
+    return {
+      Response: {
+        ISInfo: {
+          serviceId: "FACS-SALARYDAY-TRANSACTION-01",
+          responseId: Helpers.generateGUID(),
+          isCorrelationId: correlationId || "c5919c23-a691-4cc8-a3fe-b918b9c04f94",
+          senderMessageId
+        },
+        responseDetail: {
+          transactions: [
+            {
+              transactionId,
               actionDate: Helpers.getCurrentDate(),
+              effectiveDate: Helpers.getCurrentDate(),
               nativeTransactionId,
-              serviceType: "EFTCOLLECTION",
+              serviceType: "EFTPAYMENT",
               transactionError: {
                 errorCode: "",
                 errorDescription: ""
@@ -112,7 +163,49 @@ export class TransactionFactory {
           responseCode: "PROCESSED",
           responseType: "RESPONSE",
           clientProfile: "FACHYTQ1",
-          responseTimestamp: Helpers.getCurrentDate(),
+          responseTimestamp: Helpers.responseTimestamp(),
+          nativeMsgId: "11049bd1-5fea-4bb2-b97e-0afa064ac82a",
+          clientIntegrationId: "HYT0002"
+        }
+      }
+    };
+
+  }
+  static CashedPayload({ senderMessageId, transactionId, nativeTransactionId, correlationId }) {
+    return {
+      Response: {
+        ISInfo: {
+          serviceId: "FACS-SALARYDAY-TRANSACTION-01",
+          responseId: Helpers.generateGUID(),
+          isCorrelationId: correlationId || "c5919c23-a691-4cc8-a3fe-b918b9c04f94",
+          senderMessageId
+        },
+        responseDetail: {
+          transactions: [
+            {
+              transactionId,
+              actionDate: Helpers.getCurrentDate(),
+              effectiveDate: Helpers.getCurrentDate(),
+              nativeTransactionId,
+              serviceType: "EFTPAYMENT",
+              transactionError: {
+                errorCode: "",
+                errorDescription: ""
+              },
+              transactionAmount: "100",
+              transactionResponse: {
+                responseType: "CASHED",
+                responseDescription: "Transaction successful"
+              }
+            }
+          ]
+        },
+        responseHeader: {
+          totalCount: 1, 
+          responseCode: "PROCESSED",
+          responseType: "RESPONSE",
+          clientProfile: "FACHYTQ1",
+          responseTimestamp: Helpers.responseTimestamp(),
           nativeMsgId: "11049bd1-5fea-4bb2-b97e-0afa064ac82a",
           clientIntegrationId: "HYT0002"
         }

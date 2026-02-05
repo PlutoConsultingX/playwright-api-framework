@@ -1,0 +1,99 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Load created Payload to send: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "{{$guid}}",
+      "isCorrelationId": "4332489f-7273-4f93-b989-53436a1277ab",
+      "senderMessageId": "806df6aa-f361-4eb1-bc70-c2859b377574"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "transactionId": "d779bfe2-fbf0-4e00-b123-dd192cc03709",
+          "actionDate": "2026-01-27",
+          "nativeTransactionId": "P631550-EF-000000165-00000100",
+          "effectiveDate": "2026-01-27",
+          "serviceType": "EFTPAYMENT",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-27",
+      "nativeMsgId": "{{$guid}}",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+THis is the Load Created URL: http://10.10.21.65:9183/workflow-worker-eft-payments-salaryday/api/v1/callback
+This is the load created parameters undefined undefined undefined
+Load Created Payload: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "dbe8520c-8957-4fed-a580-d0e5dad3daf3"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "actionDate": "2026-01-27",
+          "effectiveDate": "2026-01-27",
+          "serviceType": "EFTPAYMENT",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-27",
+      "nativeMsgId": "{{$guid}}",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Load Created Status: 200
+Load Created Response: {"versionNumber":1,"traceId":"9fbf5952-8a86-47a7-8e4a-e91d066518e9","correlationId":"6ee48be8-ee27-4b55-b2e6-6c7eb04d1c87","result":{"success":true,"origin":"WORKER_SERVICE"},"profile":{"zone":"SAT","lang":"ENG","country":"USA","offset":"+02:00","requestDate":"2026-01-27 12:14:08.123","responseDate":"2026-01-27 12:14:08.138","hostDateUtc":"2026-01-27 10:14:08.123","hostDate":"2026-01-27 12:14:08.123","durationInMillis":15}}
+DB rows returned: 0
+⏳ Waiting for response_data... (1/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (2/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (3/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (4/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (5/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (6/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (7/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (8/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (9/15)

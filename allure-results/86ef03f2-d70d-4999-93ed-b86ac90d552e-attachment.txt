@@ -1,0 +1,95 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Load Created Payload: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "89f87509-7a55-42bd-9260-d01a2cae1037",
+      "senderMessageId": "97f6fafc-4706-4ea9-b188-1140e11dde3a",
+      "transactionId": "c7b5af69-1f0d-4380-a66c-37bed602404a"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "transactionId": "c7b5af69-1f0d-4380-a66c-37bed602404a",
+          "actionDate": "2026-01-26",
+          "effectiveDate": "2026-01-26",
+          "serviceType": "EFTPAYMENT",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-26",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Load Created Status: 400
+Load Created Response: {"versionNumber":1,"traceId":"b19227a2-55a6-4e8a-8d39-41ca155aea09","correlationId":"67fbd531-a3bc-4d2f-901a-61d8746a2004","result":{"success":false,"message":"Invalid argument: Unrecognized field \"transactionId\" (class za.co.hyphen.nxflow.worker.common.model.response.ISInfo), not marked as ignorable (5 known properties: \"serviceId\", \"isCorrelationId\", \"responseId\", \"senderMessageId\", \"senderId\"])\n at [Source: UNKNOWN; byte offset: #UNKNOWN] (through reference chain: za.co.hyphen.nxflow.worker.common.model.response.ResponseDTO[\"Response\"]->za.co.hyphen.nxflow.worker.common.model.response.Response[\"ISInfo\"]->za.co.hyphen.nxflow.worker.common.model.response.ISInfo[\"transactionId\"])","origin":"WORKER_SERVICE","error":{},"cause":{}},"profile":{"zone":"SAT","lang":"ENG","country":"USA","offset":"+02:00","requestDate":"2026-01-26 17:47:15.611","responseDate":"2026-01-26 17:47:15.638","hostDateUtc":"2026-01-26 15:47:15.612","hostDate":"2026-01-26 17:47:15.611","durationInMillis":26}}
+Load Created API Response: {
+  "versionNumber": 1,
+  "traceId": "b19227a2-55a6-4e8a-8d39-41ca155aea09",
+  "correlationId": "67fbd531-a3bc-4d2f-901a-61d8746a2004",
+  "result": {
+    "success": false,
+    "message": "Invalid argument: Unrecognized field \"transactionId\" (class za.co.hyphen.nxflow.worker.common.model.response.ISInfo), not marked as ignorable (5 known properties: \"serviceId\", \"isCorrelationId\", \"responseId\", \"senderMessageId\", \"senderId\"])\n at [Source: UNKNOWN; byte offset: #UNKNOWN] (through reference chain: za.co.hyphen.nxflow.worker.common.model.response.ResponseDTO[\"Response\"]->za.co.hyphen.nxflow.worker.common.model.response.Response[\"ISInfo\"]->za.co.hyphen.nxflow.worker.common.model.response.ISInfo[\"transactionId\"])",
+    "origin": "WORKER_SERVICE",
+    "error": {},
+    "cause": {}
+  },
+  "profile": {
+    "zone": "SAT",
+    "lang": "ENG",
+    "country": "USA",
+    "offset": "+02:00",
+    "requestDate": "2026-01-26 17:47:15.611",
+    "responseDate": "2026-01-26 17:47:15.638",
+    "hostDateUtc": "2026-01-26 15:47:15.612",
+    "hostDate": "2026-01-26 17:47:15.611",
+    "durationInMillis": 26
+  }
+}
+DB rows returned: 0
+This is where the DB result is logged: []
+⏳ Waiting for response_data... (1/10)
+DB rows returned: 0
+This is where the DB result is logged: []
+⏳ Waiting for response_data... (2/10)
+DB rows returned: 0
+This is where the DB result is logged: []
+⏳ Waiting for response_data... (3/10)
+DB rows returned: 0
+This is where the DB result is logged: []
+⏳ Waiting for response_data... (4/10)
+DB rows returned: 0
+This is where the DB result is logged: []
+⏳ Waiting for response_data... (5/10)
+DB rows returned: 0
+This is where the DB result is logged: []
+⏳ Waiting for response_data... (6/10)
+DB rows returned: 0
+This is where the DB result is logged: []
+⏳ Waiting for response_data... (7/10)
+DB rows returned: 0
+This is where the DB result is logged: []
+⏳ Waiting for response_data... (8/10)
+DB rows returned: 0
+This is where the DB result is logged: []
+⏳ Waiting for response_data... (9/10)
+DB rows returned: 0
+This is where the DB result is logged: []
+⏳ Waiting for response_data... (10/10)

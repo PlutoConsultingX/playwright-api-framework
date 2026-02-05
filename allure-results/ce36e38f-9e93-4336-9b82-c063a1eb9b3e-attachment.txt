@@ -1,0 +1,83 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Load Created Payload: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "7fed973a-4965-4858-aae6-999a8726f916"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "actionDate": "2026-01-27",
+          "effectiveDate": "2026-01-27",
+          "serviceType": "EFTPAYMENT",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-27",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Load Created Status: 200
+Load Created Response: {"versionNumber":1,"traceId":"8549245c-b54d-4353-95e2-c1b7ab158764","correlationId":"2c388e3a-63dc-461e-8294-5745dabaa7ed","result":{"success":true,"origin":"WORKER_SERVICE"},"profile":{"zone":"SAT","lang":"ENG","country":"USA","offset":"+02:00","requestDate":"2026-01-27 09:13:17.727","responseDate":"2026-01-27 09:13:17.741","hostDateUtc":"2026-01-27 07:13:17.727","hostDate":"2026-01-27 09:13:17.727","durationInMillis":14}}
+Load Created API Response: {
+  "versionNumber": 1,
+  "traceId": "8549245c-b54d-4353-95e2-c1b7ab158764",
+  "correlationId": "2c388e3a-63dc-461e-8294-5745dabaa7ed",
+  "result": {
+    "success": true,
+    "origin": "WORKER_SERVICE"
+  },
+  "profile": {
+    "zone": "SAT",
+    "lang": "ENG",
+    "country": "USA",
+    "offset": "+02:00",
+    "requestDate": "2026-01-27 09:13:17.727",
+    "responseDate": "2026-01-27 09:13:17.741",
+    "hostDateUtc": "2026-01-27 07:13:17.727",
+    "hostDate": "2026-01-27 09:13:17.727",
+    "durationInMillis": 14
+  }
+}
+DB rows returned: 0
+This is where the DB result is logged: []
+⏳ Waiting for response_data... (1/10)
+DB rows returned: 0
+This is where the DB result is logged: []
+⏳ Waiting for response_data... (2/10)
+DB rows returned: 0
+This is where the DB result is logged: []
+⏳ Waiting for response_data... (3/10)
+DB rows returned: 0
+This is where the DB result is logged: []
+⏳ Waiting for response_data... (4/10)
+DB rows returned: 0
+This is where the DB result is logged: []
+⏳ Waiting for response_data... (5/10)
+DB rows returned: 0
+This is where the DB result is logged: []
+⏳ Waiting for response_data... (6/10)
+DB rows returned: 0
+This is where the DB result is logged: []
+⏳ Waiting for response_data... (7/10)
+DB rows returned: 0
+This is where the DB result is logged: []
+⏳ Waiting for response_data... (8/10)

@@ -1,0 +1,96 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+2026-02-03T20:08:39
+2026-02-03T20:08:39
+{
+  "workflowID": "c5d1f3b5-508e-4f47-9997-a4912d486466",
+  "clientCorrelationID": "3bd99421-64d8-4bae-bbe5-58e707aaa49d",
+  "requestDate": "2026-02-03T20:08:39",
+  "totalCount": 1,
+  "transactions": [
+    {
+      "transactionID": "9b3c2127-0d17-466c-9b04-b1f4aa0b68f3",
+      "transactionAmount": 300,
+      "actionDate": "2026-02-03",
+      "subjectReference": "SREF000-23042025",
+      "clientReference": "CREF000-23042025",
+      "mandateReference": "00032024091612QRZ2ZDWW",
+      "contractReference": "Thato Auto",
+      "trackingDays": 10,
+      "collectionReoccurance": "OOFF",
+      "subjectDetails": {
+        "accountNumber": "62006677069",
+        "accountType": "02",
+        "branchCode": "250655",
+        "country": "ZAF",
+        "idType": "EntityRegistrationNumber",
+        "idValue": "1951/000009/07",
+        "initials": "SK",
+        "firstName": "john",
+        "lastName": "doe",
+        "phoneNumber": "+27721234567",
+        "emailAddress": "Hyphen@RMB.com",
+        "profileReference": "Thatos"
+      }
+    }
+  ]
+}
+API Validation Response Status: 200
+API Validation Response Body: {
+  "success": true,
+  "message": [
+    "Total transactions posted: 1",
+    "Total valid transactions saved: 1",
+    "Total invalid transactions: 0"
+  ],
+  "clientCorrelationID": "3bd99421-64d8-4bae-bbe5-58e707aaa49d",
+  "hyphenCorrelationID": "b1adf891-15de-4ec4-81bb-d4460e5d5594"
+}
+CorrelationID from validation response : 3bd99421-64d8-4bae-bbe5-58e707aaa49d
+DB Result validation (attempt 1): []
+Waiting for DB record... (1/10)
+DB Result validation (attempt 2): []
+Waiting for DB record... (2/10)
+DB Result validation (attempt 3): []
+Waiting for DB record... (3/10)
+DB Result validation (attempt 4): []
+Waiting for DB record... (4/10)
+DB Result validation (attempt 5): []
+Waiting for DB record... (5/10)
+DB Result validation (attempt 6): []
+Waiting for DB record... (6/10)
+DB Result validation (attempt 7): []
+Waiting for DB record... (7/10)
+DB Result validation (attempt 8): [
+  {
+    "workflow_execution_id": "ea6ce0bb-0892-40d9-ba11-6483ee2750cb",
+    "transaction_id": "ff16500f-4f31-40f6-b664-f160d1ef6926",
+    "client_transaction_id": "9b3c2127-0d17-466c-9b04-b1f4aa0b68f3",
+    "transaction_item_id": "cfc99584-72be-4481-9690-2f8ede10fd69",
+    "child_workflow_execution_id": "1e64d786-0718-3dd8-90be-3512d8aa54d7",
+    "trxBatchStatus": "In Progress",
+    "trxStatus": "In progress",
+    "trxItemDetailStatus": "In progress",
+    "service_name": "SALARY_EFT_PAYMENTS",
+    "transaction_item_detail_id": "f7a0ba8a-aa08-4e03-8519-d0fee0ace175",
+    "transaction_item_detail_run_status_name": "In progress",
+    "response_manager_code": null,
+    "response_manager_exception_type": null,
+    "response_manager_message": null,
+    "response_data": null,
+    "response_reference": "7f001929-5aae-49a2-b9eb-a48bb7ffbcdd",
+    "sagrequestpayload": "{\n  \"transactionId\": \"2fa7d5fd-19a4-4205-869f-bd39b3fccbd8\",\n  \"beneficiaryAccountNumber\": \"62006677069\",\n  \"branchCode\": \"250655\",\n  \"accountType\": \"2\",\n  \"serviceType\": \"EFTPAYMENT\",\n  \"transactionType\": \"P926\",\n  \"documentType\": \"EF\",\n  \"customerName\": \"john doe\",\n  \"napsBeneficiaryCode\": \"\",\n  \"globalRecipient\": \"\",\n  \"transactionAmount\": \"300\",\n  \"actionDate\": \"2026-02-03\",\n  \"reference1\": \"SREF000-23042025\",\n  \"reference2\": \"CREF000-23042025\",\n  \"reference3\": \"\",\n  \"bicCode\": \"\",\n  \"processingOption1\": \"I\",\n  \"processingOption2\": \"S\",\n  \"mandateReference\": \"\",\n  \"collectionReoccurence\": \"OOFF\",\n  \"contractReference\": \"Thato Auto\",\n  \"emailAddress\": \"Hyphen@RMB.com\",\n  \"cellphoneNumber\": \"+27721234567\"\n}",
+    "senderID": "aec24714-691d-489e-83dc-b3f3e6abece6",
+    "transactionIDSAGReqPayload": "2fa7d5fd-19a4-4205-869f-bd39b3fccbd8",
+    "response_payload_data": "{\n  \"response\": {\n    \"isInfo\": {\n      \"senderMessageId\": \"6103391a-3db8-491b-8180-8728d04dffb2\",\n      \"serviceId\": \"FACS-SALARYDAY-TRANSACTION-01\",\n      \"responseId\": \"7f001929-5aae-49a2-b9eb-a48bb7ffbcdd\",\n      \"isCorrelationId\": \"740f1e25-7ef9-4f4f-8762-6d1951667358\"\n    },\n    \"responseHeader\": {\n      \"responseTimestamp\": \"2026-02-03 20:08:45.234\",\n      \"responseType\": \"ack\",\n      \"responseCode\": \"accepted\"\n    }\n  }\n}",
+    "response_type": "ack",
+    "workertransactionstatus": 1,
+    "sagTransresponsecode": "CREATED",
+    "sagTransresponse_description": "Transaction created",
+    "sagTranserrorcode": null,
+    "sagTranserror_description": null,
+    "callback_data": "{\n  \"isInfo\": {\n    \"senderMessageId\": \"6103391a-3db8-491b-8180-8728d04dffb2\",\n    \"serviceId\": \"FACS-SALARYDAY-TRANSACTION-01\",\n    \"responseId\": \"f68a8026-0c08-457c-a116-16bc08b10267\",\n    \"isCorrelationId\": \"740f1e25-7ef9-4f4f-8762-6d1951667358\"\n  },\n  \"responseHeader\": {\n    \"totalCount\": 1,\n    \"responseTimestamp\": \"2026-02-03 20:08:52.136\",\n    \"clientIntegrationId\": \"HYT0002\",\n    \"clientProfile\": \"FACHYTQ1\",\n    \"responseType\": \"LOAD\",\n    \"responseCode\": \"PROCESSED\",\n    \"nativeMsgId\": \"6aa56f89-0586-4bde-853e-f2d3df2f5d95\"\n  },\n  \"responseDetail\": {\n    \"transactions\": [\n      {\n        \"transactionId\": \"2fa7d5fd-19a4-4205-869f-bd39b3fccbd8\",\n        \"serviceType\": \"EFTPAYMENT\",\n        \"transactionAmount\": \"300\",\n        \"effectiveDate\": \"2026-02-03\",\n        \"actionDate\": \"2026-02-03\",\n        \"nativeTransactionId\": \"P926 -EF-000000419-00000100\",\n        \"transactionResponse\": {\n          \"responseType\": \"CREATED\",\n          \"responseDescription\": \"Transaction created\"\n        },\n        \"transactionError\": {\n          \"errorCode\": \"\",\n          \"errorDescription\": \"\"\n        }\n      }\n    ]\n  }\n}"
+  }
+]
+Database results after validation  undefined

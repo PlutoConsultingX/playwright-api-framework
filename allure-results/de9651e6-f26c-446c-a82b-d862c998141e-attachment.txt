@@ -1,0 +1,9 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Step 2 using values: {
+  transactionId: '8fe6e0c5-c680-43b5-b0f6-24bb3747abf3',
+  senderMessageId: '2b33309d-7fb1-4b67-9cfe-bbab2b1e9ee2',
+  correlationId: '0fed67c6-32a3-4ae2-ac57-158587eb073b'
+}
+Generated nativeTransactionId: P926 -EF-000000154-00000100

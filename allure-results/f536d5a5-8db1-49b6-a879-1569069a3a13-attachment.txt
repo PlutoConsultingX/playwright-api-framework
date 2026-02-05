@@ -1,0 +1,79 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Load Created Payload: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "e972527d-6206-47ea-863c-8b837a8ab46a"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "actionDate": "2026-01-26",
+          "effectiveDate": "2026-01-26",
+          "serviceType": "EFTPAYMENT",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-26",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Load Created Status: 200
+Load Created Response: {"versionNumber":1,"traceId":"0dfed0c2-3573-4d53-927b-308c5d9ed75b","correlationId":"4f93f774-baa7-4bdf-8438-3e0556b6442a","result":{"success":true,"origin":"WORKER_SERVICE"},"profile":{"zone":"SAT","lang":"ENG","country":"USA","offset":"+02:00","requestDate":"2026-01-26 13:28:56.115","responseDate":"2026-01-26 13:28:56.133","hostDateUtc":"2026-01-26 11:28:56.116","hostDate":"2026-01-26 13:28:56.116","durationInMillis":17}}
+Load Created API Response: {
+  "versionNumber": 1,
+  "traceId": "0dfed0c2-3573-4d53-927b-308c5d9ed75b",
+  "correlationId": "4f93f774-baa7-4bdf-8438-3e0556b6442a",
+  "result": {
+    "success": true,
+    "origin": "WORKER_SERVICE"
+  },
+  "profile": {
+    "zone": "SAT",
+    "lang": "ENG",
+    "country": "USA",
+    "offset": "+02:00",
+    "requestDate": "2026-01-26 13:28:56.115",
+    "responseDate": "2026-01-26 13:28:56.133",
+    "hostDateUtc": "2026-01-26 11:28:56.116",
+    "hostDate": "2026-01-26 13:28:56.116",
+    "durationInMillis": 17
+  }
+}
+DB rows returned: 1
+⏳ Waiting for response_data... (1/10)
+DB rows returned: 1
+⏳ Waiting for response_data... (2/10)
+DB rows returned: 1
+⏳ Waiting for response_data... (3/10)
+DB rows returned: 1
+⏳ Waiting for response_data... (4/10)
+DB rows returned: 1
+⏳ Waiting for response_data... (5/10)
+DB rows returned: 1
+⏳ Waiting for response_data... (6/10)
+DB rows returned: 1
+⏳ Waiting for response_data... (7/10)
+DB rows returned: 1
+⏳ Waiting for response_data... (8/10)
+DB rows returned: 1
+⏳ Waiting for response_data... (9/10)
+DB rows returned: 1
+⏳ Waiting for response_data... (10/10)

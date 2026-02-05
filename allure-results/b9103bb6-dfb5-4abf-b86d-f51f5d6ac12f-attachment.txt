@@ -1,0 +1,78 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+2026-01-27T16:19:12
+2026-01-27T16:19:12
+{
+  "workflowID": "c5d1f3b5-508e-4f47-9997-a4912d486466",
+  "clientCorrelationID": "e6f706b6-6b8d-4496-ada2-00a62c5f33db",
+  "requestDate": "2026-01-27T16:19:12",
+  "totalCount": 1,
+  "transactions": [
+    {
+      "transactionID": "0952544b-ed69-407a-a662-3c7817e2a4e7",
+      "transactionAmount": 300,
+      "actionDate": "2026-01-27",
+      "subjectReference": "SREF000-23042025",
+      "clientReference": "CREF000-23042025",
+      "mandateReference": "00032024091612QRZ2ZDWW",
+      "contractReference": "Thato Auto",
+      "trackingDays": 10,
+      "collectionReoccurance": "OOFF",
+      "subjectDetails": {
+        "accountNumber": "62006677069",
+        "accountType": "02",
+        "branchCode": "250655",
+        "country": "ZAF",
+        "idType": "EntityRegistrationNumber",
+        "idValue": "1951/000009/07",
+        "initials": "SK",
+        "firstName": "john",
+        "lastName": "doe",
+        "phoneNumber": "+27721234567",
+        "emailAddress": "Hyphen@RMB.com",
+        "profileReference": "Thatos"
+      }
+    }
+  ]
+}
+API Response Status: 200
+API Response Body: {
+  "success": true,
+  "message": [
+    "Total transactions posted: 1",
+    "Total valid transactions saved: 1",
+    "Total invalid transactions: 0"
+  ],
+  "clientCorrelationID": "e6f706b6-6b8d-4496-ada2-00a62c5f33db",
+  "hyphenCorrelationID": "e2eccd7a-8a22-4510-abb4-9415b27585d5"
+}
+CorrelationID from validation response : e6f706b6-6b8d-4496-ada2-00a62c5f33db
+DB Result validation (attempt 1): []
+Waiting for DB record... (1/10)
+DB Result validation (attempt 2): [
+  {
+    "workflow_execution_id": "f07ec752-7110-435f-8f9d-66249e885416",
+    "transaction_id": "76c99150-bd19-44ba-8ce4-8b816abc2c89",
+    "client_transaction_id": "0952544b-ed69-407a-a662-3c7817e2a4e7",
+    "transaction_item_id": "6b49f6c8-72f1-4898-9c46-9d7f8b5d053e",
+    "child_workflow_execution_id": "aa27fb19-737b-312e-b26b-31c57f311022",
+    "trxBatchStatus": "In Progress",
+    "trxStatus": "In progress",
+    "trxItemDetailStatus": "In progress",
+    "service_name": "SALARY_EFT_PAYMENTS",
+    "transaction_item_detail_id": "8e72881a-37c1-4d8b-a01d-27d90d243aec",
+    "transaction_item_detail_run_status_name": "In progress",
+    "response_manager_code": null,
+    "response_manager_exception_type": null,
+    "response_manager_message": null,
+    "response_data": null,
+    "response_reference": "31c5c28d-065b-40db-8b24-d6cdedae50a2",
+    "sagrequestpayload": "{\n  \"transactionId\": \"676053e0-84fd-4e73-bf4e-f0b39fb7709f\",\n  \"beneficiaryAccountNumber\": \"62006677069\",\n  \"branchCode\": \"250655\",\n  \"accountType\": \"2\",\n  \"serviceType\": \"EFTPAYMENT\",\n  \"transactionType\": \"P926\",\n  \"documentType\": \"EF\",\n  \"customerName\": \"john doe\",\n  \"napsBeneficiaryCode\": \"\",\n  \"globalRecipient\": \"\",\n  \"transactionAmount\": \"300\",\n  \"actionDate\": \"2026-01-27\",\n  \"reference1\": \"SREF000-23042025\",\n  \"reference2\": \"CREF000-23042025\",\n  \"reference3\": \"\",\n  \"bicCode\": \"\",\n  \"processingOption1\": \"I\",\n  \"processingOption2\": \"S\",\n  \"mandateReference\": \"\",\n  \"collectionReoccurence\": \"OOFF\",\n  \"contractReference\": \"Thato Auto\",\n  \"emailAddress\": \"Hyphen@RMB.com\",\n  \"cellphoneNumber\": \"+27721234567\"\n}",
+    "senderID": "5e416479-abee-43ff-bb14-96b92ef20c7d",
+    "transactionIDSAGReqPayload": "676053e0-84fd-4e73-bf4e-f0b39fb7709f",
+    "response_payload_data": "{\n  \"response\": {\n    \"isInfo\": {\n      \"senderMessageId\": \"bf5d812f-8041-4e56-ba53-431324949fec\",\n      \"serviceId\": \"FACS-SALARYDAY-TRANSACTION-01\",\n      \"responseId\": \"31c5c28d-065b-40db-8b24-d6cdedae50a2\",\n      \"isCorrelationId\": \"0fa749fb-0efe-4057-a683-4930c7bfc06e\"\n    },\n    \"responseHeader\": {\n      \"responseTimestamp\": \"2026-01-27 16:19:15.243\",\n      \"responseType\": \"ack\",\n      \"responseCode\": \"accepted\"\n    }\n  }\n}",
+    "response_type": "ack",
+    "workertransactionstatus": 1
+  }
+]

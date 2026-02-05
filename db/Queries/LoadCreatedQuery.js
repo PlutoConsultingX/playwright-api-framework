@@ -5,7 +5,6 @@ export const loadCreatedQuery = {
     ,tidr.child_workflow_execution_id 
     ,ts.transaction_status_name as trxBatchStatus,tis.transaction_item_status_name as trxStatus,tids.transaction_item_detail_status_name as trxItemDetailStatus
  
-    -- t.client_message_id,t.workflow_id,t.transaction_id,ti.transaction_item_id,tid.transaction_item_detail_id 
     ,s.service_name ,tid.transaction_item_detail_id 
     ,tidrs.transaction_item_detail_run_status_name 
     ,tidr.response_manager_code ,tidr.response_manager_exception_type ,tidr.response_manager_message,tidr.response_data 

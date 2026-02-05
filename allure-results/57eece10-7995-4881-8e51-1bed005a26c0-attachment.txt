@@ -1,0 +1,61 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Load Created Payload: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "eb08e772-30aa-4718-94cf-02b5500fa974"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "actionDate": "2026-01-26",
+          "effectiveDate": "2026-01-26",
+          "serviceType": "EFTPAYMENT",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-26",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Load Created Status: 200
+Load Created Response: {"versionNumber":1,"traceId":"b17c572a-ee67-4fb0-a51f-60d78d9a6f8c","correlationId":"4f97ba13-69e4-43aa-ac62-3eecf0c161e8","result":{"success":true,"origin":"WORKER_SERVICE"},"profile":{"zone":"SAT","lang":"ENG","country":"USA","offset":"+02:00","requestDate":"2026-01-26 13:21:26.554","responseDate":"2026-01-26 13:21:26.575","hostDateUtc":"2026-01-26 11:21:26.554","hostDate":"2026-01-26 13:21:26.554","durationInMillis":20}}
+Load Created API Response: {
+  "versionNumber": 1,
+  "traceId": "b17c572a-ee67-4fb0-a51f-60d78d9a6f8c",
+  "correlationId": "4f97ba13-69e4-43aa-ac62-3eecf0c161e8",
+  "result": {
+    "success": true,
+    "origin": "WORKER_SERVICE"
+  },
+  "profile": {
+    "zone": "SAT",
+    "lang": "ENG",
+    "country": "USA",
+    "offset": "+02:00",
+    "requestDate": "2026-01-26 13:21:26.554",
+    "responseDate": "2026-01-26 13:21:26.575",
+    "hostDateUtc": "2026-01-26 11:21:26.554",
+    "hostDate": "2026-01-26 13:21:26.554",
+    "durationInMillis": 20
+  }
+}
+Polling DB (attempt 1) for clientCorrelationID: 2fbe0099-cdb9-4d26-b385-55878a0cb1d3
+DB rows returned: 1

@@ -1,0 +1,126 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Step 2 using values: {
+  transactionId: '80c416b4-0c4b-4b4d-b978-f09cb5ea099f',
+  senderMessageId: 'f02584a0-a573-40df-9332-f9962f6fc05b',
+  correlationId: 'dc151371-2a5b-43cc-b3d3-d9867d61e7ff'
+}
+Generated nativeTransactionId: P926 -EF-000000160-00000100
+Load created Payload to send: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "7dbe3b87-8111-468f-8e8e-135f6b909a52",
+      "isCorrelationId": "dc151371-2a5b-43cc-b3d3-d9867d61e7ff",
+      "senderMessageId": "f02584a0-a573-40df-9332-f9962f6fc05b"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "transactionId": "80c416b4-0c4b-4b4d-b978-f09cb5ea099f",
+          "actionDate": "2026-01-30",
+          "effectiveDate": "2026-01-30",
+          "serviceType": "EFTPAYMENT",
+          "nativeTransactionId": "P926 -EF-000000160-00000100",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-30 14:41:53.141",
+      "nativeMsgId": "01343699-11c9-41a4-80b9-bebc40589911",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Load Created Body (from factory): {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "af2bdada-7592-4bcb-be3f-87eebcd2ee85",
+      "isCorrelationId": "dc151371-2a5b-43cc-b3d3-d9867d61e7ff",
+      "senderMessageId": "f02584a0-a573-40df-9332-f9962f6fc05b"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "transactionId": "80c416b4-0c4b-4b4d-b978-f09cb5ea099f",
+          "actionDate": "2026-01-30",
+          "effectiveDate": "2026-01-30",
+          "serviceType": "EFTPAYMENT",
+          "nativeTransactionId": "P926 -EF-000000160-00000100",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-30 14:41:53.141",
+      "nativeMsgId": "efed687c-79b2-4dba-96d9-632e0285ff82",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Sending Load Created Body: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "7dbe3b87-8111-468f-8e8e-135f6b909a52",
+      "isCorrelationId": "dc151371-2a5b-43cc-b3d3-d9867d61e7ff",
+      "senderMessageId": "f02584a0-a573-40df-9332-f9962f6fc05b"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "transactionId": "80c416b4-0c4b-4b4d-b978-f09cb5ea099f",
+          "actionDate": "2026-01-30",
+          "effectiveDate": "2026-01-30",
+          "serviceType": "EFTPAYMENT",
+          "nativeTransactionId": "P926 -EF-000000160-00000100",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-30 14:41:53.141",
+      "nativeMsgId": "01343699-11c9-41a4-80b9-bebc40589911",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}

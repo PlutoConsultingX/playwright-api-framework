@@ -1,0 +1,70 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+2026-02-03T14:09:50
+2026-02-03T14:09:50
+{
+  "workflowID": "c5d1f3b5-508e-4f47-9997-a4912d486466",
+  "clientCorrelationID": "e4177ba1-459b-400b-80e8-d28f99ce2142",
+  "requestDate": "2026-02-03T14:09:50",
+  "totalCount": 1,
+  "transactions": [
+    {
+      "transactionID": "bacd1b08-09ba-4742-8290-2ed3195d2768",
+      "transactionAmount": 300,
+      "actionDate": "2026-02-03",
+      "subjectReference": "SREF000-23042025",
+      "clientReference": "CREF000-23042025",
+      "mandateReference": "00032024091612QRZ2ZDWW",
+      "contractReference": "Thato Auto",
+      "trackingDays": 10,
+      "collectionReoccurance": "OOFF",
+      "subjectDetails": {
+        "accountNumber": "62006677069",
+        "accountType": "02",
+        "branchCode": "250655",
+        "country": "ZAF",
+        "idType": "EntityRegistrationNumber",
+        "idValue": "1951/000009/07",
+        "initials": "SK",
+        "firstName": "john",
+        "lastName": "doe",
+        "phoneNumber": "+27721234567",
+        "emailAddress": "Hyphen@RMB.com",
+        "profileReference": "Thatos"
+      }
+    }
+  ]
+}
+API Validation Response Status: 200
+API Validation Response Body: {
+  "success": true,
+  "message": [
+    "Total transactions posted: 1",
+    "Total valid transactions saved: 1",
+    "Total invalid transactions: 0"
+  ],
+  "clientCorrelationID": "e4177ba1-459b-400b-80e8-d28f99ce2142",
+  "hyphenCorrelationID": "3879dc35-9ee7-4d47-8775-81c7fdad2de8"
+}
+CorrelationID from validation response : e4177ba1-459b-400b-80e8-d28f99ce2142
+DB Result validation (attempt 1): []
+Waiting for DB record... (1/10)
+DB Result validation (attempt 2): []
+Waiting for DB record... (2/10)
+DB Result validation (attempt 3): []
+Waiting for DB record... (3/10)
+DB Result validation (attempt 4): []
+Waiting for DB record... (4/10)
+DB Result validation (attempt 5): []
+Waiting for DB record... (5/10)
+DB Result validation (attempt 6): []
+Waiting for DB record... (6/10)
+DB Result validation (attempt 7): []
+Waiting for DB record... (7/10)
+DB Result validation (attempt 8): []
+Waiting for DB record... (8/10)
+DB Result validation (attempt 9): []
+Waiting for DB record... (9/10)
+DB Result validation (attempt 10): []
+Waiting for DB record... (10/10)

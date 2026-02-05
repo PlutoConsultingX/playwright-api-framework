@@ -1,0 +1,13 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+⏳ Waiting for callback_data... (1/10)
+⏳ Waiting for callback_data... (2/10)
+⏳ Waiting for callback_data... (3/10)
+⏳ Waiting for callback_data... (4/10)
+⏳ Waiting for callback_data... (5/10)
+⏳ Waiting for callback_data... (6/10)
+⏳ Waiting for callback_data... (7/10)
+⏳ Waiting for callback_data... (8/10)
+⏳ Waiting for callback_data... (9/10)
+⏳ Waiting for callback_data... (10/10)

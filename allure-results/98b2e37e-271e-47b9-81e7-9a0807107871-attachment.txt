@@ -1,0 +1,132 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+This is the Processed to Bank payload {
+  Response: {
+    ISInfo: {
+      serviceId: 'FACS-SALARYDAY-TRANSACTION-01',
+      responseId: 'fdfee71c-7d58-4027-b75c-e01af0750ea3',
+      isCorrelationId: '31f0642a-2960-4fa9-81c7-7ffdce352441',
+      senderMessageId: undefined
+    },
+    responseDetail: { transactions: [Array] },
+    responseHeader: {
+      totalCount: 1,
+      responseCode: 'PROCESSED',
+      responseType: 'RESPONSE',
+      clientProfile: 'FACHYTQ1',
+      responseTimestamp: '2026-02-03',
+      nativeMsgId: '11049bd1-5fea-4bb2-b97e-0afa064ac82a',
+      clientIntegrationId: 'HYT0002'
+    }
+  }
+}
+Load created Payload to send: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "fdfee71c-7d58-4027-b75c-e01af0750ea3",
+      "isCorrelationId": "31f0642a-2960-4fa9-81c7-7ffdce352441"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "actionDate": "2026-02-03",
+          "serviceType": "EFTCOLLECTION",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "PROCESSED",
+            "responseDescription": "Processed to bank"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "RESPONSE",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-02-03",
+      "nativeMsgId": "11049bd1-5fea-4bb2-b97e-0afa064ac82a",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Processed to Bank Body (from factory): {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "85a4e570-cabc-4fbc-8d32-b6934f32beee",
+      "isCorrelationId": "31f0642a-2960-4fa9-81c7-7ffdce352441",
+      "senderMessageId": "639d50ab-bdcd-4ff6-8f58-f783b47360b8"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "transactionId": "73bbe947-a454-4737-b9ea-1f1b1f91060b",
+          "actionDate": "2026-02-03",
+          "nativeTransactionId": "P926 -EF-000000417-00000100",
+          "serviceType": "EFTCOLLECTION",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "PROCESSED",
+            "responseDescription": "Processed to bank"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "RESPONSE",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-02-03",
+      "nativeMsgId": "11049bd1-5fea-4bb2-b97e-0afa064ac82a",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Sending processed to bank Body: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "fdfee71c-7d58-4027-b75c-e01af0750ea3",
+      "isCorrelationId": "31f0642a-2960-4fa9-81c7-7ffdce352441"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "actionDate": "2026-02-03",
+          "serviceType": "EFTCOLLECTION",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "PROCESSED",
+            "responseDescription": "Processed to bank"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "RESPONSE",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-02-03",
+      "nativeMsgId": "11049bd1-5fea-4bb2-b97e-0afa064ac82a",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Processed to Bank API call successful 200

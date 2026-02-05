@@ -1,3 +1,4 @@
+import { TransactionFactory } from '../factories/transactionFactory.js';
 import { Helpers } from '../utils/helpers.js';
 import { loadEnvironment } from '../utils/process.env';
 const ENV = loadEnvironment(process.env.ENV || "qa_token");
@@ -59,8 +60,8 @@ export class UserClient {
       data: payload   // send JSON body exactly as expected
     });
     const responseBody = await response.json();
-    console.log("API Response Status:", response.status());
-    console.log("API Response Body:", JSON.stringify(responseBody, null, 2));
+    console.log("API Validation Response Status:", response.status());
+    console.log("API Validation Response Body:", JSON.stringify(responseBody, null, 2));
 
     return response;
   }
@@ -68,11 +69,12 @@ export class UserClient {
 
 
   //----------Processed EFT Payment Request ----------
-  async processedToBankSalary({senderMessageIdFromCallback, transactionIdFromCallback, nativeTransactionIdFromCallback }) {
+  /*
+  async processedToBankSalary({ senderMessageIdFromCallback, transactionIdFromCallback, nativeTransactionIdFromCallback }) {
     if (!ENV.LOAD_CREATED_URL) {
       throw new Error("ENV.LOAD_CREATED_URL is not defined");
     }
-    
+
 
     const payloadProcessedToBank = {
       Response: {
@@ -88,7 +90,7 @@ export class UserClient {
               transactionId: transactionIdFromCallback,
               actionDate: Helpers.getCurrentDate(),
               actionDate: Helpers.getCurrentDate(),
-              nativeTransactionId: nativeTransactionIdFromCallback ,
+              nativeTransactionId: nativeTransactionIdFromCallback,
               serviceType: "EFTCOLLECTION",
               transactionError: {
                 errorCode: "",
@@ -114,7 +116,7 @@ export class UserClient {
       }
     };
     console.log("Processed To Bank Payload:", JSON.stringify(payloadProcessedToBank, null, 2));
-  
+
     const response = await this.request.post(ENV.LOAD_CREATED_URL, {
       headers: {
         Authorization: `Bearer ${this.token}`,
@@ -124,62 +126,74 @@ export class UserClient {
       },
       data: payloadProcessedToBank
     });
-  
+
     console.log("Processed to bank Status:", response.status());
     console.log("Processed to bank Response:", await response.text());
-  
+
     return response;
 
   }
-
-  async loadCreatedSalary({ transactionId, senderMessageId }) {
-    
+*/
+  /**
+   * @typedef {Object} LoadCreatedSalaryParams
+   * @property {string} transactionId
+   * @property {string} senderMessageId
+   * @property {string} nativeTransactionId
+   */
+  /*
+  async loadCreatedSalary({
+    transactionId,
+    senderMessageId,
+    nativeTransactionId,
+  }) {
+  
     if (!ENV.LOAD_CREATED_URL) {
-      throw new Error("ENV.LOAD_CREATED_URL is not defined");
-      //console.log("LOAD_CREATED_URL:", ENV.LOAD_CREATED_URL);
+      throw new Error('ENV.LOAD_CREATED_URL is not defined');
     }
-    
-
+  
+    console.log('This is the Load Created URL:', ENV.LOAD_CREATED_URL);
+  
     const payloadLoadCreated = {
       Response: {
         ISInfo: {
-          serviceId: "FACS-SALARYDAY-TRANSACTION-01",
+          serviceId: 'FACS-SALARYDAY-TRANSACTION-01',
           responseId: Helpers.generateGUID(),
-          //isCorrelationId: correlationId,
-          senderMessageId: senderMessageId,
-          transactionId : transactionId
+          isCorrelationId: Helpers.generateGUID(),
+          senderMessageId,
         },
         responseDetail: {
           transactions: [
             {
-              transactionId: transactionId,
+              transactionId,
               actionDate: Helpers.getCurrentDate(),
               effectiveDate: Helpers.getCurrentDate(),
-              serviceType: "EFTPAYMENT",
+              serviceType: 'EFTPAYMENT',
+              nativeTransactionId : TransactionFactory.nativeTransactionId,
               transactionError: {
-                errorCode: "",
-                errorDescription: ""
+                errorCode: '',
+                errorDescription: '',
               },
-              transactionAmount: "100",
+              transactionAmount: '100',
               transactionResponse: {
-                responseType: "CREATED",
-                responseDescription: "Transaction created"
-              }
-            }
-          ]
+                responseType: 'CREATED',
+                responseDescription: 'Transaction created',
+              },
+            },
+          ],
         },
         responseHeader: {
           totalCount: 1,
-          responseCode: "PROCESSED",
-          responseType: "LOAD",
-          clientProfile: "FACHYTQ1",
+          responseCode: 'PROCESSED',
+          responseType: 'LOAD',
+          clientProfile: 'FACHYTQ1',
           responseTimestamp: Helpers.getCurrentDate(),
-          clientIntegrationId: "HYT0002"
-        }
-      }
+          nativeMsgId: Helpers.generateGUID(),
+          clientIntegrationId: 'HYT0002',
+        },
+      },
     };
   
-    console.log("Load Created Payload:", JSON.stringify(payloadLoadCreated, null, 2));
+    console.log("Load Created Payload from UserClient.js :", JSON.stringify(payloadLoadCreated, null, 2));
   
     const response = await this.request.post(ENV.LOAD_CREATED_URL, {
       headers: {
@@ -196,66 +210,61 @@ export class UserClient {
   
     return response;
   }
+*/
+  async loadCreatedSalary(body) {
+    if (!ENV.LOAD_CREATED_URL) {
+      throw new Error('ENV.LOAD_CREATED_URL is not defined');
+    }
 
-  async cashedSalary({ senderMessageIdFromCallback, transactionIdFromCallback, nativeTransactionIdFromCallback }) {  
-    if (!ENV.CASHED_URL) {
-      throw new Error("ENV.CASHED_URL is not defined");
-    }    
+    console.log('Sending Load Created Body:', JSON.stringify(body, null, 2)
+    );
 
-    const payloadCashed = {
-      Response: {
-        ISInfo: {
-          serviceId: "FACS-EFT-TRANSACTION-01",
-          responseId: Helpers.generateGUID(),
-          //isCorrelationId: correlationId,
-          senderMessageId: senderMessageIdFromCallback
-        },
-        responseDetail: {
-          transactions: [
-            {
-              transactionId: transactionIdFromCallback,
-              actionDate: Helpers.getCurrentDate(),
-              nativeTransactionId: nativeTransactionIdFromCallback,
-              serviceType: "EFTCOLLECTION",
-              transactionError: {
-                errorCode: "",
-                errorDescription: ""
-              },
-              transactionAmount: "100",
-              transactionResponse: {
-                responseType: "CASHED",
-                responseDescription: "Cashed by beneficiary"
-              }
-            }
-          ]
-        },
-        responseHeader: {
-          totalCount: 1,
-          responseCode: "CASHED",
-          responseType: "RESPONSE",
-          clientProfile: "FACHYTQ1",
-          responseTimestamp: Helpers.getCurrentDate(),
-          clientIntegrationId: "HYT0004"
-        }
-      }
-    };
-    console.log("Cashed Payload:", JSON.stringify(payloadCashed, null, 2));
-  
-    const response = await this.request.post(ENV.CASHED_URL, {
+    return this.request.post(ENV.LOAD_CREATED_URL, {
       headers: {
         Authorization: `Bearer ${this.token}`,
-        "Content-Type": "application/json",
-        Accept: "application/json",
-        "sag-correlation-id": Helpers.generateGUID()
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+        'sag-correlation-id': Helpers.generateGUID(),
       },
-      data: payloadCashed
+      data: body,
     });
-  
-    console.log("Cashed Status:", response.status());
-    console.log("Cashed Response:", await response.text());
-  
-    return response;
+  }
 
-  }  
+  async processedToBankSalary(body) {
+    if (!ENV.PROCESSED_TO_BANK_URL) {
+      throw new Error('ENV.PROCESSED_TO_BANK_URL is not defined');
+    }
+
+    console.log('Sending processed to bank Body:', JSON.stringify(body, null, 2)
+    );
+
+    return this.request.post(ENV.PROCESSED_TO_BANK_URL, {
+      headers: {
+        Authorization: `Bearer ${this.token}`,
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+        'sag-correlation-id': Helpers.generateGUID(),
+      },
+      data: body,
+    });
+  }
+  async cashedSalary(body) {
+    if (!ENV.CASHED_URL) {
+      throw new Error('ENV.CASHED_URL is not defined');
+    }
+
+    console.log('Sending Cashed Body:', JSON.stringify(body, null, 2)
+    );
+
+    return this.request.post(ENV.CASHED_URL, {
+      headers: {
+        Authorization: `Bearer ${this.token}`,
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+        'sag-correlation-id': Helpers.generateGUID(),
+      },
+      data: body,
+    });
+  }
 }
 

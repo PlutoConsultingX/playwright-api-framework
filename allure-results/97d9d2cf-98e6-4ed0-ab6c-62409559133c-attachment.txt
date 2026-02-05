@@ -1,0 +1,23 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+DB rows returned: 0
+⏳ Waiting for response_data... (1/10)
+DB rows returned: 0
+⏳ Waiting for response_data... (2/10)
+DB rows returned: 0
+⏳ Waiting for response_data... (3/10)
+DB rows returned: 0
+⏳ Waiting for response_data... (4/10)
+DB rows returned: 0
+⏳ Waiting for response_data... (5/10)
+DB rows returned: 0
+⏳ Waiting for response_data... (6/10)
+DB rows returned: 0
+⏳ Waiting for response_data... (7/10)
+DB rows returned: 0
+⏳ Waiting for response_data... (8/10)
+DB rows returned: 0
+⏳ Waiting for response_data... (9/10)
+DB rows returned: 0
+⏳ Waiting for response_data... (10/10)

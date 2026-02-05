@@ -1,0 +1,48 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Step 2 using values: {
+  transactionId: '670dff24-85d7-4b33-aa2d-9c96632a0dae',
+  senderMessageId: '0185ae96-0ced-4aa1-867f-5c6b9054cbe5',
+  correlationId: '0100d556-4881-4fd3-b2ad-eb45c4e26f17'
+}
+Generated nativeTransactionId: P926 -EF-000000161-00000100
+Load created Payload to send: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "ec5373d9-b616-4c4e-ac68-d508fa1f76ce",
+      "isCorrelationId": "0100d556-4881-4fd3-b2ad-eb45c4e26f17",
+      "senderMessageId": "0185ae96-0ced-4aa1-867f-5c6b9054cbe5"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "transactionId": "670dff24-85d7-4b33-aa2d-9c96632a0dae",
+          "actionDate": "2026-01-29",
+          "effectiveDate": "2026-01-29",
+          "serviceType": "EFTPAYMENT",
+          "nativeTransactionId": "P926 -EF-000000161-00000100",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-29",
+      "nativeMsgId": "c2d399eb-b17a-426f-8acc-2d35f78fb8e4",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}

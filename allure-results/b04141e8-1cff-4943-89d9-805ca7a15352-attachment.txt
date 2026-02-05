@@ -1,0 +1,103 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Processed to Bank payload: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "46266782-7552-4aff-8fce-7cc82bf2a6fc",
+      "isCorrelationId": "288563d9-7ea6-408d-9fbb-2f9b6d42bb1e",
+      "senderMessageId": "bdd1b579-4749-41f2-833b-f0fcf4ad8619"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "transactionId": "237f5062-df26-4bab-84f2-d6e2414f9f9b",
+          "actionDate": "2026-02-05",
+          "effectiveDate": "2026-02-05",
+          "nativeTransactionId": "P926 -EF-000000466-00000100",
+          "serviceType": "EFTPAYMENT",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CASHED",
+            "responseDescription": "Transaction successful"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "RESPONSE",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-02-05 13:13:44.570",
+      "nativeMsgId": "11049bd1-5fea-4bb2-b97e-0afa064ac82a",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Sending Cashed Body: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "46266782-7552-4aff-8fce-7cc82bf2a6fc",
+      "isCorrelationId": "288563d9-7ea6-408d-9fbb-2f9b6d42bb1e",
+      "senderMessageId": "bdd1b579-4749-41f2-833b-f0fcf4ad8619"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "transactionId": "237f5062-df26-4bab-84f2-d6e2414f9f9b",
+          "actionDate": "2026-02-05",
+          "effectiveDate": "2026-02-05",
+          "nativeTransactionId": "P926 -EF-000000466-00000100",
+          "serviceType": "EFTPAYMENT",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CASHED",
+            "responseDescription": "Transaction successful"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "RESPONSE",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-02-05 13:13:44.570",
+      "nativeMsgId": "11049bd1-5fea-4bb2-b97e-0afa064ac82a",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Cashed URL: http://10.10.21.65:9183/workflow-worker-eft-payments-salaryday/api/v1/callback
+Cashed status: 200
+Cashed response body: {
+  "versionNumber": 1,
+  "traceId": "82804ccd-890d-4aac-9835-f5971cfde1d4",
+  "correlationId": "833f592d-18d1-40d4-9e4f-797919eacced",
+  "result": {
+    "success": true,
+    "origin": "WORKER_SERVICE"
+  },
+  "profile": {
+    "zone": "SAT",
+    "lang": "ENG",
+    "country": "USA",
+    "offset": "+02:00",
+    "requestDate": "2026-02-05 13:13:45.949",
+    "responseDate": "2026-02-05 13:13:46.002",
+    "hostDateUtc": "2026-02-05 11:13:45.949",
+    "hostDate": "2026-02-05 13:13:45.949",
+    "durationInMillis": 53
+  }
+}

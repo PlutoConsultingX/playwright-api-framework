@@ -1,0 +1,42 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Load created Payload to send: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "6fc8af40-4f35-495e-89c6-65332a496d7d",
+      "isCorrelationId": "1cb49332-36ff-4532-800b-f8c838b772aa",
+      "senderMessageId": "2f4f8c08-424b-47a3-ae9a-e6e6f576abb7"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "transactionId": "9ada0354-7a58-4161-87c7-6ef7ad111626",
+          "actionDate": "2026-01-27",
+          "effectiveDate": "2026-01-27",
+          "serviceType": "EFTPAYMENT",
+          "nativeTransactionId": "P926 -EF-000000163-00000100",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-27",
+      "nativeMsgId": "315280a1-887c-4eee-a210-5b4dfbce8beb",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}

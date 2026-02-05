@@ -1,0 +1,87 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+✅ Step 2 using values: {
+  transactionId: 'dbe3d3e4-926c-4d8e-8533-074d4161346c',
+  senderMessageId: '069f970a-6361-468e-aa40-f2b8e23eb362',
+  correlationId: '2ee25233-0355-4d5c-8cf4-477b8828a3e1'
+}
+Generated nativeTransactionId: P926 -EF-000000166-00000100
+Load created Payload to send: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "01049eb1-94f9-423e-90b1-807e50f92883",
+      "isCorrelationId": "2ee25233-0355-4d5c-8cf4-477b8828a3e1",
+      "senderMessageId": "069f970a-6361-468e-aa40-f2b8e23eb362"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "transactionId": "dbe3d3e4-926c-4d8e-8533-074d4161346c",
+          "actionDate": "2026-01-27",
+          "effectiveDate": "2026-01-27",
+          "serviceType": "EFTPAYMENT",
+          "nativeTransactionId": "P926 -EF-000000166-00000100",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-27",
+      "nativeMsgId": "9ccf9265-a574-4253-bcc5-25e1925b3953",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+THis is the Load Created URL: http://10.10.21.65:9183/workflow-worker-eft-payments-salaryday/api/v1/callback
+This is the load created parameters undefined undefined undefined
+Load Created Payload: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "8f6e1ca4-353d-4333-aa12-ea5855dd06b7"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "actionDate": "2026-01-27",
+          "effectiveDate": "2026-01-27",
+          "serviceType": "EFTPAYMENT",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-27",
+      "nativeMsgId": "f07773ac-94bc-4a69-915c-066600f36415",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Load Created Status: 200
+Load Created Response: {"versionNumber":1,"traceId":"dae4d2e9-6ebe-451e-acda-8275a7e39e88","correlationId":"75acb22b-6e51-4f8c-a7bc-7140fcded264","result":{"success":true,"origin":"WORKER_SERVICE"},"profile":{"zone":"SAT","lang":"ENG","country":"USA","offset":"+02:00","requestDate":"2026-01-27 17:31:17.898","responseDate":"2026-01-27 17:31:17.910","hostDateUtc":"2026-01-27 15:31:17.898","hostDate":"2026-01-27 17:31:17.898","durationInMillis":12}}

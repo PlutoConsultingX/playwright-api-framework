@@ -1,0 +1,128 @@
+[INFO] Generating token using password grant...
+[object Object]
+[INFO] Token generated successfully.
+Payload to send: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "{{$guid}}",
+      "isCorrelationId": "4332489f-7273-4f93-b989-53436a1277ab",
+      "senderMessageId": "3043dce9-d91f-4500-9f0d-3967f4df62b2"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "transactionId": "d226cf5b-0bd4-4fc8-bf20-51c2c58e7ed7",
+          "actionDate": "2026-01-27",
+          "nativeTransactionId": "P950912-EF-000000155-00000100",
+          "effectiveDate": "2026-01-27",
+          "serviceType": "EFTPAYMENT",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-27",
+      "nativeMsgId": "{{$guid}}",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Load Created Payload: {
+  "Response": {
+    "ISInfo": {
+      "serviceId": "FACS-SALARYDAY-TRANSACTION-01",
+      "responseId": "d5d0341d-9d37-4c2d-8218-32a21cefd644"
+    },
+    "responseDetail": {
+      "transactions": [
+        {
+          "actionDate": "2026-01-27",
+          "effectiveDate": "2026-01-27",
+          "serviceType": "EFTPAYMENT",
+          "transactionError": {
+            "errorCode": "",
+            "errorDescription": ""
+          },
+          "transactionAmount": "100",
+          "transactionResponse": {
+            "responseType": "CREATED",
+            "responseDescription": "Transaction created"
+          }
+        }
+      ]
+    },
+    "responseHeader": {
+      "totalCount": 1,
+      "responseCode": "PROCESSED",
+      "responseType": "LOAD",
+      "clientProfile": "FACHYTQ1",
+      "responseTimestamp": "2026-01-27",
+      "clientIntegrationId": "HYT0002"
+    }
+  }
+}
+Load Created Status: 200
+Load Created Response: {"versionNumber":1,"traceId":"16b0567c-a867-4834-910a-ec794a6b6502","correlationId":"15445e1d-0cc0-4c8a-adce-a8ebac56c630","result":{"success":true,"origin":"WORKER_SERVICE"},"profile":{"zone":"SAT","lang":"ENG","country":"USA","offset":"+02:00","requestDate":"2026-01-27 10:26:22.003","responseDate":"2026-01-27 10:26:22.017","hostDateUtc":"2026-01-27 08:26:22.003","hostDate":"2026-01-27 10:26:22.003","durationInMillis":14}}
+Load Created API Response: {
+  "versionNumber": 1,
+  "traceId": "16b0567c-a867-4834-910a-ec794a6b6502",
+  "correlationId": "15445e1d-0cc0-4c8a-adce-a8ebac56c630",
+  "result": {
+    "success": true,
+    "origin": "WORKER_SERVICE"
+  },
+  "profile": {
+    "zone": "SAT",
+    "lang": "ENG",
+    "country": "USA",
+    "offset": "+02:00",
+    "requestDate": "2026-01-27 10:26:22.003",
+    "responseDate": "2026-01-27 10:26:22.017",
+    "hostDateUtc": "2026-01-27 08:26:22.003",
+    "hostDate": "2026-01-27 10:26:22.003",
+    "durationInMillis": 14
+  }
+}
+DB rows returned: 0
+⏳ Waiting for response_data... (1/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (2/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (3/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (4/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (5/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (6/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (7/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (8/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (9/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (10/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (11/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (12/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (13/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (14/15)
+DB rows returned: 0
+⏳ Waiting for response_data... (15/15)
